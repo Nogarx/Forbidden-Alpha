@@ -9,11 +9,12 @@
 	"author": "Nogar et al.",
 	"esmodules":
 	[
-		"module/forbiddenAlpha.js"
+		"source/forbiddenAlpha.js"
 	],
 	"styles": 
 	[
-		"css/forbiddenAlpha.css"
+		"css/forbiddenAlpha.css",
+		"css/actor/actorSheet.css"
 	],
 	"scripts": 
 	[
