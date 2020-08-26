@@ -10,8 +10,9 @@ export class ForbiddenAlphaCharacterSheet extends ForbiddenAlphaActorSheet
         return mergeObject(super.defaultOptions, {
         classes: ["forbiddenAlpha", "sheet", "actor"],
         template: "systems/forbiddenAlpha/templates/actor/characterSheet.html",
-        width: 1000,
-        height: 500,
+        width: 920,
+        height: 570,
+        resizable: false,
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
         });
     }
@@ -22,6 +23,5 @@ export class ForbiddenAlphaCharacterSheet extends ForbiddenAlphaActorSheet
         const data = super.getData();
         return data;
     }
-
 }
   

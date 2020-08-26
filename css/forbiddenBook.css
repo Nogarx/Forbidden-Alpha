@@ -1,0 +1,96 @@
+.forbiddenAlpha.sheet .book 
+{
+    display: flex;
+    background-image:url(../assets/alphaBookBackgound.png);
+    background-size: cover;
+    background-position: center;
+
+    background-color: transparent;
+	width: 100%;
+    height: 100%;
+    position: relative;
+
+    /*
+    background:red;
+    -webkit-mask:url(../../assets/actor/character/characterBackground.png);*/
+}
+
+.forbiddenAlpha.sheet .book .leftPage 
+{
+    display: flex;
+
+    /* Box transform */
+    position: absolute;
+    transform: rotate(1.5deg);
+    top: 30px;
+    left: 70px;
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    overflow: hidden;
+
+    /* Debug */
+    /*background-color: rgba(255, 0, 0, 0.25);*/
+}
+
+.forbiddenAlpha.sheet .book .rightPage 
+{
+    display: flex;
+    /* Box transform */
+    position: absolute;
+    transform: rotate(-1.5deg);
+    top: 25px;
+    left: 485px;
+    width: 350px;
+    height: 450px;
+    padding: 10px;
+    overflow: hidden;
+
+    /* Debug */
+    /*background-color: rgba(255, 0, 0, 0.25);*/
+}
+
+.forbiddenAlpha.sheet .book .tabsBar
+{
+    display: flex;
+    flex-direction: row;
+
+    /* Box transform */
+    position: absolute;
+    left: 500px;
+    top: -5px;
+    height: 32px;
+    width: 300px;
+    justify-content: center;
+
+    /* Debug */
+    /*background-color: rgba(255, 0, 0, 0.25);*/
+}
+
+.forbiddenAlpha.sheet .book .tabsBar .bookMark
+{
+    /* Bookmark image */
+    background-image:url(../assets/bookmark.png);
+    background-size: cover;
+    background-position: center;
+    overflow: visible;
+    width: 40px;
+    height: 40px;
+
+    margin: 5px 10px;
+    text-align: center;
+}
+
+.forbiddenAlpha.sheet .book .tabsBar .bookMark:hover
+{
+    /* Bookmark image */
+    background-color: red;
+    background-blend-mode: multiply;
+}
+
+.forbiddenAlpha.sheet .book .active
+{
+    /* Bookmark image */
+    background-color: green;
+    background-blend-mode: multiply;
+}

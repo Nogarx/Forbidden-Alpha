@@ -4,10 +4,9 @@
  */
 export class ForbiddenAlphaActorSheet extends ActorSheet 
 {
-
     activateListeners(html) 
     {
-		super.activateListeners(html);
+        super.activateListeners(html);
 
         // Everything below here is only needed if the sheet is editable
         if (!this.options.editable) return;
@@ -30,7 +29,17 @@ export class ForbiddenAlphaActorSheet extends ActorSheet
         });
 
         // Rollable abilities.
+        /*
         html.find('.rollable').click(this._onRoll.bind(this));
+        */
     }
 
+    _onItemCreate(event) 
+    {
+        event.preventDefault();
+        let header = event.currentTarget;
+        let data = duplicate(header.dataset);
+        data["name"] = `New ${data.type.capitalize()}`;
+        this.actor.createEmbeddedEntity("OwnedItem", data, { renderSheet: true });
+    }
 }
