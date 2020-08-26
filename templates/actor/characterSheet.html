@@ -1,0 +1,21 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="book">
+        <!--<nav class="sheet-tabs tabs" data-group="primary">-->
+        <nav class="sheet-tabs tabsBar" data-group="primary">
+            <!--<div class="bookMark"> <b class="item" data-tab="main">MAIN</b> </div>-->
+            <b class="item bookMark" data-tab="main">M</b>
+            <b class="item bookMark" data-tab="combat">C</b>
+        </nav>
+
+        <div class="sheet-body">
+            <div class="tab" data-group="primary" data-tab="main">
+                {{> systems/forbiddenAlpha/templates/actor/tab/main.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="combat">
+                {{> systems/forbiddenAlpha/templates/actor/tab/combat.html}}
+            </div>
+        </div>
+
+    </div>
+</form>
+

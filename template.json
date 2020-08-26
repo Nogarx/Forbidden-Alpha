@@ -1,61 +1,452 @@
 {
-  "Actor": {
-    "types": ["character"],
-    "templates": {
-      "base": {
-        "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
-        },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        }
-      }
-    },
-    "character": {
-      "templates": ["base"],
-      "biography": "",
-      "attributes": {
-        "level": {
-          "value": 1
-        }
-      },
-      "abilities": {
-        "str": {
-          "value": 10
-        },
-        "dex": {
-          "value": 10
-        },
-        "con": {
-          "value": 10
-        },
-        "int": {
-          "value": 10
-        },
-        "wis": {
-          "value": 10
-        },
-        "cha": {
-          "value": 10
-        }
-      }
-    }
-  },
-  "Item": {
-    "types": ["item"],
-    "templates": {
-      "base": {
-        "description": ""
-      }
-    },
-    "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0
-    }
-  }
+	"Actor": 
+	{
+		"types": 
+		[
+			"character", 
+			"monster", 
+			"stronghold", 
+			"adventureSite"
+		],
+
+		"templates": 
+		{
+			"attributes": 
+			{
+				"Strenght": 
+				{
+					"value": 0,
+					"label": "ATTRIBUTES.STRENGHT"
+				},
+				"agility": 
+				{
+					"value": 0,
+					"label": "ATTRIBUTES.AGILITY"
+				},
+				"wits": 
+				{
+					"value": 0,
+					"label": "ATTRIBUTES.WITS"
+				},
+				"empathy": 
+				{
+					"value": 0,
+					"label": "ATTRIBUTES.EMPATHY"
+				}
+			},
+			"skills":
+			{
+				"might": 
+				{
+					"value": 0,
+					"attribute": "strenght",
+					"label": "SKILLS.MIGHT"
+				},
+				"endurance": 
+				{
+					"value": 0,
+					"attribute": "strenght",
+					"label": "SKILLS.ENDURANCE"
+				},
+				"melee": 
+				{
+					"value": 0,
+					"attribute": "strenght",
+					"label": "SKILLS.MELEE"
+				},
+				"crafting": 
+				{
+					"value": 0,
+					"attribute": "strenght",
+					"label": "SKILLS.CRAFTING"
+				},
+				"stealth": 
+				{
+					"value": 0,
+					"attribute": "agility",
+					"label": "SKILLS.STEALTH"
+				},
+				"sleightOfHand": 
+				{
+					"value": 0,
+					"attribute": "agility",
+					"label": "SKILLS.SLEIGHT_OF_HAND"
+				},
+				"move": 
+				{
+					"value": 0,
+					"attribute": "agility",
+					"label": "SKILLS.MOVE"
+				},
+				"marksmanship": 
+				{
+					"value": 0,
+					"attribute": "agility",
+					"label": "SKILLS.MARKSMANSHIP"
+				},
+				"scouting": 
+				{
+					"value": 0,
+					"attribute": "wits",
+					"label": "SKILLS.SCOUTING"
+				},
+				"lore": 
+				{
+					"value": 0,
+					"attribute": "wits",
+					"label": "SKILLS.LORE"
+				},
+				"survival": 
+				{
+					"value": 0,
+					"attribute": "wits",
+					"label": "SKILLS.SURVIVAL"
+				},
+				"insight": 
+				{
+					"value": 0,
+					"attribute": "wits",
+					"label": "SKILLS.INSIGHT"
+				},
+				"manipulation": 
+				{
+					"value": 0,
+					"attribute": "empathy",
+					"label": "SKILLS.MANIPULATION"
+				},
+				"performance": 
+				{
+					"value": 0,
+					"attribute": "empathy",
+					"label": "SKILLS.PERFORMANCE"
+				},
+				"healing": 
+				{
+					"value": 0,
+					"attribute": "empathy",
+					"label": "SKILLS.HEALING"
+				},
+				"animalHandling": 
+				{
+					"value": 0,
+					"attribute": "empathy",
+					"label": "SKILLS.ANIMAL_HANDLING"
+				}
+			},
+			"main":
+			{
+				"reputation":
+				{
+					"value": 0,
+					"label": "MAIN.REPUTATION"
+				},
+				"experience":
+				{
+					"value": 0,
+					"label": "MAIN.EXPERIENCE"
+				},
+				"willpower":
+				{
+					"value": 0,
+					"label": "MAIN.EXPERIENCE"
+				}
+			},
+			"biography": 
+			{
+				"age":
+				{
+					"value": "",
+					"label": "BIOGRAPHY.AGE"
+				},
+				"pride": 
+				{
+					"value": "",
+					"label": "BIOGRAPHY.PRIDE"
+				},
+				"darkSecret": 
+				{
+					"value": "",
+					"label": "BIOGRAPHY.DARK_SECRET"
+				},
+				"relations": 
+				{
+					"value": "",
+					"label": "BIOGRAPHY.RELATIONS"
+				},
+				"faceAppearance":
+				{
+					"value": "",
+					"label": "BIOGRAPHY.FACE_APPEARANCE"
+				},
+				"bodyAppearance":
+				{
+					"value": "",
+					"label": "BIOGRAPHY.BODY_APPEARANCE"
+				},
+				"clothingAppearance":
+				{
+					"value": "",
+					"label": "BIOGRAPHY.CLOTHING_APPEARANCE"
+				}
+			},
+			"coins":
+			{
+				"bronze": 
+				{
+					"value": 0,
+				  	"label": "COIN.BRONZE"
+
+				},
+				"silver": 
+				{
+					"value": 0,
+				  	"label": "COIN.SILVER"
+
+				},
+				"gold": 
+				{
+					"value": 0,
+				  	"label": "COIN.GOLD"
+
+				}
+			},
+			"consumables": 
+			{
+				"food": 
+				{
+					"value": 0,
+				  	"label": "CONSUMABLES.FOOD"
+
+				},
+				"water": 
+				{
+					"value": 0,
+					"label": "CONSUMABLES.WATER"
+				},
+				"arrows": 
+				{
+					"value": 0,
+					"label": "CONSUMABLES.BULLETS"
+				},
+				"torches":
+				{
+					"value": 0,
+					"label": "CONSUMABLES.TORCHES"
+				}
+			},
+			"conditions":
+			{
+				"sleepless":
+				{
+					"value": false,
+					"label": "CONDITIONS.SLEEPLESS"
+				},
+				"thisty":
+				{
+					"value": false,
+					"label": "CONDITIONS.THISTY"
+				},
+				"hungry":
+				{
+					"value": false,
+					"label": "CONDITIONS.HUNGRY"
+				},
+				"cold":
+				{
+					"value": false,
+					"label": "CONDITIONS.COLD"
+				}
+			},
+			"siteDescription":
+			{
+				"location":
+				{
+					"value": "",
+					"label": "SITE_DESCRIPTION.LOCATION"
+				},
+				"description":
+				{
+					"value": "",
+					"label": "SITE_DESCRIPTION.DESCRIPTION"
+				},
+				"surrounding":
+				{
+					"value": "",
+					"label": "SITE_DESCRIPTION.SURROUNDING"
+				},
+				"defenseRaiting":
+				{
+					"value": "",
+					"label": "SITE_DESCRIPTION.DEFENSE_RAITING"
+				}
+			}
+		},
+
+		"character": 
+		{
+			"templates": 
+			[
+				"attributes",
+				"skills",
+				"main", 
+				"biography", 
+				"coins", 
+				"consumables", 
+				"conditions"
+			]
+		},
+
+		"monster": 
+		{
+			"templates": 
+			[
+				"attributes", 
+				"skills", 
+				"main", 
+				"biography", 
+				"coins", 
+				"consumables", 
+				"conditions"
+			]
+		},
+
+		"stronghold": 
+		{
+			"templates": 
+			[
+				"siteDescription"
+			]
+		},
+
+		"adventureSite": 
+		{
+			"templates": 
+			[
+				"siteDescription"
+			]
+		}
+	},
+
+	"Item": 
+	{
+		"types": 
+		[
+			"talent",
+			"spell",
+			"weapon", 
+			"armor",		
+			"criticalInjury",
+			"monsterTalent",
+			"monsterSpell",
+			"building",
+			"hireling",
+			"gear",
+			"material",
+			"artifact"
+		],
+
+		"templates": 
+		{
+			"base": 
+			{
+				"description": ""
+			}
+		},
+
+		"talent": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"spell": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"weapon": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"armor": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"criticalInjury": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"monsterTalent": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"monsterSpell": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"building": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"hireling": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"gear": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"material": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
+		"artifact": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		}
+	}
 }
