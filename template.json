@@ -11,7 +11,7 @@
 
 		"templates": 
 		{
-			"attributes": 
+			"attributes":{ "attributes":
 			{
 				"Strenght": 
 				{
@@ -33,8 +33,8 @@
 					"value": 0,
 					"label": "ATTRIBUTES.EMPATHY"
 				}
-			},
-			"skills":
+			}},
+			"skills":{ "skills":
 			{
 				"might": 
 				{
@@ -132,9 +132,26 @@
 					"attribute": "empathy",
 					"label": "SKILLS.ANIMAL_HANDLING"
 				}
-			},
-			"main":
+			}},
+			"main":	{ "main":
 			{
+				"attributesCondition":
+				{
+					"strenght": 0,
+					"agility": 0,
+					"wits": 0,
+					"empathy": 0
+				},
+				"kin":
+				{
+					"value": 0,
+					"label": "MAIN.KIN"
+				},
+				"proffession":
+				{
+					"value": 0,
+					"label": "MAIN.PROFFESION"
+				},
 				"reputation":
 				{
 					"value": 0,
@@ -148,10 +165,10 @@
 				"willpower":
 				{
 					"value": 0,
-					"label": "MAIN.EXPERIENCE"
+					"label": "MAIN.WILLPOWER"
 				}
-			},
-			"biography": 
+			}},
+			"biography": {"biography":
 			{
 				"age":
 				{
@@ -188,8 +205,8 @@
 					"value": "",
 					"label": "BIOGRAPHY.CLOTHING_APPEARANCE"
 				}
-			},
-			"coins":
+			}},
+			"coins": {"coins":
 			{
 				"bronze": 
 				{
@@ -209,8 +226,8 @@
 				  	"label": "COIN.GOLD"
 
 				}
-			},
-			"consumables": 
+			}},
+			"consumables": {"consumables": 
 			{
 				"food": 
 				{
@@ -233,8 +250,8 @@
 					"value": 0,
 					"label": "CONSUMABLES.TORCHES"
 				}
-			},
-			"conditions":
+			}},
+			"conditions": {"conditions":
 			{
 				"sleepless":
 				{
@@ -256,8 +273,8 @@
 					"value": false,
 					"label": "CONDITIONS.COLD"
 				}
-			},
-			"siteDescription":
+			}},
+			"siteDescription": {"siteDescription":
 			{
 				"location":
 				{
@@ -279,7 +296,7 @@
 					"value": "",
 					"label": "SITE_DESCRIPTION.DEFENSE_RAITING"
 				}
-			}
+			}}
 		},
 
 		"character": 

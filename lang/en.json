@@ -1,0 +1,58 @@
+{
+
+
+	"MAIN.REPUTATION": "Reputation",
+	"MAIN.EXPERIENCE": "Experience",
+	"MAIN.WILLPOWER": "Willpower",
+
+	"BIOGRAPHY.AGE": "Age",
+	"BIOGRAPHY.PRIDE": "Pride",
+	"BIOGRAPHY.DARK_SECRET": "Dark Secret",
+	"BIOGRAPHY.RELATIONS": "Relations",
+	"BIOGRAPHY.FACE_APPEARANCE": "Face Appearance",
+	"BIOGRAPHY.BODY_APPEARANCE": "Body Appearance",
+	"BIOGRAPHY.CLOTHING_APPEARANCE": "Clothing Appearance",
+
+	"COIN.BRONZE": "Strenght",
+	"COIN.SILVER": "Strenght",
+	"COIN.GOLD": "Strenght",
+
+	"CONSUMABLES.FOOD": "Strenght",
+	"CONSUMABLES.WATER": "Strenght",
+	"CONSUMABLES.BULLETS": "Strenght",
+	"CONSUMABLES.TORCHES": "Strenght",
+
+	"CONDITIONS.SLEEPLESS": "Strenght",
+	"CONDITIONS.THISTY": "Strenght",
+	"CONDITIONS.HUNGRY": "Strenght",
+	"CONDITIONS.COLD": "Strenght",
+
+	"SITE_DESCRIPTION.LOCATION": "Location",
+	"SITE_DESCRIPTION.DESCRIPTION": "Description",
+	"SITE_DESCRIPTION.SURROUNDING": "Surrounding",
+	"SITE_DESCRIPTION.DEFENSE_RAITING": "Defense Raiting",
+
+	"ATTRIBUTES.LABEL": "Attributes",
+    "ATTRIBUTES.STRENGHT": "Strenght",
+    "ATTRIBUTES.AGILITY": "Agility",
+    "ATTRIBUTES.WITS": "Wits",
+    "ATTRIBUTES.EMPATHY": "Empathy",
+
+	"SKILLS.LABEL": "Skills",
+    "SKILLS.MIGHT": "Might",
+    "SKILLS.ENDURANCE": "Endurance",
+    "SKILLS.MELEE": "Melee",
+    "SKILLS.CRAFTING": "Crafting",
+    "SKILLS.STEALTH": "Stealth",
+    "SKILLS.SLEIGHT_OF_HAND": "Sleight of Hand",
+    "SKILLS.MOVE": "Move",
+    "SKILLS.MARKSMANSHIP": "Marksmanship",
+    "SKILLS.SCOUTING": "Scouting",
+    "SKILLS.LORE": "Lore",
+    "SKILLS.SURVIVAL": "Survival",
+    "SKILLS.INSIGHT": "Insight",
+    "SKILLS.MANIPULATION": "Manipulation",
+    "SKILLS.PERFORMANCE": "Performance",
+    "SKILLS.HEALING": "Healing",
+    "SKILLS.ANIMAL_HANDLING": "Animal Handling"
+}
