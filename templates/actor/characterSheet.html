@@ -3,16 +3,32 @@
         <!--<nav class="sheet-tabs tabs" data-group="primary">-->
         <nav class="sheet-tabs tabsBar" data-group="primary">
             <!--<div class="bookMark"> <b class="item" data-tab="main">MAIN</b> </div>-->
-            <b class="item bookMark" data-tab="main">M</b>
-            <b class="item bookMark" data-tab="combat">C</b>
+            <b class="item bookMark" data-tab="main">main</b>
+            <b class="item bookMark" data-tab="skills">skill</b>
+            <b class="item bookMark" data-tab="combat">combat</b>
+            <b class="item bookMark" data-tab="talent">talent</b>
+            <b class="item bookMark" data-tab="gear">gear</b>
+            <b class="item bookMark" data-tab="biography">biography</b>
         </nav>
 
         <div class="sheet-body">
             <div class="tab" data-group="primary" data-tab="main">
-                {{> systems/forbiddenAlpha/templates/actor/tab/main.html}}
+                {{> systems/forbiddenAlpha/templates/actor/tab/mainTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="skills">
+                {{> systems/forbiddenAlpha/templates/actor/tab/skillTab.html}}
             </div>
             <div class="tab" data-group="primary" data-tab="combat">
-                {{> systems/forbiddenAlpha/templates/actor/tab/combat.html}}
+                {{> systems/forbiddenAlpha/templates/actor/tab/combatTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="talent">
+                {{> systems/forbiddenAlpha/templates/actor/tab/talentTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="gear">
+                {{> systems/forbiddenAlpha/templates/actor/tab/gearTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="biography">
+                {{> systems/forbiddenAlpha/templates/actor/tab/biographyTab.html}}
             </div>
         </div>
 

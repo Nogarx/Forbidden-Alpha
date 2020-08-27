@@ -6,12 +6,13 @@ import { ForbiddenAlphaActorSheet } from "./actorSheet.js";
 export class ForbiddenAlphaCharacterSheet extends ForbiddenAlphaActorSheet 
 {
     /** @override */
-    static get defaultOptions() {
+    static get defaultOptions() 
+    {
         return mergeObject(super.defaultOptions, {
         classes: ["forbiddenAlpha", "sheet", "actor"],
         template: "systems/forbiddenAlpha/templates/actor/characterSheet.html",
-        width: 920,
-        height: 570,
+        width: 1000,
+        height: 700,
         resizable: false,
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
         });

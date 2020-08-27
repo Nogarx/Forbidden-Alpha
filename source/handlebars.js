@@ -2,8 +2,12 @@ function preloadHandlebarsTemplates()
 {
     const templatePaths = 
     [
-      "systems/forbiddenAlpha/templates/actor/tab/main.html",
-      "systems/forbiddenAlpha/templates/actor/tab/combat.html",
+      "systems/forbiddenAlpha/templates/actor/tab/biographyTab.html",
+	  "systems/forbiddenAlpha/templates/actor/tab/combatTab.html",
+	  "systems/forbiddenAlpha/templates/actor/tab/gearTab.html",
+	  "systems/forbiddenAlpha/templates/actor/tab/mainTab.html",
+	  "systems/forbiddenAlpha/templates/actor/tab/skillTab.html",
+	  "systems/forbiddenAlpha/templates/actor/tab/talentTab.html"
     ];
     return loadTemplates(templatePaths);
 }

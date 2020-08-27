@@ -1,0 +1,36 @@
+<div class="skillTab">
+    <!--LEFT PAGE-->
+    <div class="leftPage">
+        <!--TITLE-->
+        <div class="pageTitle">{{localize "ATTRIBUTES.LABEL"}}</div>
+        <!--CONTNENT-->
+        <div class="pageContent"> 
+            <!--ADD ATTRIBUTES TO PAGE-->
+            <div class="attributeList">
+                {{#each data.attributes as |attribute key|}}
+                    <div class="attribute">
+                        <input name="data.attributes.{{key}}.value" type="number" value="{{attribute.value}}" data-dtype="Number" />
+                        <button class="roll-skill" data-skill="{{key}}">{{localize attribute.label}}</button>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <!--RIGHT PAGE-->
+    <div class="rightPage">
+        <!--TITLE-->
+        <div class="pageTitle">{{localize "SKILLS.LABEL"}}</div>
+        <!--CONTNENT-->
+        <div class="pageContent"> 
+            <!--ADD SKILLS TO PAGE-->
+            <div class="skillList">
+            {{#each actor.data.skills as |skill key|}}
+                <div class="skill">
+                    <button class="roll-skill" data-skill="{{key}}">{{localize skill.label}}</button>
+                    <input name="data.skills.{{key}}.value" type="number" value="{{skill.value}}" data-dtype="Number" />
+                </div>
+            {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -11,7 +11,7 @@ export class ForbiddenAlphaAdventureSiteSheet extends ForbiddenAlphaActorSheet
         classes: ["forbiddenAlpha", "sheet", "actor"],
         template: "systems/forbiddenAlpha/templates/actor/adventureSiteSheet.html",
         width: 1000,
-        height: 500,
+        height: 700,
         resizable: false,
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
         });
