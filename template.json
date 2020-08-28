@@ -144,12 +144,12 @@
 				},
 				"kin":
 				{
-					"value": 0,
+					"value": "",
 					"label": "MAIN.KIN"
 				},
 				"proffession":
 				{
-					"value": 0,
+					"value": "",
 					"label": "MAIN.PROFFESION"
 				},
 				"reputation":
@@ -172,7 +172,7 @@
 			{
 				"age":
 				{
-					"value": "",
+					"value": 0,
 					"label": "BIOGRAPHY.AGE"
 				},
 				"pride": 

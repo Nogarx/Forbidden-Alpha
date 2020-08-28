@@ -1,10 +1,12 @@
 {
 
-
+	"MAIN.KIN": "Kin",
+	"MAIN.PROFFESION": "Proffession",
 	"MAIN.REPUTATION": "Reputation",
 	"MAIN.EXPERIENCE": "Experience",
 	"MAIN.WILLPOWER": "Willpower",
 
+	"BIOGRAPHY.LABEL": "Biography",
 	"BIOGRAPHY.AGE": "Age",
 	"BIOGRAPHY.PRIDE": "Pride",
 	"BIOGRAPHY.DARK_SECRET": "Dark Secret",
@@ -17,11 +19,13 @@
 	"COIN.SILVER": "Strenght",
 	"COIN.GOLD": "Strenght",
 
+	"CONSUMABLES.LABEL": "Consumables",
 	"CONSUMABLES.FOOD": "Strenght",
 	"CONSUMABLES.WATER": "Strenght",
 	"CONSUMABLES.BULLETS": "Strenght",
 	"CONSUMABLES.TORCHES": "Strenght",
 
+	"CONDITIONS.LABEL": "Conditions",
 	"CONDITIONS.SLEEPLESS": "Strenght",
 	"CONDITIONS.THISTY": "Strenght",
 	"CONDITIONS.HUNGRY": "Strenght",
@@ -54,5 +58,31 @@
     "SKILLS.MANIPULATION": "Manipulation",
     "SKILLS.PERFORMANCE": "Performance",
     "SKILLS.HEALING": "Healing",
-    "SKILLS.ANIMAL_HANDLING": "Animal Handling"
+	"SKILLS.ANIMAL_HANDLING": "Animal Handling",
+	
+	"COMBAT.LABEL": "Combat",
+	"TALENTS.LABEL": "Talents",
+	"SPELLS.LABEL": "Spells",
+	"GEAR.LABEL": "Gear",
+	"BOOKTITLE.LABEL": "The Forbidden Tale of",
+
+	"KIN.LABEL": "Kin",
+	"KIN.HUMAN": "Human",
+	"KIN.ELF": "Elf",
+	"KIN.HALF_ELF": "Half Elf",
+	"KIN.DWARF": "Dwarf",
+	"KIN.HALFLING": "Halfling",
+	"KIN.WOLFKIN": "Wolfkin",
+	"KIN.ORC": "Orc",
+	"KIN.GOBLIN": "Goblin",
+
+	"PROFFESSION.LABEL": "Proffession",
+	"PROFFESSION.DRUID": "Druid",
+	"PROFFESSION.FIGHTER": "Fighter",
+	"PROFFESSION.HUNTER": "Hunter",
+	"PROFFESSION.MINSTREL": "Minstrel",
+	"PROFFESSION.PEDDLER": "Peddler",
+	"PROFFESSION.RIDER": "Rider",
+	"PROFFESSION.ROGUE": "Rogue",
+	"PROFFESSION.SORCERER": "Sorcerer"
 }
