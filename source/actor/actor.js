@@ -1,12 +1,12 @@
 /**
- * Extend the base Actor.
- * @extends {Actor}
- */
+* Extend the base Actor.
+* @extends {Actor}
+*/
 export class ForbiddenAlphaActor extends Actor
 {
 	/**
-	 * Augment the basic actor data with additional dynamic data.
-	 */
+	* Augment the basic actor data with additional dynamic data.
+	*/
 	prepareData() 
 	{
 		super.prepareData();
@@ -21,8 +21,8 @@ export class ForbiddenAlphaActor extends Actor
 	}
 
 	/**
-	 * Prepare Character type specific data
-	 */
+	* Prepare Character type specific data
+	*/
 	_prepareCharacterData(actorData) 
 	{
 		const data = actorData.data;

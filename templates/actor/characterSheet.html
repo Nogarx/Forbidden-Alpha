@@ -2,20 +2,19 @@
     <div class="book">
         <!--<nav class="sheet-tabs tabs" data-group="primary">-->
         <nav class="sheet-tabs tabsBar" data-group="primary">
-            <!--<div class="bookMark"> <b class="item" data-tab="main">MAIN</b> </div>-->
-            <b class="item bookMark" data-tab="main">main</b>
-            <b class="item bookMark" data-tab="skills">skill</b>
-            <b class="item bookMark" data-tab="combat">combat</b>
-            <b class="item bookMark" data-tab="talent">talent</b>
-            <b class="item bookMark" data-tab="gear">gear</b>
-            <b class="item bookMark" data-tab="biography">biography</b>
+            <b class="item bookMark" data-tab="main"><img src="systems/forbiddenAlpha/assets/icons/mainMark.png"></b>
+            <b class="item bookMark" data-tab="skill"><img src="systems/forbiddenAlpha/assets/icons/skillMark.png"></b>
+            <b class="item bookMark" data-tab="combat"><img src="systems/forbiddenAlpha/assets/icons/combatMark.png"></b>
+            <b class="item bookMark" data-tab="talent"><img src="systems/forbiddenAlpha/assets/icons/talentMark.png"></b>
+            <b class="item bookMark" data-tab="gear"><img src="systems/forbiddenAlpha/assets/icons/gearMark.png"></b>
+            <b class="item bookMark" data-tab="biography"><img src="systems/forbiddenAlpha/assets/icons/biographyMark.png"></b>
         </nav>
 
         <div class="sheet-body">
             <div class="tab" data-group="primary" data-tab="main">
                 {{> systems/forbiddenAlpha/templates/actor/tab/mainTab.html}}
             </div>
-            <div class="tab" data-group="primary" data-tab="skills">
+            <div class="tab" data-group="primary" data-tab="skill">
                 {{> systems/forbiddenAlpha/templates/actor/tab/skillTab.html}}
             </div>
             <div class="tab" data-group="primary" data-tab="combat">

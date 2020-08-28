@@ -5,7 +5,18 @@ import { ForbiddenAlphaMonsterSheet } from "./actor/monsterSheet.js";
 import { ForbiddenAlphaStrongholdSheet } from "./actor/strongholdSheet.js";
 import { ForbiddenAlphaAdventureSiteSheet } from "./actor/adventureSiteSheet.js";
 import { ForbiddenAlphaItem } from "./item/item.js";
-import { ForbiddenAlphaItemSheet } from "./item/itemSheet.js";
+import { ForbiddenAlphaTalentSheet } from "./item/talentSheet.js";
+import { ForbiddenAlphaSpellSheet } from "./item/spellSheet.js";
+import { ForbiddenAlphaWeaponSheet } from "./item/weaponSheet.js";
+import { ForbiddenAlphaArmorSheet } from "./item/armorSheet.js";
+import { ForbiddenAlphaCriticalInjurySheet } from "./item/criticalInjurySheet.js";
+import { ForbiddenAlphaMonsterTalentSheet } from "./item/monsterTalentSheet.js";
+import { ForbiddenAlphaMonsterSpellSheet } from "./item/monsterSpellSheet.js";
+import { ForbiddenAlphaBuildingSheet } from "./item/buildingSheet.js";
+import { ForbiddenAlphaHirelingSheet } from "./item/hirelingSheet.js";
+import { ForbiddenAlphaGearSheet } from "./item/gearSheet.js";
+import { ForbiddenAlphaMaterialSheet } from "./item/materialSheet.js";
+import { ForbiddenAlphaArtifactSheet } from "./item/artifactSheet.js";
 import { initializeHandlebars } from "./handlebars.js";
 
 Hooks.once('init', async function() 
@@ -38,7 +49,18 @@ Hooks.once('init', async function()
 	Actors.registerSheet("forbiddenAlpha", ForbiddenAlphaStrongholdSheet, { types: ["stronghold"], makeDefault: true });
 	Actors.registerSheet("forbiddenAlpha", ForbiddenAlphaAdventureSiteSheet, { types: ["adventureSite"], makeDefault: true });
 	Items.unregisterSheet("core", ItemSheet);
-	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaItemSheet, { makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaTalentSheet, { types: ["talent"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaSpellSheet, { types: ["spell"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaWeaponSheet, { types: ["weapon"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaArmorSheet, { types: ["armor"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaCriticalInjurySheet, { types: ["criticalInjury"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaMonsterTalentSheet, { types: ["monsterTalent"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaMonsterSpellSheet, { types: ["monsterSpell"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaBuildingSheet, { types: ["building"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaHirelingSheet, { types: ["hireling"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaGearSheet, { types: ["gear"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaMaterialSheet, { types: ["material"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaArtifactSheet, { types: ["artifact"], makeDefault: true });
 
 	// Handlebars initialization.
 	initializeHandlebars();

@@ -59,12 +59,6 @@
     "SKILLS.PERFORMANCE": "Performance",
     "SKILLS.HEALING": "Healing",
 	"SKILLS.ANIMAL_HANDLING": "Animal Handling",
-	
-	"COMBAT.LABEL": "Combat",
-	"TALENTS.LABEL": "Talents",
-	"SPELLS.LABEL": "Spells",
-	"GEAR.LABEL": "Gear",
-	"BOOKTITLE.LABEL": "The Forbidden Tale of",
 
 	"KIN.LABEL": "Kin",
 	"KIN.HUMAN": "Human",
@@ -84,5 +78,12 @@
 	"PROFFESSION.PEDDLER": "Peddler",
 	"PROFFESSION.RIDER": "Rider",
 	"PROFFESSION.ROGUE": "Rogue",
-	"PROFFESSION.SORCERER": "Sorcerer"
+	"PROFFESSION.SORCERER": "Sorcerer",
+
+	"COMBAT.LABEL": "Combat",
+	"TALENTS.LABEL": "Talents",
+	"SPELLS.LABEL": "Spells",
+	"GEAR.LABEL": "Gear",
+	"BOOKTITLE.LABEL": "The Forbidden Tale of",
+	"MONSTERBOOKTITLE.LABEL": "The Bestiary"
 }

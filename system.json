@@ -2,7 +2,7 @@
 	"name": "forbiddenAlpha",
 	"title": "Forbidden Alpha",
 	"description": "The Forbidden Alpha system for FoundryVTT!",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"minimumCoreVersion": "0.6.2",
 	"compatibleCoreVersion": "0.6.5",
 	"templateVersion": 2,
@@ -15,7 +15,9 @@
 	[
 		"css/forbiddenAlpha.css",
 		"css/forbiddenBook.css",
-		"css/forbiddenBookTabs.css"
+		"css/forbiddenBookTabs.css",
+		"css/forbiddenScroll.css",
+		"css/forbiddenScrollItem.css"
 	],
 	"scripts": 
 	[
