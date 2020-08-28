@@ -1,4 +1,4 @@
-<div class="skillTab">
+<div class="bookTab">
     <!--LEFT PAGE-->
     <div class="leftPage">
         <!--TITLE-->
@@ -6,10 +6,10 @@
         <!--CONTNENT-->
         <div class="pageContent"> 
             <!--ADD ATTRIBUTES TO PAGE-->
-            <div class="attributeList">
+            <div class="singleColumn">
                 {{#each data.attributes as |attribute key|}}
                     <div class="attribute">
-                        <input name="data.attributes.{{key}}.value" type="number" value="{{attribute.value}}" data-dtype="Number" />
+                        <input class="bookInput" name="data.attributes.{{key}}.value" type="number" value="{{attribute.value}}" data-dtype="Number" />
                         <button class="roll-skill" data-skill="{{key}}">{{localize attribute.label}}</button>
                     </div>
                 {{/each}}
@@ -23,7 +23,7 @@
         <!--CONTNENT-->
         <div class="pageContent"> 
             <!--ADD SKILLS TO PAGE-->
-            <div class="skillList">
+            <div class="wrapColumns">
             {{#each actor.data.skills as |skill key|}}
                 <div class="skill">
                     <button class="roll-skill" data-skill="{{key}}">{{localize skill.label}}</button>

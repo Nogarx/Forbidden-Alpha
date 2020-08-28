@@ -1,12 +1,82 @@
-<div class="mainTab">
+<div class="bookTab">
+    <!--LEFT PAGE-->
     <div class="leftPage">
+        <!--CONTNENT-->
         <div class="pageContent"> 
-
+            <!--CHARACTER IMAGE-->
+            <div class="profileImage">
+                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+            </div>
+            <!--TITLE-->
+            <div class="bookTitle ">{{localize "BOOKTITLE.LABEL"}}</div>
+            <div class="bookTitleName">
+                <input name="name" type="text" value="{{actor.name}}" />
+            </div>
         </div>
     </div>
+    <!--RIGHT PAGE-->
     <div class="rightPage">
+        <!--CONTNENT-->
         <div class="pageContent"> 
+            
+            <div class="singleColumn">
+                
+                <div class="centeredRow">
+                    <label>{{localize "MAIN.KIN"}}:</label>
+                    <select name="data.main.kin.value">
+                        {{#select data.main.kin.value}}
+                        <option hidden disabled selected value> {{localize "KIN.LABEL"}} </option>
+                        <option value="human">{{localize "KIN.HUMAN"}}</option>
+                        <option value="elf">{{localize "KIN.ELF"}}</option>
+                        <option value="halfElf">{{localize "KIN.HALF_ELF"}}</option>
+                        <option value="dwarf">{{localize "KIN.DWARF"}}</option>
+                        <option value="halfling">{{localize "KIN.HALFLING"}}</option>
+                        <option value="wolfkin">{{localize "KIN.WOLFKIN"}}</option>
+                        <option value="orc">{{localize "KIN.ORC"}}</option>
+                        <option value="goblin">{{localize "KIN.GOBLIN"}}</option>                          
+                        {{/select}}
+                    </select>
+                </div>      
 
+                <div class="centeredRow">
+                    <label>{{localize "MAIN.PROFFESION"}}:</label>
+                    <select name="data.main.proffession.value">
+                        {{#select data.main.proffession.value}}
+                        <option hidden disabled selected value> {{localize "PROFFESSION.LABEL"}} </option>
+                        <option value="druid">{{localize "PROFFESSION.DRUID"}}</option>
+                        <option value="fighter">{{localize "PROFFESSION.FIGHTER"}}</option>
+                        <option value="hunter">{{localize "PROFFESSION.HUNTER"}}</option>
+                        <option value="minstrel">{{localize "PROFFESSION.MINSTREL"}}</option>
+                        <option value="peddler">{{localize "PROFFESSION.PEDDLER"}}</option>
+                        <option value="rider">{{localize "PROFFESSION.RIDER"}}</option>
+                        <option value="rogue">{{localize "PROFFESSION.ROGUE"}}</option>
+                        <option value="sorcerer">{{localize "PROFFESSION.SORCERER"}}</option>                          
+                        {{/select}}
+                    </select>
+                </div>
+
+                <div class="centeredRow"> 
+                    <label>{{localize "BIOGRAPHY.AGE"}}:</label> 
+                    <input name="data.biography.age.value" type="number" value="{{data.biography.age.value}}" data-dtype="Number" /> 
+                </div>   
+
+                <div class="centeredRow">  
+                    <label>{{localize "MAIN.EXPERIENCE"}}:</label> 
+                    <input name="data.main.experience.value" type="number" value="{{data.main.experience.value}}" data-dtype="Number" /> 
+                </div>
+
+                <div class="centeredRow">  
+                    <label>{{localize "MAIN.REPUTATION"}}:</label>
+                    <input name="data.main.reputation.value" type="number" value="{{data.main.reputation.value}}" data-dtype="Number" /> 
+                </div>
+
+                <div class="centeredRow">  
+                    <label>{{localize "MAIN.WILLPOWER"}}:</label>
+                    <input name="data.main.willpower.value" type="number" value="{{data.main.willpower.value}}" data-dtype="Number" /> 
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
+

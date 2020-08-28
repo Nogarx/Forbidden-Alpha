@@ -1,3 +1,7 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------- BOOK STRUCTURE -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
 .forbiddenAlpha.sheet .book 
 {
     display: flex;
@@ -10,63 +14,7 @@
     height: 100%;
     position: relative;
 
-    /*
-    background:red;
-    -webkit-mask:url(../../assets/actor/character/characterBackground.png);*/
-}
-
-.forbiddenAlpha .book button 
-{
-    /* Transform */
-    width: auto;
-    height: auto;
-    padding: 2px 4px;
-    line-height: inherit;
-    
-    /* Style */
-    border: 0 none;
-    border-radius: 3px;
-    box-shadow: none;
-    background: transparent;
-    cursor: pointer;
-    color: rgb(26, 26, 26);
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
-}
-
-.forbiddenAlpha .book button:hover
-{
-    text-shadow: 0px 0px 2px red;
-}
-
-
-.forbiddenAlpha .book input 
-{
-    /* Transform */
-    width: auto;
-    height: auto;
-    padding: 2px 4px;
-    line-height: inherit;
-    
-    /* Style */
-    border: none;
-    border-radius: 3px;
-    box-shadow: none;
-    background: transparent;
-    color: rgb(26, 26, 26);
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
-    text-align: center;
-}
-
-.forbiddenAlpha .book input[type="number"]::-webkit-outer-spin-button,
-.forbiddenAlpha .book input[type="number"]::-webkit-inner-spin-button 
-{
-    /*Disable number spinner*/
-    -webkit-appearance: none;
-    margin: 0;
+    font-family: var(--font-book);
 }
 
 .forbiddenAlpha.sheet .book .leftPage 
@@ -118,7 +66,6 @@
     /* Box transform */
     display: flex;
     position: absolute;
-    top: 2.5%;
     width: 70%;
     height: 10%;
     overflow: visible;
@@ -128,8 +75,7 @@
     /* Text */
     color: rgb(26, 26, 26);
     font-family: inherit;
-    font-size: 150pt;
-    font-size: 3.5vw;
+    font-size: 36px;
     font-weight: italic;
     text-decoration: underline;
 
@@ -141,16 +87,19 @@
 {
     /* Box transform */
     display: flex;
-    position: absolute;
-    top: 12.5%;
-    left: 10%;
-    width: 80%;
-    height: 81.5%;
+    position: relative;
+    top: 10%;
+    width: 88%;
+    height: 84%;
     overflow: hidden;
 
     /* Debug */
     /*background-color: rgba(255, 0, 0, 0.25);*/
 }
+
+/* ------------------------------------------------------------------------------- */
+/* ----------------------------------- TAB BAR ----------------------------------- */
+/* ------------------------------------------------------------------------------- */
 
 .forbiddenAlpha.sheet .book .tabsBar
 {
@@ -194,4 +143,142 @@
     /* Bookmark image */
     background-color: green;
     background-blend-mode: multiply;
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/* ----------------------------------- INPUTS ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha .book .pageContent label
+{
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    margin: 0px 8px;
+}
+
+.forbiddenAlpha .book .pageContent textarea
+{
+    /* Transform */
+    width: auto;
+    height: auto;
+    resize: none;
+
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: justify;
+    white-space: normal;
+
+    border: 0 none;
+    border-radius: 8px;
+    background-color: rgba(26, 26, 26, 0.055);
+
+    /* Debug */
+    /*background-color: rgba(0, 255, 0, 0.25);*/
+}
+
+.forbiddenAlpha .book .pageContent textarea:hover,
+.forbiddenAlpha .book .pageContent textarea:focus
+{
+    outline: none !important;
+    border-color: blue;
+    box-shadow: 0 0 8px blue;
+}
+
+.forbiddenAlpha .book .pageContent button 
+{
+    /* Transform */
+    width: auto;
+    height: auto;
+    padding: 2px 4px;
+    line-height: inherit;
+    
+    /* Style */
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+}
+
+.forbiddenAlpha .book .pageContent button:hover
+{
+    text-shadow: 0px 0px 2px red;
+}
+
+.forbiddenAlpha .book .pageContent input
+{
+    /* Transform */
+    width: auto;
+    height: auto;
+    padding: 2px 4px;
+    line-height: inherit;
+    
+    /* Style */
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+}
+
+.forbiddenAlpha .book .pageContent input:hover
+{
+    border-color: blue;
+    box-shadow: 0 0 8px blue;
+    text-shadow: 0px 0px 2px blue;
+}
+
+.forbiddenAlpha .book .pageContent input[type="number"]::-webkit-outer-spin-button,
+.forbiddenAlpha .book .pageContent input[type="number"]::-webkit-inner-spin-button 
+{
+    /*Disable number spinner*/
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.forbiddenAlpha .book .pageContent select
+{
+    /* Transform */
+    width: auto;
+    height: auto;
+    padding: 0px 4px;
+    line-height: inherit;
+    
+    /* Style */
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.forbiddenAlpha .book .pageContent select:hover
+{
+    border-color: blue;
+    box-shadow: 0 0 8px blue;
+    text-shadow: 0px 0px 2px blue;
 }
