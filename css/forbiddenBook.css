@@ -120,30 +120,54 @@
 .forbiddenAlpha.sheet .book .tabsBar .bookMark
 {
     /* Bookmark image */
-    background-image:url(../assets/bookmark.png);
+    background-image:url(../assets/bookMarkBackground.png);
     background-size: cover;
     background-position: center;
     overflow: visible;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     z-index: 10;
     margin: 5px 10px;
     text-align: center;
 }
 
-.forbiddenAlpha.sheet .book .tabsBar .bookMark:hover
+.forbiddenAlpha.sheet .book .tabsBar .bookMark:hover img
 {
     /* Bookmark image */
-    background-color: red;
-    background-blend-mode: multiply;
+    opacity: 1;
 }
 
-.forbiddenAlpha.sheet .book .active
+.forbiddenAlpha.sheet .book .tabsBar .bookMark img
 {
     /* Bookmark image */
-    background-color: green;
-    background-blend-mode: multiply;
+    width: 26px;
+    height: 26px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 8px;
+    border: none;
+    opacity: 0.3;
 }
+
+.forbiddenAlpha.sheet .book .tabsBar .active img
+{
+    /* Bookmark image */
+    opacity: 1;
+    width: 34px;
+    height: 34px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4px;
+    border: none;
+}
+
+.forbiddenAlpha.sheet .book .active image
+{
+    /* Bookmark image */
+    filter: invert(100%);
+}
+
+
 
 
 /* ------------------------------------------------------------------------------- */

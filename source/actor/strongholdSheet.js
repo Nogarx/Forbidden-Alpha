@@ -1,8 +1,8 @@
 import { ForbiddenAlphaActorSheet } from "./actorSheet.js";
 /**
- * Extend the basic ActorSheet with some very simple modifications
- * @extends {ForbiddenAlphaActorSheet}
- */
+* Extend the basic ActorSheet with some very simple modifications
+* @extends {ForbiddenAlphaActorSheet}
+*/
 export class ForbiddenAlphaStrongholdSheet extends ForbiddenAlphaActorSheet 
 {
     /** @override */

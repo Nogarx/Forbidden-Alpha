@@ -1,16 +1,35 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <div class="actorSheet">
-        {{!-- Sheet Header --}}
-        <header class="sheet-header">
-        </header>
-        <!--
-        <nav class="sheet-tabs tabs" data-group="primary">
-            HOLA MUNDO
+    <div class="book">
+        <!--<nav class="sheet-tabs tabs" data-group="primary">-->
+        <nav class="sheet-tabs tabsBar" data-group="primary">
+            <b class="item bookMark" data-tab="mainMonster"><img src="systems/forbiddenAlpha/assets/icons/mainMark.png"></b>
+            <b class="item bookMark" data-tab="skill"><img src="systems/forbiddenAlpha/assets/icons/skillMark.png"></b>
+            <b class="item bookMark" data-tab="combat"><img src="systems/forbiddenAlpha/assets/icons/combatMark.png"></b>
+            <b class="item bookMark" data-tab="talent"><img src="systems/forbiddenAlpha/assets/icons/talentMark.png"></b>
+            <b class="item bookMark" data-tab="gear"><img src="systems/forbiddenAlpha/assets/icons/gearMark.png"></b>
         </nav>
-        -->
-        <section class="sheet-body">
-            MONSTER
-        </section>
+
+        <div class="sheet-body">
+            <div class="tab" data-group="primary" data-tab="mainMonster">
+                {{> systems/forbiddenAlpha/templates/actor/tab/mainMonsterTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="skill">
+                {{> systems/forbiddenAlpha/templates/actor/tab/skillTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="combat">
+                {{> systems/forbiddenAlpha/templates/actor/tab/combatTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="talent">
+                {{> systems/forbiddenAlpha/templates/actor/tab/talentTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="gear">
+                {{> systems/forbiddenAlpha/templates/actor/tab/gearTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="biography">
+                {{> systems/forbiddenAlpha/templates/actor/tab/biographyTab.html}}
+            </div>
+        </div>
+
     </div>
 </form>
 

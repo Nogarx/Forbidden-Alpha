@@ -1,7 +1,7 @@
 /**
- * Extend the basic ActorSheet with some very simple modifications
- * @extends {ActorSheet}
- */
+* Extend the basic ActorSheet with some very simple modifications
+* @extends {ActorSheet}
+*/
 export class ForbiddenAlphaActorSheet extends ActorSheet 
 {
     activateListeners(html) 

@@ -1,0 +1,171 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ SCROLL STRUCTURE ------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .scroll 
+{
+    display: flex;
+    background-image:url(../assets/scroll.png);
+    background-size: cover;
+    background-position: center;
+
+    background-color: transparent;
+	width: 100%;
+    height: 100%;
+    position: relative;
+
+    font-family: var(--font-book);
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent 
+{
+    /* Box transform */
+    display: flex;
+    position: relative;
+    top: 12%;
+    left: 10%;
+    width: 80%;
+    height: 76%;
+    overflow: hidden;
+
+    /* Debug */
+    background-color: rgba(255, 0, 0, 0.25);
+}
+
+
+/* ------------------------------------------------------------------------------- */
+/* ----------------------------------- INPUTS ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .scroll .scrollContent label
+{
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    margin: 0px 8px;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent  textarea
+{
+    /* Transform */
+    width: auto;
+    height: auto;
+    resize: none;
+
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: justify;
+    white-space: normal;
+
+    border: 0 none;
+    border-radius: 8px;
+    background-color: rgba(26, 26, 26, 0.055);
+
+    /* Debug */
+    /*background-color: rgba(0, 255, 0, 0.25);*/
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent textarea:hover,
+.forbiddenAlpha.sheet .scroll .scrollContent textarea:focus
+{
+    outline: none !important;
+    border-color: blue;
+    box-shadow: 0 0 8px blue;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent  button 
+{
+    /* Transform */
+    width: auto;
+    height: auto;
+    padding: 2px 4px;
+    line-height: inherit;
+    
+    /* Style */
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent  button:hover
+{
+    text-shadow: 0px 0px 2px red;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent  input
+{
+    /* Transform */
+    width: auto;
+    height: auto;
+    padding: 2px 4px;
+    line-height: inherit;
+    
+    /* Style */
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent  input:hover
+{
+    border-color: blue;
+    box-shadow: 0 0 8px blue;
+    text-shadow: 0px 0px 2px blue;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent  input[type="number"]::-webkit-outer-spin-button,
+.forbiddenAlpha.sheet .scroll .scrollContent  input[type="number"]::-webkit-inner-spin-button 
+{
+    /*Disable number spinner*/
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent  select
+{
+    /* Transform */
+    width: auto;
+    height: auto;
+    padding: 0px 4px;
+    line-height: inherit;
+    
+    /* Style */
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent  select:hover
+{
+    border-color: blue;
+    box-shadow: 0 0 8px blue;
+    text-shadow: 0px 0px 2px blue;
+}
