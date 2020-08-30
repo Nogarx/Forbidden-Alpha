@@ -11,8 +11,9 @@ export class ForbiddenAlphaMaterialSheet extends ForbiddenAlphaItemSheet
         return mergeObject(super.defaultOptions, {
         classes: ["forbiddenAlpha", "sheet", "item"],
         template: "systems/forbiddenAlpha/templates/item/materialSheet.html",
-        width: 520,
-        height: 480,
+        width: 450,
+        height: 600,
+        resizable: false,
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
         });
     }
@@ -20,7 +21,7 @@ export class ForbiddenAlphaMaterialSheet extends ForbiddenAlphaItemSheet
     /** @override */
 	getData() 
 	{
-	const data = super.getData();
-	return data;
+        const data = super.getData();
+        return data;
 	}
 }

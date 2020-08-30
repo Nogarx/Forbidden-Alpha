@@ -12,7 +12,8 @@ export class ForbiddenAlphaTalentSheet extends ForbiddenAlphaItemSheet
         classes: ["forbiddenAlpha", "sheet", "item"],
         template: "systems/forbiddenAlpha/templates/item/talentSheet.html",
         width: 450,
-        height: 600,
+        height: 650,
+        resizable: false,
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
         });
     }
@@ -20,7 +21,7 @@ export class ForbiddenAlphaTalentSheet extends ForbiddenAlphaItemSheet
     /** @override */
 	getData() 
 	{
-	const data = super.getData();
-	return data;
+        const data = super.getData();
+        return data;
 	}
 }

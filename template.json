@@ -347,18 +347,18 @@
 	{
 		"types": 
 		[
-			"talent",
-			"spell",
-			"weapon", 
 			"armor",		
-			"criticalInjury",
-			"monsterTalent",
-			"monsterSpell",
+			"artifact",
 			"building",
-			"hireling",
+			"criticalInjury",
 			"gear",
+			"hireling",
 			"material",
-			"artifact"
+			"monsterSpell",
+			"monsterTalent",
+			"spell",
+			"talent",
+			"weapon"
 		],
 
 		"templates": 
@@ -366,31 +366,20 @@
 			"base": 
 			{
 				"description": ""
+			},
+			"ability":	
+			{
+				"rank":
+				{
+					"value": 0,
+					"label": "ABILITY.RANK"
+				},
+				"description":
+				{
+					"value": "",
+					"label": "ABILITY.DESCRIPTION"
+				}
 			}
-		},
-
-		"talent": 
-		{
-			"templates": 
-			[
-				"base"
-			]
-		},
-
-		"spell": 
-		{
-			"templates": 
-			[
-				"base"
-			]
-		},
-
-		"weapon": 
-		{
-			"templates": 
-			[
-				"base"
-			]
 		},
 
 		"armor": 
@@ -401,23 +390,7 @@
 			]
 		},
 
-		"criticalInjury": 
-		{
-			"templates": 
-			[
-				"base"
-			]
-		},
-
-		"monsterTalent": 
-		{
-			"templates": 
-			[
-				"base"
-			]
-		},
-
-		"monsterSpell": 
+		"artifact": 
 		{
 			"templates": 
 			[
@@ -433,7 +406,7 @@
 			]
 		},
 
-		"hireling": 
+		"criticalInjury": 
 		{
 			"templates": 
 			[
@@ -449,6 +422,14 @@
 			]
 		},
 
+		"hireling": 
+		{
+			"templates": 
+			[
+				"base"
+			]
+		},
+
 		"material": 
 		{
 			"templates": 
@@ -457,7 +438,39 @@
 			]
 		},
 
-		"artifact": 
+		"monsterSpell": 
+		{
+			"templates": 
+			[
+				"ability"
+			]
+		},
+
+		"monsterTalent": 
+		{
+			"templates": 
+			[
+				"ability"
+			]
+		},
+
+		"spell": 
+		{
+			"templates": 
+			[
+				"ability"
+			]
+		},
+
+		"talent": 
+		{
+			"templates": 
+			[
+				"ability"
+			]
+		},
+
+		"weapon": 
 		{
 			"templates": 
 			[

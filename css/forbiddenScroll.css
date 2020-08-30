@@ -6,9 +6,9 @@
 {
     display: flex;
     background-image:url(../assets/scroll.png);
-    background-size: cover;
+    background-size: 430px 600px;
     background-position: center;
-
+    background-repeat: no-repeat;
     background-color: transparent;
 	width: 100%;
     height: 100%;
@@ -22,14 +22,14 @@
     /* Box transform */
     display: flex;
     position: relative;
-    top: 12%;
+    top: 13%;
     left: 10%;
     width: 80%;
-    height: 76%;
+    height: 74%;
     overflow: hidden;
 
     /* Debug */
-    background-color: rgba(255, 0, 0, 0.25);
+    /*background-color: rgba(255, 0, 0, 0.25);*/
 }
 
 

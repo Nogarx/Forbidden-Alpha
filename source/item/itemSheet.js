@@ -6,17 +6,17 @@ export class ForbiddenAlphaItemSheet extends ItemSheet
 {
 	getData() 
 	{
-	const data = super.getData();
-	return data;
+		const data = super.getData();
+		return data;
 	}
 
 	setPosition(options = {}) 
 	{
-	const position = super.setPosition(options);
-	const sheetBody = this.element.find(".sheet-body");
-	const bodyHeight = position.height - 192;
-	sheetBody.css("height", bodyHeight);
-	return position;
+		const position = super.setPosition(options);
+		const sheetBody = this.element.find(".sheet-body");
+		const bodyHeight = position.height - 192;
+		sheetBody.css("height", bodyHeight);
+		return position;
 	}
 
     activateListeners(html) 
