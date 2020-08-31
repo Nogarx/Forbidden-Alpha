@@ -1,3 +1,51 @@
 <form class="{{cssClass}}" autocomplete="off">
-    CRITICAL INJURY
+    <div class="scroll">
+        <div class="scrollContent">
+            <div class="singleColumn">
+
+                <!--TITLE-->
+                <div class="injuryTitle ">
+                    <div class="centeredRow"> <input name="name" type="text" value="{{item.name}}" /> </div>
+                </div>
+                
+                <!--ITEM IMAGE-->
+                <div class="injuryImage">
+                    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+                </div>
+
+                <div class="injuryRow">
+                    <!--LETHAL-->
+                    <div class="injuryProperty">
+                        <label> {{localize data.lethal.label}} </label>          
+                        <select name="data.lethal.value">
+                            {{#select data.lethal.value}}
+                            <option hidden disabled selected value> {{localize "CRITICAL_INJURY_LETHAL.LABEL"}} </option>
+                            <option value="yes">{{localize "CRITICAL_INJURY_LETHAL.YES"}}</option>
+                            <option value="no">{{localize "CRITICAL_INJURY_LETHAL.NO"}}</option>                          
+                            {{/select}}
+                        </select>
+                    </div>
+                        
+                    <!--TIME LIMIT-->
+                    <div class="injuryProperty">
+                        <label> {{localize data.timeLimit.label}} </label>          
+                        <input name="data.timeLimit.value" type="text" value="{{data.timeLimit.value}}" />  
+                    </div>
+
+                    <!--HEALING TIME-->
+                    <div class="injuryProperty">
+                        <label> {{localize data.healingTime.label}} </label>          
+                        <input name="data.healingTime.value" type="text" value="{{data.healingTime.value}}" />  
+                    </div>
+                </div>
+
+                <!--EFFECT-->
+                <div class="injuryRow"> <label> {{localize data.effect.label}} </label> </div>
+                <div class="textInjuryRow">
+                    <textarea name="data.effect.value">{{data.effect.value}}</textarea>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </form>

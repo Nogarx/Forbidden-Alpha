@@ -363,38 +363,108 @@
 
 		"templates": 
 		{
-			"base": 
+			"common": { "common":
 			{
-				"description": ""
-			},
-			"ability":	
-			{
-				"rank":
+				"appearance":
 				{
-					"value": 0,
-					"label": "ABILITY.RANK"
-				},
+					"label": "ITEM.APPEARANCE",
+					"value": ""
+				},	
+				"quality":
+				{
+					"label": "ITEM.QUALITY",
+					"value": ""
+				},	
 				"description":
 				{
-					"value": "",
-					"label": "ABILITY.DESCRIPTION"
+					"label": "ITEM.DESCRIPTION",
+					"value": ""
+				},			
+				"drawback":
+				{
+					"label": "ITEM.DRAWBACK",
+					"value": ""
+				},
+				"effect":
+				{
+					"label": "ITEM.EFFECT",
+					"value": ""
+				},
+				"weight":
+				{
+					"label": "ITEM.WEIGHT",
+					"value": ""
 				}
-			}
+			}},
+			"crafting": {"crafting":
+			{
+				"material":
+				{
+					"label": "CRAFTING.MATERIAL",
+					"value": ""
+				},
+				"time":
+				{
+					"label": "CRAFTING.TIME",
+					"value": ""
+				},
+				"talent":
+				{
+					"label": "CRAFTING.TALENT",
+					"value": ""
+				},
+				"tools":
+				{
+					"label": "CRAFTING.TOOLS",
+					"value": ""
+				}
+			}},
+			"commerce": {"commerce":
+				{
+					"price":
+					{
+						"label": "COMMERCE.PRICE",
+						"valueCopper": 0,
+						"valueSilver": 0,
+						"valueGold": 0
+					},
+					"recolected":
+					{
+						"label": "COMMERCE.RECOLECTED",
+						"value": ""
+					},
+					"shelfLife":
+					{
+						"label": "COMMERCE.SHELF_LIFE",
+						"value": ""
+					}
+				}}
 		},
 
 		"armor": 
 		{
 			"templates": 
 			[
-				"base"
-			]
+				"common"
+			],
+			"armorRating":
+			{
+				"label": "ARMOR.ARMOR_RATING",
+				"value": 0,
+				"maximum": 0
+			},
+			"bodyPart":
+			{
+				"label": "ARMOR.BODY_PART",
+				"value": ""
+			}
 		},
 
 		"artifact": 
 		{
 			"templates": 
 			[
-				"base"
+				"common"
 			]
 		},
 
@@ -402,80 +472,183 @@
 		{
 			"templates": 
 			[
-				"base"
-			]
+				"crafting"
+			],
+			"description":
+			{
+				"label": "BUILDING.DESCRIPTION",
+				"value": ""
+			}
 		},
 
 		"criticalInjury": 
 		{
-			"templates": 
-			[
-				"base"
-			]
+			"lethal":
+			{
+				"label": "CRITICAL_INJURY.LETHAL",
+				"value": ""
+			},
+			"timeLimit":
+			{
+				"label": "CRITICAL_INJURY.TIME_LIMIT",
+				"value": ""
+			},
+			"healingTime":
+			{
+				"label": "CRITICAL_INJURY.HEALING_TIME",
+				"value": ""
+			},
+			"effect":
+			{
+				"label": "CRITICAL_INJURY.EFFECT",
+				"value": ""
+			}
 		},
 
 		"gear": 
 		{
 			"templates": 
 			[
-				"base"
+				"common",
+				"commerce"
 			]
 		},
 
 		"hireling": 
 		{
-			"templates": 
-			[
-				"base"
-			]
+			"salary":
+			{
+				"label": "HIRELING.SALARY",
+				"valueCopper": 0,
+				"valueSilver": 0,
+				"valueGold": 0
+			},
+			"description":
+			{
+				"value": "",
+				"label": "HIRELING.DESCRIPTION"
+			}
 		},
 
 		"material": 
 		{
 			"templates": 
 			[
-				"base"
+				"common", 
+				"crafting",
+				"commerce"
 			]
 		},
 
 		"monsterSpell": 
 		{
-			"templates": 
-			[
-				"ability"
-			]
+			"scrollTitle":
+			{
+				"label": "MONSTER_SPELL.TITLE"
+			},
+			"rank":
+			{
+				"value": 0,
+				"label": "MONSTER_SPELL.RANK"
+			},
+			"description":
+			{
+				"value": "",
+				"label": "MONSTER_SPELL.DESCRIPTION"
+			}
 		},
 
 		"monsterTalent": 
 		{
-			"templates": 
-			[
-				"ability"
-			]
+			"scrollTitle":
+			{
+				"label": "MONSTER_TALENT.TITLE"
+			},
+			"rank":
+			{
+				"value": 0,
+				"label": "MONSTER_TALENT.RANK"
+			},
+			"description":
+			{
+				"value": "",
+				"label": "MONSTER_TALENT.DESCRIPTION"
+			}
 		},
 
 		"spell": 
 		{
-			"templates": 
-			[
-				"ability"
-			]
+			"scrollTitle":
+			{
+				"label": "SPELL.TITLE"
+			},
+			"rank":
+			{
+				"value": 0,
+				"label": "SPELL.RANK"
+			},
+			"description":
+			{
+				"value": "",
+				"label": "SPELL.DESCRIPTION"
+			}
 		},
 
 		"talent": 
 		{
-			"templates": 
-			[
-				"ability"
-			]
+			"scrollTitle":
+			{
+				"label": "TALENT.TITLE"
+			},
+			"rank":
+			{
+				"value": 0,
+				"label": "TALENT.RANK"
+			},
+			"description":
+			{
+				"value": "",
+				"label": "TALENT.DESCRIPTION"
+			}
 		},
 
 		"weapon": 
 		{
 			"templates": 
 			[
-				"base"
-			]
+				"common"
+			],
+			"artifactBonus":
+			{
+				"label": "WEAPON.ARTIFACT_BONUS",
+				"value": 0
+			},
+			"damage":
+			{
+				"label": "WEAPON.DAMAGE",
+				"value": 0
+			},
+			"gearBonus":
+			{
+				"label": "WEAPON.GEAR_BONUS",
+				"value": 0,
+				"maximum": 0
+			},
+			"grip":
+			{
+				"label": "WEAPON.GRIP",
+				"value": ""
+			},
+			"range":
+			{
+				"label": "WEAPON.RANGE",
+				"value": ""
+			},
+			"type":
+			{
+				"label": "WEAPON.TYPE",
+				"value": ""
+			}
 		}
 	}
 }

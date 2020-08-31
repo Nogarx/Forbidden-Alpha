@@ -1,3 +1,158 @@
 <form class="{{cssClass}}" autocomplete="off">
-    WEAPON
+    <div class="scroll">
+        <div class="scrollContent">
+            <div class="singleColumn">
+                <!--TITLE-->
+                <div class="title">
+                    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+                    <div class="name"> <input name="name" type="text" value="{{item.name}}" /> </div>
+                </div>
+
+                <!--ITEM DESCRIPTION-->
+                <div class="propertyWeaponRow">
+
+                    <!--DAMAGE-->
+                    <div class="weaponProperty">
+                        <label> {{localize data.damage.label}} </label>          
+                        <div class="input">
+                            <input name="data.damage.value" type="number" value="{{data.damage.value}}" />  
+                        </div>
+                    </div>
+                                            
+                    <!--GEAR BONUS-->
+                    <div class="weaponProperty">
+                        <label> {{localize data.gearBonus.label}} </label>          
+                        <div class="input">
+                            <input name="data.gearBonus.value" type="number" value="{{data.gearBonus.value}}" />  
+                            /
+                            <input name="data.gearBonus.maximum" type="number" value="{{data.gearBonus.maximum}}" />  
+                        </div>
+                    </div>
+                        
+                    <!--ARTIFACT BONUS-->
+                    <div class="weaponProperty">
+                        <label> {{localize data.artifactBonus.label}} </label>
+                        <select name="data.artifactBonus.value">
+                            {{#select data.artifactBonus.value}}
+                            <option hidden disabled selected value> {{localize "ARTIFACT_BONUS.LABEL"}} </option>
+                            <option value="none">{{localize "ARTIFACT_BONUS.NONE"}}</option>
+                            <option value="d8">{{localize "ARTIFACT_BONUS.EIGHT"}}</option>               
+                            <option value="d10">{{localize "ARTIFACT_BONUS.TEN"}}</option>        
+                            <option value="d12">{{localize "ARTIFACT_BONUS.TWELVE"}}</option>                   
+                            {{/select}}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="propertyWeaponRow">
+                    <!--TYPE-->
+                    <div class="weaponProperty">
+                        <label> {{localize data.type.label}} </label>          
+                        <select name="data.type.value">
+                            {{#select data.type.value}}
+                            <option hidden disabled selected value> {{localize "WEAPON_TYPE.LABEL"}} </option>
+                            <option value="melee">{{localize "WEAPON_TYPE.MELEE"}}</option>
+                            <option value="range">{{localize "WEAPON_TYPE.RANGE"}}</option>                          
+                            {{/select}}
+                        </select>
+                    </div>
+
+                    <!--GRIP-->
+                    <div class="weaponProperty">
+                        <label> {{localize data.grip.label}} </label>          
+                        <select name="data.grip.value">
+                            {{#select data.grip.value}}
+                            <option hidden disabled selected value> {{localize "WEAPON_GRIP.LABEL"}} </option>
+                            <option value="oneHand">{{localize "WEAPON_GRIP.ONE_HAND"}}</option>
+                            <option value="twoHands">{{localize "WEAPON_GRIP.TWO_HANDS"}}</option>                          
+                            {{/select}}
+                        </select>
+                    </div>
+                        
+                    <!--RANGE-->
+                    <div class="weaponProperty">
+                        <label> {{localize data.range.label}} </label>
+                        <div class="bigSelect"> 
+                            <select name="data.range.value">
+                                {{#select data.range.value}}
+                                <option hidden disabled selected value> {{localize "RANGE.LABEL"}} </option>
+                                <option value="armsLenght">{{localize "RANGE.ARMS_LENGHT"}}</option>
+                                <option value="near">{{localize "RANGE.NEAR"}}</option>   
+                                <option value="short">{{localize "RANGE.SHORT"}}</option>         
+                                <option value="long">{{localize "RANGE.LONG"}}</option>
+                                <option value="distant">{{localize "RANGE.DISTANT"}}</option>                                              
+                                {{/select}}
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="propertyWeaponRow">
+                    <!--QUALITY-->
+                    <div class="bigWeaponProperty">
+                        <label> {{localize data.common.quality.label}} </label>          
+                        <select name="data.common.quality.value">
+                            {{#select data.common.quality.value}}
+                            <option hidden disabled selected value> {{localize "QUALITY.LABEL"}} </option>
+                            <option value="common">{{localize "QUALITY.COMMON"}}</option>
+                            <option value="rare">{{localize "QUALITY.RARE"}}</option>          
+                            <option value="crafted">{{localize "QUALITY.CRAFTED"}}</option>    
+                            <option value="artifact">{{localize "QUALITY.ARTIFACT"}}</option>                   
+                            {{/select}}
+                        </select>
+                    </div>
+
+                    <!--WEIGHT-->
+                    <div class="bigWeaponProperty">
+                        <label> {{localize data.common.weight.label}} </label>
+                        <select name="data.common.weight.value">
+                            {{#select data.common.weight.value}}
+                            <option hidden disabled selected value> {{localize "WEIGHT.LABEL"}} </option>
+                            <option value="tiny">{{localize "WEIGHT.TINY"}}</option>
+                            <option value="light">{{localize "WEIGHT.LIGHT"}}</option>   
+                            <option value="regular">{{localize "WEIGHT.REGULAR"}}</option>         
+                            <option value="heavy">{{localize "WEIGHT.HEAVY"}}</option>                                
+                            {{/select}}
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="tabsWeaponRow">
+                    <nav class="sheet-tabs tabsBar" data-group="primary">
+                        <b class="item tabItem" data-tab="effect">{{localize data.common.effect.label}}</b>
+                        <b class="item tabItem" data-tab="description">{{localize data.common.description.label}}</b>
+                        <b class="item tabItem" data-tab="appearance">{{localize data.common.appearance.label}}</b>
+                        <b class="item tabItem" data-tab="drawback">{{localize data.common.drawback.label}}</b>
+                    </nav>
+                </div>
+
+
+
+                <div class="sheet-body">
+                    <div class="tab" data-group="primary" data-tab="effect">
+                        <div class="textWeaponRow">
+                            <textarea name="data.common.effect.value">{{data.common.effect.value}}</textarea>
+                        </div>
+                    </div>
+                    <div class="tab" data-group="primary" data-tab="description">
+                        <div class="textWeaponRow">
+                            <textarea name="data.common.description.value">{{data.common.description.value}}</textarea>
+                        </div>
+                    </div>
+                    <div class="tab" data-group="primary" data-tab="appearance">
+                        <div class="textWeaponRow">
+                            <textarea name="data.common.appearance.value">{{data.common.appearance.value}}</textarea>
+                        </div>
+                    </div>
+                    <div class="tab" data-group="primary" data-tab="drawback">
+                        <div class="textWeaponRow">
+                            <textarea name="data.common.drawback.value">{{data.common.drawback.value}}</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>

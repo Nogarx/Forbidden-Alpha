@@ -1,9 +1,18 @@
 {
-	"MAIN.KIN": "Kin",
-	"MAIN.PROFFESION": "Proffession",
-	"MAIN.REPUTATION": "Reputation",
-	"MAIN.EXPERIENCE": "Experience",
-	"MAIN.WILLPOWER": "Willpower",
+	"ARMOR.ARMOR_RATING": "Armor Rating:",
+	"ARMOR.BODY_PART": "Body Part:",
+
+	"ARTIFACT_BONUS.LABEL": "Artifact",
+	"ARTIFACT_BONUS.NONE": "None",
+	"ARTIFACT_BONUS.EIGHT": "D8",
+	"ARTIFACT_BONUS.TEN": "D10",
+	"ARTIFACT_BONUS.TWELVE": "D12",
+
+	"ATTRIBUTES.LABEL": "Attributes",
+    "ATTRIBUTES.STRENGHT": "Strenght",
+    "ATTRIBUTES.AGILITY": "Agility",
+    "ATTRIBUTES.WITS": "Wits",
+    "ATTRIBUTES.EMPATHY": "Empathy",
 
 	"BIOGRAPHY.LABEL": "Biography",
 	"BIOGRAPHY.AGE": "Age",
@@ -14,15 +23,19 @@
 	"BIOGRAPHY.BODY_APPEARANCE": "Body Appearance",
 	"BIOGRAPHY.CLOTHING_APPEARANCE": "Clothing Appearance",
 
+	"BODY.LABEL": "Body Part",
+	"BODY.HEAD": "Head",
+	"BODY.TORSO": "Torso",
+
+	"BUILDING.DESCRIPTION": "Decription:",
+
 	"COIN.BRONZE": "Bronze",
 	"COIN.SILVER": "Silver",
 	"COIN.GOLD": "Gold",
 
-	"CONSUMABLES.LABEL": "Consumables",
-	"CONSUMABLES.FOOD": "Food",
-	"CONSUMABLES.WATER": "Water",
-	"CONSUMABLES.ARROWS": "Arrows",
-	"CONSUMABLES.TORCHES": "Torches",
+	"COMMERCE.PRICE": "Price:",
+	"COMMERCE.RECOLECTED": "Recolection Date:",
+	"COMMERCE.SHELF_LIFE": "Shelf Life:",
 
 	"CONDITIONS.LABEL": "Conditions",
 	"CONDITIONS.SLEEPLESS": "Sleepless",
@@ -30,16 +43,86 @@
 	"CONDITIONS.HUNGRY": "Hungry",
 	"CONDITIONS.COLD": "Cold",
 
+	"CONSUMABLES.LABEL": "Consumables",
+	"CONSUMABLES.FOOD": "Food",
+	"CONSUMABLES.WATER": "Water",
+	"CONSUMABLES.ARROWS": "Arrows",
+	"CONSUMABLES.TORCHES": "Torches",
+
+	"CRAFTING.MATERIAL": "Required Material:",
+	"CRAFTING.TIME": "Rquired Time:",
+	"CRAFTING.TALENT": "Required Talent:",
+	"CRAFTING.TOOLS": "Required Tools:",
+
+	"CRITICAL_INJURY.LETHAL": "Lethal:",
+	"CRITICAL_INJURY.TIME_LIMIT": "Time Limit:",
+	"CRITICAL_INJURY.HEALING_TIME": "Healing Time:",
+	"CRITICAL_INJURY.EFFECT": "Effects",
+	"CRITICAL_INJURY_LETHAL.LABEL": "Lethal",
+	"CRITICAL_INJURY_LETHAL.YES": "Yes",
+	"CRITICAL_INJURY_LETHAL.NO": "No",
+
+	"HIRELING.SALARY": "Salary:",
+	"HIRELING.DESCRIPTION": "Description:",
+
+	"ITEM.APPEARANCE": "Appearance",
+	"ITEM.QUALITY": "Quality:",
+	"ITEM.DESCRIPTION": "Description",
+	"ITEM.DRAWBACK": "Drawback",
+	"ITEM.EFFECT": "Effect",
+	"ITEM.WEIGHT": "Weight:",
+
+	"KIN.LABEL": "Kin",
+	"KIN.HUMAN": "Human",
+	"KIN.ELF": "Elf",
+	"KIN.HALF_ELF": "Half Elf",
+	"KIN.DWARF": "Dwarf",
+	"KIN.HALFLING": "Halfling",
+	"KIN.WOLFKIN": "Wolfkin",
+	"KIN.ORC": "Orc",
+	"KIN.GOBLIN": "Goblin",
+
+	"MAIN.KIN": "Kin",
+	"MAIN.PROFFESION": "Proffession",
+	"MAIN.REPUTATION": "Reputation",
+	"MAIN.EXPERIENCE": "Experience",
+	"MAIN.WILLPOWER": "Willpower",
+
+	"MONSTER_SPELL.TITLE": "Forbidden Scroll Of",
+	"MONSTER_SPELL.RANK": "Rank:",
+	"MONSTER_SPELL.DESCRIPTION": "Monster Spell Description:",
+
+	"MONSTER_TALENT.TITLE": "Forbidden Tome Of",
+	"MONSTER_TALENT.RANK": "Rank:",
+	"MONSTER_TALENT.DESCRIPTION": "Monster Talent Description:",
+
+	"PROFFESSION.LABEL": "Proffession",
+	"PROFFESSION.DRUID": "Druid",
+	"PROFFESSION.FIGHTER": "Fighter",
+	"PROFFESSION.HUNTER": "Hunter",
+	"PROFFESSION.MINSTREL": "Minstrel",
+	"PROFFESSION.PEDDLER": "Peddler",
+	"PROFFESSION.RIDER": "Rider",
+	"PROFFESSION.ROGUE": "Rogue",
+	"PROFFESSION.SORCERER": "Sorcerer",
+
+	"QUALITY.LABEL": "Quality",
+	"QUALITY.COMMON": "Common",
+	"QUALITY.RARE": "Rare",
+	"QUALITY.CRAFTED": "Crafted",
+	"QUALITY.ARTIFACT": "Artifact",
+
+	"RANGE.LABEL": "Range",
+	"RANGE.ARMS_LENGHT": "Arm's Lenght",
+	"RANGE.NEAR": "Near",
+	"RANGE.SHORT": "Short",
+	"RANGE.LONG": "Long",
+	"RANGE.DISTANT": "Distant",
+
 	"SITE_DESCRIPTION.LOCATION": "Location",
 	"SITE_DESCRIPTION.DESCRIPTION": "Description",
 	"SITE_DESCRIPTION.SURROUNDING": "Surrounding",
 	"SITE_DESCRIPTION.DEFENSE_RAITING": "Defense Raiting",
-
-	"ATTRIBUTES.LABEL": "Attributes",
-    "ATTRIBUTES.STRENGHT": "Strenght",
-    "ATTRIBUTES.AGILITY": "Agility",
-    "ATTRIBUTES.WITS": "Wits",
-    "ATTRIBUTES.EMPATHY": "Empathy",
 
 	"SKILLS.LABEL": "Skills",
     "SKILLS.MIGHT": "Might",
@@ -59,34 +142,43 @@
     "SKILLS.HEALING": "Healing",
 	"SKILLS.ANIMAL_HANDLING": "Animal Handling",
 
-	"ABILITY.RANK": "Rank",
-	"ABILITY.DESCRIPTION": "Description",
+	"SPELL.TITLE": "Scroll Of",
+	"SPELL.RANK": "Rank:",
+	"SPELL.DESCRIPTION": "Spell Description:",
+	
+	"TALENT.TITLE": "Tome Of",
+	"TALENT.RANK": "Rank:",
+	"TALENT.DESCRIPTION": "Talent Description:",
 
-	"KIN.LABEL": "Kin",
-	"KIN.HUMAN": "Human",
-	"KIN.ELF": "Elf",
-	"KIN.HALF_ELF": "Half Elf",
-	"KIN.DWARF": "Dwarf",
-	"KIN.HALFLING": "Halfling",
-	"KIN.WOLFKIN": "Wolfkin",
-	"KIN.ORC": "Orc",
-	"KIN.GOBLIN": "Goblin",
+	"WEAPON.ARTIFACT_BONUS": "Artifact Bonus:",
+	"WEAPON.DAMAGE": "Damage",
+	"WEAPON.GEAR_BONUS": "Gear Bonus:",
+	"WEAPON.GRIP": "Grip",
+	"WEAPON.RANGE": "Range",
+	"WEAPON.TYPE": "Type:",
 
-	"PROFFESSION.LABEL": "Proffession",
-	"PROFFESSION.DRUID": "Druid",
-	"PROFFESSION.FIGHTER": "Fighter",
-	"PROFFESSION.HUNTER": "Hunter",
-	"PROFFESSION.MINSTREL": "Minstrel",
-	"PROFFESSION.PEDDLER": "Peddler",
-	"PROFFESSION.RIDER": "Rider",
-	"PROFFESSION.ROGUE": "Rogue",
-	"PROFFESSION.SORCERER": "Sorcerer",
+	"WEAPON_TYPE.LABEL": "Type",
+	"WEAPON_TYPE.RANGE": "Range",
+	"WEAPON_TYPE.MELEE": "Melee",
+
+	"WEAPON_GRIP.LABEL": "Grip",
+	"WEAPON_GRIP.ONE_HAND": "One Hand",
+	"WEAPON_GRIP.TWO_HANDS": "Two Hands",
+
+	"WEIGHT.LABEL": "Weight",
+	"WEIGHT.TINY": "Tiny",
+	"WEIGHT.LIGHT": "Light",
+	"WEIGHT.REGULAR": "Regular",
+	"WEIGHT.HEAVY": "Heavy",
+
+
 
 	"COMBAT.LABEL": "Combat",
 	"TALENTS.LABEL": "Talents",
 	"SPELLS.LABEL": "Spells",
 	"GEAR.LABEL": "Gear",
 	"BOOKTITLE.LABEL": "The Forbidden Tale Of",
-	"MONSTERBOOKTITLE.LABEL": "The Bestiary",
-	"ABILITYSCROLL.LABEL": "Forbidden Scroll Of"
+	"MONSTERBOOKTITLE.LABEL": "The Bestiary"
+
+
 }

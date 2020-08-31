@@ -1,3 +1,77 @@
 <form class="{{cssClass}}" autocomplete="off">
-    MATERIAL
+    <div class="scroll">
+        <div class="scrollContent">
+            <div class="singleColumn">
+                <!--TITLE-->
+                <div class="title">
+                    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+                    <div class="name"> <input name="name" type="text" value="{{item.name}}" /> </div>
+                </div>
+
+                <!--ITEM DESCRIPTION-->
+                <div class="gearRow">
+                    <!--PRICE-->
+                    <div class="gearProperty">
+                        <label> {{localize data.commerce.price.label}} </label>          
+                        <div class="input">
+                            C: <input name="data.commerce.price.valueCopper" type="number" value="{{data.commerce.price.valueCopper}}" />  
+                            S: <input name="data.commerce.price.valueSilver" type="number" value="{{data.commerce.price.valueSilver}}" />  
+                            G: <input name="data.commerce.price.valueGold" type="number" value="{{data.commerce.price.valueGold}}" />  
+                        </div>
+                    </div>
+
+                    <!--WEIGHT-->
+                    <div class="gearProperty">
+                        <label> {{localize data.common.weight.label}} </label>
+                        <select name="data.common.weight.value">
+                            {{#select data.common.weight.value}}
+                            <option hidden disabled selected value> {{localize "WEIGHT.LABEL"}} </option>
+                            <option value="tiny">{{localize "WEIGHT.TINY"}}</option>
+                            <option value="light">{{localize "WEIGHT.LIGHT"}}</option>   
+                            <option value="regular">{{localize "WEIGHT.REGULAR"}}</option>         
+                            <option value="heavy">{{localize "WEIGHT.HEAVY"}}</option>                                
+                            {{/select}}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="gearRow">
+                    <!--RECOLECTED-->
+                    <div class="gearProperty">
+                        <label> {{localize data.commerce.recolected.label}} </label>          
+                        <div class="inputText">
+                            <input name="data.commerce.recolected.value" type="text" value="{{data.commerce.recolected.value}}" />  
+                        </div>
+                    </div>
+
+                    <!--SHELF-->
+                    <div class="gearProperty">
+                        <label> {{localize data.commerce.shelfLife.label}} </label>          
+                        <div class="inputText">
+                            <input name="data.commerce.shelfLife.value" type="text" value="{{data.commerce.shelfLife.value}}" />  
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gearRow">
+                    <!--TOOLS-->
+                    <div class="gearProperty">
+                        <label> {{localize data.crafting.tools.label}} </label>          
+                        <div class="inputText">
+                            <input name="data.crafting.tools.value" type="text" value="{{data.crafting.tools.value}}" />  
+                        </div>
+                    </div>
+
+                    <!--TIME-->
+                    <div class="gearProperty">
+                        <label> {{localize data.crafting.time.label}} </label>          
+                        <div class="inputText">
+                            <input name="data.crafting.time.value" type="text" value="{{data.crafting.time.value}}" />  
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </form>

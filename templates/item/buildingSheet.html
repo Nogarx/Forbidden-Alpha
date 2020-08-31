@@ -1,3 +1,53 @@
 <form class="{{cssClass}}" autocomplete="off">
-    BUILDING
+    <div class="scroll">
+        <div class="scrollContent">
+            <div class="singleColumn">
+
+                <!--TITLE-->
+                <div class="buildingTitle ">
+                    <div class="centeredRow"> <input name="name" type="text" value="{{item.name}}" /> </div>
+                </div>
+                
+                <!--ITEM IMAGE-->
+                <div class="buildingImage">
+                    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+                </div>
+
+                <div class="buildingRow">
+                    <!--TIME-->
+                    <div class="buildingProperty">
+                        <label> {{localize data.crafting.time.label}} </label>          
+                        <input name="data.crafting.time.value" type="text" value="{{data.crafting.time.value}}" />  
+                    </div>
+
+                    <!--TOOLS-->
+                    <div class="buildingProperty">
+                        <label> {{localize data.crafting.tools.label}} </label>          
+                        <input name="data.crafting.tools.value" type="text" value="{{data.crafting.tools.value}}" />  
+                    </div>
+                </div>
+
+                <div class="buildingRow">
+                    <!--TALENT-->
+                    <div class="buildingProperty">
+                        <label> {{localize data.crafting.talent.label}} </label>          
+                        <input name="data.crafting.talent.value" type="text" value="{{data.crafting.talent.value}}" />  
+                    </div>
+
+                    <!--MATERIALS-->
+                    <div class="buildingProperty">
+                        <label> {{localize data.crafting.material.label}} </label>          
+                        <input name="data.crafting.material.value" type="text" value="{{data.crafting.material.value}}" />  
+                    </div>
+                </div>
+
+                <!--EFFECT-->
+                <div class="buildingRow"> <label> {{localize data.description.label}} </label> </div>
+                <div class="textBuildingRow">
+                    <textarea name="data.description.value">{{data.description.value}}</textarea>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </form>

@@ -4,16 +4,12 @@
             <div class="singleColumn">
                 <!--TITLE-->
                 <div class="abilityScrollTitle ">
-                    <div class="centeredRow">  
-                        <label>{{localize "ABILITYSCROLL.LABEL"}}</label>
-                    </div>
-                    <div class="centeredRow">  
-                        <input name="name" type="text" value="{{item.name}}" />
-                    </div>
+                    <div class="centeredRow"> <label>{{localize data.scrollTitle.label}}</label> </div>
+                    <div class="centeredRow"> <input name="name" type="text" value="{{item.name}}" /> </div>
                     <div class="centeredRow"> 
                         <div class="rank"> 
-                            <label>{{localize "ABILITY.RANK"}}:</label>
-                            <input name="data.rank.value" type="number" value="{{data.rank.value}}" />  
+                             <label>{{localize data.rank.label}}</label>
+                         <input name="data.rank.value" type="number" value="{{data.rank.value}}" />  
                         </div>
                     </div>
                 </div>
@@ -24,7 +20,7 @@
                 <!--ITEM DESCRIPTION-->
                 <div class="abilityScrollDescription">
                     <div class="singleColumn">
-
+                        <div class="label"> {{localize data.description.label}}</div>
                         <textarea name="data.description.value">{{data.description.value}}</textarea>
                     </div>
                 </div>
