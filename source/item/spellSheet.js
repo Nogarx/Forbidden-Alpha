@@ -10,9 +10,10 @@ export class ForbiddenAlphaSpellSheet extends ForbiddenAlphaItemSheet
     {
         return mergeObject(super.defaultOptions, {
         classes: ["forbiddenAlpha", "sheet", "item"],
-        template: "systems/forbiddenAlpha/templates/item/spellSheet.html",
-        width: 520,
-        height: 480,
+        template: "systems/forbiddenAlpha/templates/item/abilityScroll.html",
+        width: 450,
+        height: 600,
+        resizable: false,
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
         });
     }
@@ -20,7 +21,7 @@ export class ForbiddenAlphaSpellSheet extends ForbiddenAlphaItemSheet
     /** @override */
 	getData() 
 	{
-	const data = super.getData();
-	return data;
+        const data = super.getData();
+        return data;
 	}
 }

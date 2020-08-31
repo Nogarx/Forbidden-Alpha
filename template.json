@@ -347,81 +347,124 @@
 	{
 		"types": 
 		[
-			"talent",
-			"spell",
-			"weapon", 
 			"armor",		
-			"criticalInjury",
-			"monsterTalent",
-			"monsterSpell",
+			"artifact",
 			"building",
-			"hireling",
+			"criticalInjury",
 			"gear",
+			"hireling",
 			"material",
-			"artifact"
+			"monsterSpell",
+			"monsterTalent",
+			"spell",
+			"talent",
+			"weapon"
 		],
 
 		"templates": 
 		{
-			"base": 
+			"common": { "common":
 			{
-				"description": ""
-			}
-		},
-
-		"talent": 
-		{
-			"templates": 
-			[
-				"base"
-			]
-		},
-
-		"spell": 
-		{
-			"templates": 
-			[
-				"base"
-			]
-		},
-
-		"weapon": 
-		{
-			"templates": 
-			[
-				"base"
-			]
+				"appearance":
+				{
+					"label": "ITEM.APPEARANCE",
+					"value": ""
+				},	
+				"quality":
+				{
+					"label": "ITEM.QUALITY",
+					"value": ""
+				},	
+				"description":
+				{
+					"label": "ITEM.DESCRIPTION",
+					"value": ""
+				},			
+				"drawback":
+				{
+					"label": "ITEM.DRAWBACK",
+					"value": ""
+				},
+				"effect":
+				{
+					"label": "ITEM.EFFECT",
+					"value": ""
+				},
+				"weight":
+				{
+					"label": "ITEM.WEIGHT",
+					"value": ""
+				}
+			}},
+			"crafting": {"crafting":
+			{
+				"material":
+				{
+					"label": "CRAFTING.MATERIAL",
+					"value": ""
+				},
+				"time":
+				{
+					"label": "CRAFTING.TIME",
+					"value": ""
+				},
+				"talent":
+				{
+					"label": "CRAFTING.TALENT",
+					"value": ""
+				},
+				"tools":
+				{
+					"label": "CRAFTING.TOOLS",
+					"value": ""
+				}
+			}},
+			"commerce": {"commerce":
+				{
+					"price":
+					{
+						"label": "COMMERCE.PRICE",
+						"valueCopper": 0,
+						"valueSilver": 0,
+						"valueGold": 0
+					},
+					"recolected":
+					{
+						"label": "COMMERCE.RECOLECTED",
+						"value": ""
+					},
+					"shelfLife":
+					{
+						"label": "COMMERCE.SHELF_LIFE",
+						"value": ""
+					}
+				}}
 		},
 
 		"armor": 
 		{
 			"templates": 
 			[
-				"base"
-			]
+				"common"
+			],
+			"armorRating":
+			{
+				"label": "ARMOR.ARMOR_RATING",
+				"value": 0,
+				"maximum": 0
+			},
+			"bodyPart":
+			{
+				"label": "ARMOR.BODY_PART",
+				"value": ""
+			}
 		},
 
-		"criticalInjury": 
+		"artifact": 
 		{
 			"templates": 
 			[
-				"base"
-			]
-		},
-
-		"monsterTalent": 
-		{
-			"templates": 
-			[
-				"base"
-			]
-		},
-
-		"monsterSpell": 
-		{
-			"templates": 
-			[
-				"base"
+				"common"
 			]
 		},
 
@@ -429,40 +472,183 @@
 		{
 			"templates": 
 			[
-				"base"
-			]
+				"crafting"
+			],
+			"description":
+			{
+				"label": "BUILDING.DESCRIPTION",
+				"value": ""
+			}
 		},
 
-		"hireling": 
+		"criticalInjury": 
 		{
-			"templates": 
-			[
-				"base"
-			]
+			"lethal":
+			{
+				"label": "CRITICAL_INJURY.LETHAL",
+				"value": ""
+			},
+			"timeLimit":
+			{
+				"label": "CRITICAL_INJURY.TIME_LIMIT",
+				"value": ""
+			},
+			"healingTime":
+			{
+				"label": "CRITICAL_INJURY.HEALING_TIME",
+				"value": ""
+			},
+			"effect":
+			{
+				"label": "CRITICAL_INJURY.EFFECT",
+				"value": ""
+			}
 		},
 
 		"gear": 
 		{
 			"templates": 
 			[
-				"base"
+				"common",
+				"commerce"
 			]
+		},
+
+		"hireling": 
+		{
+			"salary":
+			{
+				"label": "HIRELING.SALARY",
+				"valueCopper": 0,
+				"valueSilver": 0,
+				"valueGold": 0
+			},
+			"description":
+			{
+				"value": "",
+				"label": "HIRELING.DESCRIPTION"
+			}
 		},
 
 		"material": 
 		{
 			"templates": 
 			[
-				"base"
+				"common", 
+				"crafting",
+				"commerce"
 			]
 		},
 
-		"artifact": 
+		"monsterSpell": 
+		{
+			"scrollTitle":
+			{
+				"label": "MONSTER_SPELL.TITLE"
+			},
+			"rank":
+			{
+				"value": 0,
+				"label": "MONSTER_SPELL.RANK"
+			},
+			"description":
+			{
+				"value": "",
+				"label": "MONSTER_SPELL.DESCRIPTION"
+			}
+		},
+
+		"monsterTalent": 
+		{
+			"scrollTitle":
+			{
+				"label": "MONSTER_TALENT.TITLE"
+			},
+			"rank":
+			{
+				"value": 0,
+				"label": "MONSTER_TALENT.RANK"
+			},
+			"description":
+			{
+				"value": "",
+				"label": "MONSTER_TALENT.DESCRIPTION"
+			}
+		},
+
+		"spell": 
+		{
+			"scrollTitle":
+			{
+				"label": "SPELL.TITLE"
+			},
+			"rank":
+			{
+				"value": 0,
+				"label": "SPELL.RANK"
+			},
+			"description":
+			{
+				"value": "",
+				"label": "SPELL.DESCRIPTION"
+			}
+		},
+
+		"talent": 
+		{
+			"scrollTitle":
+			{
+				"label": "TALENT.TITLE"
+			},
+			"rank":
+			{
+				"value": 0,
+				"label": "TALENT.RANK"
+			},
+			"description":
+			{
+				"value": "",
+				"label": "TALENT.DESCRIPTION"
+			}
+		},
+
+		"weapon": 
 		{
 			"templates": 
 			[
-				"base"
-			]
+				"common"
+			],
+			"artifactBonus":
+			{
+				"label": "WEAPON.ARTIFACT_BONUS",
+				"value": 0
+			},
+			"damage":
+			{
+				"label": "WEAPON.DAMAGE",
+				"value": 0
+			},
+			"gearBonus":
+			{
+				"label": "WEAPON.GEAR_BONUS",
+				"value": 0,
+				"maximum": 0
+			},
+			"grip":
+			{
+				"label": "WEAPON.GRIP",
+				"value": ""
+			},
+			"range":
+			{
+				"label": "WEAPON.RANGE",
+				"value": ""
+			},
+			"type":
+			{
+				"label": "WEAPON.TYPE",
+				"value": ""
+			}
 		}
 	}
 }

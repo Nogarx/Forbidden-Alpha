@@ -1,3 +1,103 @@
 <form class="{{cssClass}}" autocomplete="off">
-    ARMOR
+    <div class="scroll">
+        <div class="scrollContent">
+            <div class="singleColumn">
+                <!--TITLE-->
+                <div class="title">
+                    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+                    <div class="name"> <input name="name" type="text" value="{{item.name}}" /> </div>
+                </div>
+
+                <!--ITEM DESCRIPTION-->
+                <div class="propertyArmorRow">
+                    <!--RATING-->
+                    <div class="armorProperty">
+                        <label> {{localize data.armorRating.label}} </label>          
+                        <div class="input">
+                            <input name="data.armorRaiting.value" type="number" value="{{data.armorRaiting.value}}" />  
+                            /
+                            <input name="data.armorRaiting.maximum" type="number" value="{{data.armorRaiting.maximum}}" />  
+                        </div>
+                    </div>
+                        
+                    <!--BODY-->
+                    <div class="armorProperty">
+                        <label> {{localize data.bodyPart.label}} </label>
+                        <select name="data.bodyPart.value">
+                            {{#select data.bodyPart.value}}
+                            <option hidden disabled selected value> {{localize "BODY.LABEL"}} </option>
+                            <option value="head">{{localize "BODY.HEAD"}}</option>
+                            <option value="torso">{{localize "BODY.TORSO"}}</option>                          
+                            {{/select}}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="propertyArmorRow">
+                    <!--QUALITY-->
+                    <div class="armorProperty">
+                        <label> {{localize data.common.quality.label}} </label>          
+                        <select name="data.common.quality.value">
+                            {{#select data.common.quality.value}}
+                            <option hidden disabled selected value> {{localize "QUALITY.LABEL"}} </option>
+                            <option value="common">{{localize "QUALITY.COMMON"}}</option>
+                            <option value="rare">{{localize "QUALITY.RARE"}}</option>          
+                            <option value="crafted">{{localize "QUALITY.CRAFTED"}}</option>    
+                            <option value="artifact">{{localize "QUALITY.ARTIFACT"}}</option>                   
+                            {{/select}}
+                        </select>
+                    </div>
+                        
+                    <!--WEIGHT-->
+                    <div class="armorProperty">
+                        <label> {{localize data.common.weight.label}} </label>
+                        <select name="data.common.weight.value">
+                            {{#select data.common.weight.value}}
+                            <option hidden disabled selected value> {{localize "WEIGHT.LABEL"}} </option>
+                            <option value="tiny">{{localize "WEIGHT.TINY"}}</option>
+                            <option value="light">{{localize "WEIGHT.LIGHT"}}</option>   
+                            <option value="regular">{{localize "WEIGHT.REGULAR"}}</option>         
+                            <option value="heavy">{{localize "WEIGHT.HEAVY"}}</option>                                
+                            {{/select}}
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="tabsArmorRow">
+                    <nav class="sheet-tabs tabsBar" data-group="primary">
+                        <b class="item tabItem" data-tab="effect">{{localize data.common.effect.label}}</b>
+                        <b class="item tabItem" data-tab="description">{{localize data.common.description.label}}</b>
+                        <b class="item tabItem" data-tab="appearance">{{localize data.common.appearance.label}}</b>
+                        <b class="item tabItem" data-tab="drawback">{{localize data.common.drawback.label}}</b>
+                    </nav>
+                </div>
+
+
+
+                <div class="sheet-body">
+                    <div class="tab" data-group="primary" data-tab="effect">
+                        <div class="textArmorRow">
+                            <textarea name="data.common.effect.value">{{data.common.effect.value}}</textarea>
+                        </div>
+                    </div>
+                    <div class="tab" data-group="primary" data-tab="description">
+                        <div class="textArmorRow">
+                            <textarea name="data.common.description.value">{{data.common.description.value}}</textarea>
+                        </div>
+                    </div>
+                    <div class="tab" data-group="primary" data-tab="appearance">
+                        <div class="textArmorRow">
+                            <textarea name="data.common.appearance.value">{{data.common.appearance.value}}</textarea>
+                        </div>
+                    </div>
+                    <div class="tab" data-group="primary" data-tab="drawback">
+                        <div class="textArmorRow">
+                            <textarea name="data.common.drawback.value">{{data.common.drawback.value}}</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>
