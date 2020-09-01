@@ -1,0 +1,28 @@
+<div class="itemHeader">
+    <b class="gearType">{{localize "BOOK.ARMOR_HEADER"}}</b>
+    <b class="gearBonus">{{localize "BOOK.ARMOR_RATING"}}</b>
+    <b class="gearWeight">{{localize "BOOK.WEIGHT"}}</b>
+    <a class="button item-create" title="Add Armor" data-type="armor"><i class="fas fa-plus"></i></a>
+</div>
+<div> 
+    {{#each actor.items as |item|}}
+    {{#if item.isArmor}}
+    <div class="gearItem" data-item-id="{{item._id}}">
+
+        <div class="name">
+            <div class="image-container"><div class="image" style="background-image: url('{{item.img}}')"></div></div>
+            <label> {{item.name}}</label>
+        </div>
+        <div class="bonus">
+            <label> {{item.data.armorRating.value}} / {{item.data.armorRating.maximum}}</label>
+        </div>
+        <div class="weight"><label>{{item.data.common.weight.value}}</label></div>
+        <div class="buttons">
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-post" title="Post Item"><i class="fas fa-comment"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+        </div>
+    </div>
+    {{/if}}
+    {{/each}}
+</div>

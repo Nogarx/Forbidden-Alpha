@@ -14,15 +14,9 @@ export class ForbiddenAlphaCharacterSheet extends ForbiddenAlphaActorSheet
         width: 1000,
         height: 700,
         resizable: false,
-        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+        tabs: [{ navSelector: ".tabsBar", contentSelector: ".bookBody", initial: "main" },
+        {navSelector: ".gearTabs", contentSelector: ".gearItemList", initial: "gear"}]
         });
-    }
-
-    /** @override */
-    getData() 
-    {
-        const data = super.getData();
-        return data;
     }
 }
   

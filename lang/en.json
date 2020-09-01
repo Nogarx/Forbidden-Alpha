@@ -3,10 +3,6 @@
 	"ARMOR.BODY_PART": "Body Part:",
 
 	"ARTIFACT_BONUS.LABEL": "Artifact",
-	"ARTIFACT_BONUS.NONE": "None",
-	"ARTIFACT_BONUS.EIGHT": "D8",
-	"ARTIFACT_BONUS.TEN": "D10",
-	"ARTIFACT_BONUS.TWELVE": "D12",
 
 	"ATTRIBUTES.LABEL": "Attributes",
     "ATTRIBUTES.STRENGHT": "Strenght",
@@ -27,6 +23,20 @@
 	"BODY.HEAD": "Head",
 	"BODY.TORSO": "Torso",
 
+	"BOOK.MONEY": "Money",
+	"BOOK.CONSUMABLES": "Consumables",
+	"BOOK.ARMOR_HEADER": "Armor",
+	"BOOK.ARMOR_RATING": "Rating",
+	"BOOK.WEIGHT": "Weight",
+	"BOOK.WEAPON_HEADER": "Weapon",
+	"BOOK.WEAPON_BONUS": "Bonus",
+	"BOOK.GEAR_HEADER": "Gear",
+	"BOOK.GEAR_QUANTITY": "Amount",
+	"BOOK.MATERIAL_HEADER": "Material",
+	"BOOK.TALENT_HEADER": "Talent",
+	"BOOK.SPELL_HEADER": "Spell",
+	"BOOK.RANK": "Rank",
+
 	"BUILDING.DESCRIPTION": "Decription:",
 
 	"COIN.BRONZE": "Bronze",
@@ -44,13 +54,13 @@
 	"CONDITIONS.COLD": "Cold",
 
 	"CONSUMABLES.LABEL": "Consumables",
-	"CONSUMABLES.FOOD": "Food",
-	"CONSUMABLES.WATER": "Water",
-	"CONSUMABLES.ARROWS": "Arrows",
-	"CONSUMABLES.TORCHES": "Torches",
+	"CONSUMABLES.FOOD": "Food:",
+	"CONSUMABLES.WATER": "Water:",
+	"CONSUMABLES.ARROWS": "Arrows:",
+	"CONSUMABLES.TORCHES": "Torches:",
 
 	"CRAFTING.MATERIAL": "Required Material:",
-	"CRAFTING.TIME": "Rquired Time:",
+	"CRAFTING.TIME": "Required Time:",
 	"CRAFTING.TALENT": "Required Talent:",
 	"CRAFTING.TOOLS": "Required Tools:",
 
@@ -61,6 +71,12 @@
 	"CRITICAL_INJURY_LETHAL.LABEL": "Lethal",
 	"CRITICAL_INJURY_LETHAL.YES": "Yes",
 	"CRITICAL_INJURY_LETHAL.NO": "No",
+
+	"DICE.NONE": "None",
+	"DICE.SIX": "D6",
+	"DICE.EIGHT": "D8",
+	"DICE.TEN": "D10",
+	"DICE.TWELVE": "D12",
 
 	"HIRELING.SALARY": "Salary:",
 	"HIRELING.DESCRIPTION": "Description:",
@@ -177,6 +193,7 @@
 	"TALENTS.LABEL": "Talents",
 	"SPELLS.LABEL": "Spells",
 	"GEAR.LABEL": "Gear",
+
 	"BOOKTITLE.LABEL": "The Forbidden Tale Of",
 	"MONSTERBOOKTITLE.LABEL": "The Bestiary"
 

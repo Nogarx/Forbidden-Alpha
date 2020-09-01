@@ -16,14 +16,5 @@ export class ForbiddenAlphaStrongholdSheet extends ForbiddenAlphaActorSheet
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
         });
     }
-
-    /** @override */
-    getData() 
-    {
-        const data = super.getData();
-        return data;
-    }
-
-
 }
   
