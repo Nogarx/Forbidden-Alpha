@@ -15,12 +15,49 @@ export class ForbiddenAlphaActor extends Actor
 		const data = actorData.data;
 		const flags = actorData.flags;
 
-		// Make separate methods for each Actor type (character, npc, etc.) to keep
-		// things organized.
-		if (actorData.type === 'character') this._prepareCharacterData(actorData);
+		// Prepare item, regardless of actor type.
+		this._prepareItemsData(actorData);
+
+		// Prepare specific data for each actor type.
+		if (actorData.type === "character") 
+		{
+			this._prepareCharacterData(actorData);
+		}
+		else if (actorData.type === "monster") 
+		{
+			this._prepareCharacterData(actorData);
+		}
+		else if (actorData.type === "stronghold") 
+		{
+			this._prepareCharacterData(actorData);
+		}
+		else if (actorData.type === "adventureSite") 
+		{
+			this._prepareCharacterData(actorData);
+		}
 	}
 
-	/**
+	/* Items Data */
+	_prepareItemsData(data) 
+	{
+		for (let item of Object.values(data.items)) 
+		{
+		  item.isArmor = item.type === "armor";
+		  item.isArtifact = item.type === "artifact";
+		  item.isBuilding = item.type === "building";
+		  item.isCriticalInjury = item.type === "criticalInjury";
+		  item.isGear = item.type === "gear";
+		  item.isHireling = item.type === "hireling";
+		  item.isMaterial = item.type === "material";
+		  item.isMonsterSpell = item.type === "monsterSpell";
+		  item.isMonsterTalent = item.type === "monsterTalent";
+		  item.isSpell = item.type === "spell";
+		  item.isTalent = item.type === "talent";
+		  item.isWeapon = item.type === "weapon";
+		}
+	}
+
+		/**
 	* Prepare Character type specific data
 	*/
 	_prepareCharacterData(actorData) 
@@ -34,5 +71,4 @@ export class ForbiddenAlphaActor extends Actor
 			ability.mod = Math.floor((ability.value - 10) / 2);
 		}*/
 	}
-
 }

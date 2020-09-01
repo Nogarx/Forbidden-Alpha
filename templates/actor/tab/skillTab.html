@@ -1,10 +1,13 @@
 <div class="bookTab">
     <!--LEFT PAGE-->
     <div class="leftPage">
+
         <!--TITLE-->
         <div class="pageTitle">{{localize "ATTRIBUTES.LABEL"}}</div>
+        
         <!--CONTNENT-->
         <div class="pageContent"> 
+
             <!--ADD ATTRIBUTES TO PAGE-->
             <div class="singleColumn">
                 {{#each data.attributes as |attribute key|}}
@@ -14,14 +17,18 @@
                     </div>
                 {{/each}}
             </div>
+
         </div>
     </div>
     <!--RIGHT PAGE-->
     <div class="rightPage">
+
         <!--TITLE-->
         <div class="pageTitle">{{localize "SKILLS.LABEL"}}</div>
+
         <!--CONTNENT-->
         <div class="pageContent"> 
+
             <!--ADD SKILLS TO PAGE-->
             <div class="wrapColumns">
             {{#each actor.data.skills as |skill key|}}
@@ -31,6 +38,7 @@
                 </div>
             {{/each}}
             </div>
+
         </div>
     </div>
 </div>
