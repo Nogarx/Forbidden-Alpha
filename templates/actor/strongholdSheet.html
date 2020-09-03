@@ -1,16 +1,28 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <div class="actorSheet">
-        {{!-- Sheet Header --}}
-        <header class="sheet-header">
-        </header>
-        <!--
-        <nav class="sheet-tabs tabs" data-group="primary">
-            HOLA MUNDO
+    <div class="book">
+
+        <nav class="tabsBar" data-group="primary">
+            <b class="item bookMark" data-tab="main"><img src="systems/forbiddenAlpha/assets/icons/mainMark.png"></b>
+            <b class="item bookMark" data-tab="building"><img src="systems/forbiddenAlpha/assets/icons/buildingMark.png"></b>
+            <b class="item bookMark" data-tab="hireling"><img src="systems/forbiddenAlpha/assets/icons/hirelingMark.png"></b>
+            <b class="item bookMark" data-tab="storage"><img src="systems/forbiddenAlpha/assets/icons/storageMark.png"></b>
         </nav>
-        -->
-        <section class="sheet-body">
-            STRONGHOLD
-        </section>
+
+        <div class="bookBody">
+            <div class="tab" data-group="primary" data-tab="main">
+                {{> systems/forbiddenAlpha/templates/actor/tab/mainStrongholdTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="building">
+                {{> systems/forbiddenAlpha/templates/actor/tab/buildingTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="hireling">
+                {{> systems/forbiddenAlpha/templates/actor/tab/hirelingTab.html}}
+            </div>
+            <div class="tab" data-group="primary" data-tab="storage">
+                {{> systems/forbiddenAlpha/templates/actor/tab/storageTab.html}}
+            </div>
+        </div>
+
     </div>
 </form>
 

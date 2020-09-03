@@ -141,49 +141,6 @@
     /*background-color: rgba(0, 255, 0, 0.25);*/
 }
 
-.forbiddenAlpha.sheet .book .pageContent .abilityItem,
-.forbiddenAlpha.sheet .book .pageContent .gearItem
-{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 40px;
-    overflow: hidden;
-    align-items: center;
-    margin: 5px 0px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: normal;
-
-    /* Debug */
-    /*background-color: rgba(0, 255, 0, 0.25);*/
-}
-
-.forbiddenAlpha.sheet .book .pageContent .abilityItem:nth-child(even),
-.forbiddenAlpha.sheet .book .pageContent .gearItem:nth-child(even)
-{
-    border-radius: 4px;
-    background: rgba(26, 26, 26, 0.1);
-}
-
-.forbiddenAlpha.sheet .book .pageContent .itemList .itemHeader .gearType { width: 40%; }
-.forbiddenAlpha.sheet .book .pageContent .itemList .itemHeader .gearBonus { width: 20%; }
-.forbiddenAlpha.sheet .book .pageContent .itemList .itemHeader .gearWeight { width: 22.5%; }
-.forbiddenAlpha.sheet .book .pageContent .itemList .itemHeader .button { width: 17.5%; }
-
-.forbiddenAlpha.sheet .book .pageContent .gearItem .name { width: 40%; }
-.forbiddenAlpha.sheet .book .pageContent .gearItem .bonus { width: 20%; }
-.forbiddenAlpha.sheet .book .pageContent .gearItem .weight { width: 22.5%;  }
-.forbiddenAlpha.sheet .book .pageContent .gearItem .buttons { width: 17.5%; }
-
-.forbiddenAlpha.sheet .book .pageContent .itemList .itemHeader .abilityName { width: 60%; }
-.forbiddenAlpha.sheet .book .pageContent .itemList .itemHeader .abilityRank { width: 22.5%; }
-.forbiddenAlpha.sheet .book .pageContent .itemList .itemHeader .button { width: 17.5%; }
-
-.forbiddenAlpha.sheet .book .pageContent .abilityItem .name { width: 60%; }
-.forbiddenAlpha.sheet .book .pageContent .abilityItem .rank { width: 22.5%; }
-.forbiddenAlpha.sheet .book .pageContent .abilityItem .buttons { width: 17.5%; }
-
 /* ------------------------------------------------------------------------------- */
 /* ----------------------------------- TAB BAR ----------------------------------- */
 /* ------------------------------------------------------------------------------- */

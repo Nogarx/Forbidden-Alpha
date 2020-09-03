@@ -1,99 +1,100 @@
 <form class="{{cssClass}}" autocomplete="off">
     <div class="scroll">
-        <div class="scrollContent">
-            <div class="singleColumn">
-                <!--TITLE-->
-                <div class="title">
-                    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
-                    <div class="name"> <input name="name" type="text" value="{{item.name}}" /> </div>
+
+        <nav class="armorTabsBar tabsBar" data-group="primary">
+            <b class="item scrollMark" data-tab="main"><img src="systems/forbiddenAlpha/assets/icons/mainMark.png"></b>
+            <b class="item scrollMark" data-tab="crafting"><img src="systems/forbiddenAlpha/assets/icons/craftingMark.png"></b>
+        </nav>
+
+        <div class="armorTabs">
+            <!--MAIN TAB-->
+            <div class="tab" data-group="primary" data-tab="main">
+                <div class="scroll"> 
+                    <div class="scrollContent">
+                        <div class="armorScroll">
+            
+                            <!--TITLE-->
+                            <div class="armorScrollTitle">
+                                <div class="image"> <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" /> </div>
+                                <div class="name"> <input name="name" type="text" value="{{item.name}}" /> </div>
+                            </div>
+            
+                            <!--PROPERTIES-->
+                            <div class="armorScrollProperties">
+                                <div class="singleColumn">
+            
+                                    <div class="centeredRow">
+            
+                                        <!--RATING-->
+                                        <div class="armorRating verticalElement">
+                                            <label> {{localize data.armorRating.label}} </label>          
+                                            <div>
+                                                <input name="data.armorRating.value" type="number" value="{{data.armorRating.value}}" />  
+                                                /
+                                                <input name="data.armorRating.maximum" type="number" value="{{data.armorRating.maximum}}" />  
+                                            </div>
+                                        </div>
+                                                                
+                                        <!--BODY PART-->
+                                        <div class="bodyPart verticalElement">
+                                            <label> {{localize data.bodyPart.label}} </label>          
+                                            <select name="data.bodyPart.value">
+                                                {{#select data.bodyPart.value}}
+                                                <option hidden disabled selected value> {{localize "BODY.LABEL"}} </option>
+                                                <option value="head">{{localize "BODY.HEAD"}}</option>
+                                                <option value="torso">{{localize "BODY.TORSO"}}</option>                          
+                                                {{/select}}
+                                            </select>
+                                        </div>
+            
+                                        <!--WEIGHT-->
+                                        <div class="weight verticalElement">
+                                            <label> {{localize data.common.weight.label}} </label>
+                                            <select name="data.common.weight.value">
+                                                {{#select data.common.weight.value}}
+                                                <option hidden disabled selected value> {{localize "WEIGHT.LABEL"}} </option>
+                                                <option value="tiny">{{localize "WEIGHT.TINY"}}</option>
+                                                <option value="light">{{localize "WEIGHT.LIGHT"}}</option>   
+                                                <option value="regular">{{localize "WEIGHT.REGULAR"}}</option>         
+                                                <option value="heavy">{{localize "WEIGHT.HEAVY"}}</option>                                
+                                                {{/select}}
+                                            </select>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+            
+                            <!--DETAILS-->
+                            <div class="armorScrollDescription">
+                                <div class="singleColumn">
+                                    <!--FEATURES-->
+                                    <div class="centeredRow">
+                                        <div class="features verticalElement">
+                                            <label> {{localize data.common.features.label}} </label>          
+                                            <textarea name="data.common.features.value">{{data.common.features.value}}</textarea>
+                                        </div>
+                                    </div>
+            
+                                    <!--DRAWBACK-->
+                                    <div class="centeredRow">
+                                        <div class="drawback verticalElement">
+                                            <label> {{localize data.common.drawback.label}} </label>          
+                                            <textarea name="data.common.drawback.value">{{data.common.drawback.value}}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <!--ITEM DESCRIPTION-->
-                <div class="propertyArmorRow">
-                    <!--RATING-->
-                    <div class="armorProperty">
-                        <label> {{localize data.armorRating.label}} </label>          
-                        <div class="input">
-                            <input name="data.armorRaiting.value" type="number" value="{{data.armorRaiting.value}}" />  
-                            /
-                            <input name="data.armorRaiting.maximum" type="number" value="{{data.armorRaiting.maximum}}" />  
-                        </div>
-                    </div>
-                        
-                    <!--BODY-->
-                    <div class="armorProperty">
-                        <label> {{localize data.bodyPart.label}} </label>
-                        <select name="data.bodyPart.value">
-                            {{#select data.bodyPart.value}}
-                            <option hidden disabled selected value> {{localize "BODY.LABEL"}} </option>
-                            <option value="head">{{localize "BODY.HEAD"}}</option>
-                            <option value="torso">{{localize "BODY.TORSO"}}</option>                          
-                            {{/select}}
-                        </select>
-                    </div>
-                </div>
-
-                <div class="propertyArmorRow">
-                    <!--QUALITY-->
-                    <div class="armorProperty">
-                        <label> {{localize data.common.quality.label}} </label>          
-                        <select name="data.common.quality.value">
-                            {{#select data.common.quality.value}}
-                            <option hidden disabled selected value> {{localize "QUALITY.LABEL"}} </option>
-                            <option value="common">{{localize "QUALITY.COMMON"}}</option>
-                            <option value="rare">{{localize "QUALITY.RARE"}}</option>          
-                            <option value="crafted">{{localize "QUALITY.CRAFTED"}}</option>    
-                            <option value="artifact">{{localize "QUALITY.ARTIFACT"}}</option>                   
-                            {{/select}}
-                        </select>
-                    </div>
-                        
-                    <!--WEIGHT-->
-                    <div class="armorProperty">
-                        <label> {{localize data.common.weight.label}} </label>
-                        <select name="data.common.weight.value">
-                            {{#select data.common.weight.value}}
-                            <option hidden disabled selected value> {{localize "WEIGHT.LABEL"}} </option>
-                            <option value="tiny">{{localize "WEIGHT.TINY"}}</option>
-                            <option value="light">{{localize "WEIGHT.LIGHT"}}</option>   
-                            <option value="regular">{{localize "WEIGHT.REGULAR"}}</option>         
-                            <option value="heavy">{{localize "WEIGHT.HEAVY"}}</option>                                
-                            {{/select}}
-                        </select>
-                    </div>
-                </div>
-
-
-                <div class="tabsArmorRow">
-                    <nav class="sheet-tabs tabsBar" data-group="primary">
-                        <b class="item tabItem" data-tab="effect">{{localize data.common.effect.label}}</b>
-                        <b class="item tabItem" data-tab="description">{{localize data.common.description.label}}</b>
-                        <b class="item tabItem" data-tab="appearance">{{localize data.common.appearance.label}}</b>
-                        <b class="item tabItem" data-tab="drawback">{{localize data.common.drawback.label}}</b>
-                    </nav>
-                </div>
-
-                <div class="sheet-body">
-                    <div class="tab" data-group="primary" data-tab="effect">
-                        <div class="textArmorRow">
-                            <textarea name="data.common.effect.value">{{data.common.effect.value}}</textarea>
-                        </div>
-                    </div>
-                    <div class="tab" data-group="primary" data-tab="description">
-                        <div class="textArmorRow">
-                            <textarea name="data.common.description.value">{{data.common.description.value}}</textarea>
-                        </div>
-                    </div>
-                    <div class="tab" data-group="primary" data-tab="appearance">
-                        <div class="textArmorRow">
-                            <textarea name="data.common.appearance.value">{{data.common.appearance.value}}</textarea>
-                        </div>
-                    </div>
-                    <div class="tab" data-group="primary" data-tab="drawback">
-                        <div class="textArmorRow">
-                            <textarea name="data.common.drawback.value">{{data.common.drawback.value}}</textarea>
-                        </div>
-                    </div>
+            <!--RECIPE TAB-->
+            <div class="tab" data-group="primary" data-tab="crafting">
+                <div class="scroll"> 
+                    {{> systems/forbiddenAlpha/templates/item/recipeTab.html}}
                 </div>
             </div>
         </div>

@@ -17,7 +17,20 @@
 		"css/forbiddenBook.css",
 		"css/forbiddenBookTabs.css",
 		"css/forbiddenScroll.css",
-		"css/forbiddenScrollItem.css"
+		"css/forbiddenScrollItem.css",
+
+		"css/scrolls/armorScroll.css",
+		"css/scrolls/artifactScroll.css",
+		"css/scrolls/buildingScroll.css",
+		"css/scrolls/criticalInjuryScroll.css",
+		"css/scrolls/gearScroll.css",
+		"css/scrolls/hirelingScroll.css",
+		"css/scrolls/materialScroll.css",
+		"css/scrolls/monsterAttackScroll.css",
+		"css/scrolls/recipeTab.css",
+		"css/scrolls/spellScroll.css",
+		"css/scrolls/talentScroll.css",
+		"css/scrolls/weaponScroll.css"
 	],
 	"scripts": 
 	[

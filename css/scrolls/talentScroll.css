@@ -1,0 +1,68 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.talentScroll .talentScrollTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+.talentScroll .talentScrollTitle .name
+{
+    padding-bottom: 25px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ IMAGE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.talentScroll .talentScrollImage
+{
+    height: 90px;
+    width: 360px;
+    padding-bottom: 15px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.talentScroll .talentScrollDescription
+{
+    display: flex;
+    width: 360px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.talentScroll .talentScrollDescription .rank,
+.talentScroll .talentScrollDescription .origin
+{
+    height: 45px;
+    width: 180px;
+}
+
+.talentScroll .talentScrollDescription .details
+{
+    margin: 5px 0px;
+    width: 360px;
+    height: 250px;
+    text-align: center;
+}
+
+.talentScroll .talentScrollDescription .details textarea
+{
+    margin: 10px 10px;
+    width: 340px;
+    height: 250px;
+    overflow:hidden;
+}

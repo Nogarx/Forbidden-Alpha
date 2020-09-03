@@ -147,10 +147,10 @@
 					"value": "",
 					"label": "MAIN.KIN"
 				},
-				"proffession":
+				"profession":
 				{
 					"value": "",
-					"label": "MAIN.PROFFESION"
+					"label": "MAIN.PROFESION"
 				},
 				"reputation":
 				{
@@ -353,9 +353,9 @@
 			"criticalInjury",
 			"gear",
 			"hireling",
+			"combatModifier",
 			"material",
-			"monsterSpell",
-			"monsterTalent",
+			"monsterAttack",
 			"spell",
 			"talent",
 			"weapon"
@@ -370,11 +370,6 @@
 					"label": "ITEM.APPEARANCE",
 					"value": ""
 				},	
-				"quality":
-				{
-					"label": "ITEM.QUALITY",
-					"value": ""
-				},	
 				"description":
 				{
 					"label": "ITEM.DESCRIPTION",
@@ -383,6 +378,11 @@
 				"drawback":
 				{
 					"label": "ITEM.DRAWBACK",
+					"value": ""
+				},
+				"features":
+				{
+					"label": "ITEM.FEATURES",
 					"value": ""
 				},
 				"effect":
@@ -398,7 +398,7 @@
 			}},
 			"crafting": {"crafting":
 			{
-				"material":
+				"materials":
 				{
 					"label": "CRAFTING.MATERIAL",
 					"value": ""
@@ -414,6 +414,11 @@
 					"value": ""
 				},
 				"tools":
+				{
+					"label": "CRAFTING.TOOLS",
+					"value": ""
+				},
+				"other":
 				{
 					"label": "CRAFTING.TOOLS",
 					"value": ""
@@ -437,6 +442,11 @@
 					{
 						"label": "COMMERCE.SHELF_LIFE",
 						"value": ""
+					},
+					"supply":
+					{
+						"label": "COMMERCE.SUPPLY",
+						"value": ""
 					}
 				}}
 		},
@@ -445,7 +455,8 @@
 		{
 			"templates": 
 			[
-				"common"
+				"common",
+				"crafting"
 			],
 			"armorRating":
 			{
@@ -478,6 +489,16 @@
 			{
 				"label": "BUILDING.DESCRIPTION",
 				"value": ""
+			},
+			"number":
+			{
+				"label": "BUILDING.NUMBER",
+				"value": 0
+			},
+			"requirement":
+			{
+				"label": "BUILDING.REQUIREMENT",
+				"value": ""
 			}
 		},
 
@@ -498,9 +519,9 @@
 				"label": "CRITICAL_INJURY.HEALING_TIME",
 				"value": ""
 			},
-			"effect":
+			"description":
 			{
-				"label": "CRITICAL_INJURY.EFFECT",
+				"label": "CRITICAL_INJURY.DESCRIPTION",
 				"value": ""
 			}
 		},
@@ -523,10 +544,40 @@
 				"valueSilver": 0,
 				"valueGold": 0
 			},
+			"number":
+			{
+				"label": "HIRELING.NUMBER",
+				"value": 0
+			},
 			"description":
 			{
-				"value": "",
-				"label": "HIRELING.DESCRIPTION"
+				"label": "HIRELING.DESCRIPTION",
+				"value": ""
+				
+			},
+			"supply":
+			{
+				"label": "HIRELING.SUPPLY",
+				"value": ""
+			}
+		},
+
+		"combatModifier":
+		{
+			"modifierName":
+			{
+				"label": "MODIFIER.MODIFIER_NAME",
+				"value": ""
+			},
+			"skillDice":
+			{
+				"label": "MODIFIER.SKILL_DICE",
+				"value": 0
+			},
+			"artifactDice":
+			{
+				"label": "MODIFIER.ARTIFACT_DICE",
+				"value": ""
 			}
 		},
 
@@ -537,42 +588,34 @@
 				"common", 
 				"crafting",
 				"commerce"
-			]
-		},
-
-		"monsterSpell": 
-		{
-			"scrollTitle":
+			],
+			"units":
 			{
-				"label": "MONSTER_SPELL.TITLE"
-			},
-			"rank":
-			{
-				"value": 0,
-				"label": "MONSTER_SPELL.RANK"
-			},
-			"description":
-			{
-				"value": "",
-				"label": "MONSTER_SPELL.DESCRIPTION"
+				"label": "ITEM.UNITS",
+				"value": 0
 			}
 		},
 
-		"monsterTalent": 
+		"monsterAttack":
 		{
 			"scrollTitle":
 			{
-				"label": "MONSTER_TALENT.TITLE"
+				"label": "MONSTER_ATTACK.TITLE"
 			},
-			"rank":
+			"baseDice":
 			{
-				"value": 0,
-				"label": "MONSTER_TALENT.RANK"
+				"label": "MONSTER_ATTACK.DICE",
+				"value": 0
+			},
+			"damage":
+			{
+				"label": "MONSTER_ATTACK.DAMAGE",
+				"value": 0
 			},
 			"description":
 			{
-				"value": "",
-				"label": "MONSTER_TALENT.DESCRIPTION"
+				"label": "MONSTER_ATTACK.DESCRIPTION",
+				"value": ""
 			}
 		},
 
@@ -582,15 +625,30 @@
 			{
 				"label": "SPELL.TITLE"
 			},
+			"duration": 
+			{
+				"label": "SPELL.DURATION",
+				"value": ""
+			},
+			"ingredient":
+			{
+				"label": "SPELL.INGREDIENT",
+				"value": ""
+			},
+			"range":
+			{
+				"label": "SPELL.RANGE",				
+				"value": ""
+			},
 			"rank":
 			{
-				"value": 0,
-				"label": "SPELL.RANK"
+				"label": "SPELL.RANK",
+				"value": 0
 			},
 			"description":
 			{
-				"value": "",
-				"label": "SPELL.DESCRIPTION"
+				"label": "SPELL.DESCRIPTION",
+				"value": ""
 			}
 		},
 
@@ -602,13 +660,30 @@
 			},
 			"rank":
 			{
-				"value": 0,
-				"label": "TALENT.RANK"
+				"label": "TALENT.RANK",
+				"value": 0
+			},
+			"origin":
+			{
+				"label": "TALENT.ORIGIN",
+				"value": ""
 			},
 			"description":
 			{
-				"value": "",
-				"label": "TALENT.DESCRIPTION"
+				"label": "TALENT.DESCRIPTION",
+				"value": ""
+			},
+			"rankOne":
+			{
+				"value": ""
+			},
+			"rankTwo":
+			{
+				"value": ""
+			},
+			"rankThree":
+			{
+				"value": ""
 			}
 		},
 
@@ -618,11 +693,6 @@
 			[
 				"common"
 			],
-			"artifactBonus":
-			{
-				"label": "WEAPON.ARTIFACT_BONUS",
-				"value": 0
-			},
 			"damage":
 			{
 				"label": "WEAPON.DAMAGE",

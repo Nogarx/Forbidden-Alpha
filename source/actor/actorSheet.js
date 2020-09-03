@@ -12,20 +12,38 @@ export class ForbiddenAlphaActorSheet extends ActorSheet
         if (!this.options.editable) return;
 
         // Add Inventory Item
-        html.find('.item-create').click(this._onItemCreate.bind(this));
+        html.find('.itemCreate').click(this._onItemCreate.bind(this));
 
         // Update Inventory Item
-        html.find('.item-edit').click(ev => {
-        const li = $(ev.currentTarget).parents(".item");
-        const item = this.actor.getOwnedItem(li.data("itemId"));
-        item.sheet.render(true);
+        html.find('.itemEdit').click(ev => 
+        {
+            const div = $(ev.currentTarget).parents(".item");
+            const item = this.actor.getOwnedItem(div.data("itemId"));
+            item.sheet.render(true);
         });
 
         // Delete Inventory Item
-        html.find('.item-delete').click(ev => {
-        const li = $(ev.currentTarget).parents(".item");
-        this.actor.deleteOwnedItem(li.data("itemId"));
-        li.slideUp(200, () => this.render(false));
+        html.find('.itemDelete').click(ev => 
+        {
+            const div = $(ev.currentTarget).parents(".item");
+            this.actor.deleteOwnedItem(div.data("itemId"));
+            div.slideUp(200, () => this.render(false));
+        });
+
+
+        html.find('.itemSelection').click( ev => 
+        {
+            const div = $(ev.currentTarget).parents(".buildingItem");
+            const selectedItem = this.actor.getOwnedItem(div.data("itemId"));
+            const items = this.actor.items;
+            items.forEach((item) => 
+            {
+                if (item.type === "building") 
+                {
+                    if (item != selectedItem) {item.update({"data.selected": false});}
+                    else {item.update({"data.selected": true});}
+                }
+            });
         });
 
         // Rollable abilities.

@@ -1,0 +1,76 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="scroll">
+        <div class="scrollContent">
+            <div class="spellScroll">
+                <!--TITLE-->
+                <div class="spellScrollTitle ">
+                    <div class="centeredRow"> <label>{{localize data.scrollTitle.label}}</label> </div>
+                    <div class="centeredRow name"> <input name="name" type="text" value="{{item.name}}" /> </div>
+
+                </div>
+                <!--ITEM IMAGE-->
+                <div class="spellScrollImage">
+                    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+                </div>
+                <!--ITEM DESCRIPTION-->
+                <div class="spellScrollDescription">
+                    <div class="singleColumn">
+
+                        <div class="centeredRow"> 
+
+                            <div class="rank verticalElement"> 
+                                <label>{{localize data.rank.label}}:</label>
+                                <select name="data.rank.value">
+                                    {{#select data.rank.value}}
+                                    <option hidden disabled selected value="0"> 0 </option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>       
+                                    <option value="4">4</option>                                 
+                                    {{/select}}
+                                </select>
+                            </div>
+
+                            <div class="range verticalElement"> 
+                                <label>{{localize data.range.label}}:</label>
+                                <select name="data.range.value">
+                                    {{#select data.range.value}}
+                                    <option hidden disabled selected value> {{localize "RANGE.LABEL"}} </option>
+                                    <option value="armsLenght">{{localize "RANGE.ARMS_LENGHT"}}</option>
+                                    <option value="near">{{localize "RANGE.NEAR"}}</option>
+                                    <option value="short">{{localize "RANGE.SHORT"}}</option>       
+                                    <option value="long">{{localize "RANGE.LONG"}}</option>           
+                                    <option value="distant">{{localize "RANGE.DISTANT"}}</option>                              
+                                    {{/select}}
+                                </select>
+                            </div>
+    
+                        </div>
+
+                        <div class="centeredRow"> 
+
+                            <div class="duration verticalElement"> 
+                                <label>{{localize data.duration.label}}:</label>
+                                <input name="data.duration.value" type="text" value="{{data.duration.value}}" />  
+                            </div>
+
+                            <div class="ingredient verticalElement"> 
+                                <label>{{localize data.ingredient.label}}:</label>
+                                <input name="data.ingredient.value" type="text" value="{{data.ingredient.value}}" />  
+                            </div>
+    
+                        </div>
+
+                        <div class="centeredRow"> 
+                            <div class="description verticalElement">  
+                                <label>{{localize data.description.label}}:</label>
+                                <textarea name="data.description.value">{{data.description.value}}</textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

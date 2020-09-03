@@ -27,12 +27,38 @@
     /* Box transform */
     display: flex;
     position: relative;
-    top: 14%;
-    left: 10%;
-    width: 80%;
-    height: 72%;
-    overflow: hidden;
+    top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 360px;
+    height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
 
+    /* Debug */
+    /*background-color: rgba(255, 0, 0, 0.25);*/
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent .verticalElement
+{
+    /* Box transform */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Debug */
+    /*background-color: rgba(255, 0, 0, 0.25);*/
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent .horizontalElement
+{
+    /* Box transform */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
     /* Debug */
     /*background-color: rgba(255, 0, 0, 0.25);*/
 }
@@ -41,6 +67,40 @@
 /* ------------------------------------------------------------------------------- */
 /* ----------------------------------- INPUTS ------------------------------------ */
 /* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .scroll .scrollContent img
+{
+    height: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent::-webkit-scrollbar 
+{
+    width: 8px;
+    background:  transparent;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent::-webkit-scrollbar-thumb 
+{
+    outline: none;
+    border-radius: 8px;
+    background: rgb(26, 26, 26);
+    border: none;
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 30px; 
+}
+
+.forbiddenAlpha.sheet .scroll .scrollContent::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 30px;
+}
+
 
 .forbiddenAlpha.sheet .scroll .scrollContent label
 {
@@ -52,13 +112,12 @@
     text-align: center;
     align-self: center;
     margin: 0px 8px;
+    text-shadow: 0px 0px 2px rgba(0,255,0,0.25);
 }
 
 .forbiddenAlpha.sheet .scroll .scrollContent  textarea
 {
     /* Transform */
-    width: auto;
-    height: auto;
     resize: none;
 
     /* Text */
@@ -77,19 +136,21 @@
     /*background-color: rgba(0, 255, 0, 0.25);*/
 }
 
+.forbiddenAlpha.sheet .scroll .scrollContent select:hover,
+.forbiddenAlpha.sheet .scroll .scrollContent select:focus,
+.forbiddenAlpha.sheet .scroll .scrollContent input:hover,
+.forbiddenAlpha.sheet .scroll .scrollContent input:focus,
 .forbiddenAlpha.sheet .scroll .scrollContent textarea:hover,
 .forbiddenAlpha.sheet .scroll .scrollContent textarea:focus
 {
     outline: none !important;
-    border-color: blue;
-    box-shadow: 0 0 8px blue;
+    border-color: green;
+    box-shadow: 0 0 4px green;
 }
 
 .forbiddenAlpha.sheet .scroll .scrollContent  button 
 {
     /* Transform */
-    width: auto;
-    height: auto;
     padding: 2px 4px;
     line-height: inherit;
     
@@ -111,8 +172,7 @@
 .forbiddenAlpha.sheet .scroll .scrollContent  input
 {
     /* Transform */
-    width: auto;
-    height: auto;
+    margin-top: 5px;
     padding: 2px 4px;
     line-height: inherit;
     
@@ -130,13 +190,6 @@
     background-color: rgba(26, 26, 26, 0.055);
 }
 
-.forbiddenAlpha.sheet .scroll .scrollContent  input:hover
-{
-    border-color: blue;
-    box-shadow: 0 0 8px blue;
-    text-shadow: 0px 0px 2px blue;
-}
-
 .forbiddenAlpha.sheet .scroll .scrollContent  input[type="number"]::-webkit-outer-spin-button,
 .forbiddenAlpha.sheet .scroll .scrollContent  input[type="number"]::-webkit-inner-spin-button 
 {
@@ -148,8 +201,7 @@
 .forbiddenAlpha.sheet .scroll .scrollContent  select
 {
     /* Transform */
-    width: auto;
-    height: auto;
+    margin-top: 5px;
     padding: 0px 4px;
     line-height: inherit;
     
@@ -160,7 +212,7 @@
     font-family: inherit;
     font-size: inherit;
     font-weight: bold;
-    text-align: center;
+    text-align-last:center;
     align-self: center;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -169,14 +221,6 @@
     border-radius: 8px;
     background-color: rgba(26, 26, 26, 0.055);
 }
-
-.forbiddenAlpha.sheet .scroll .scrollContent  select:hover
-{
-    border-color: blue;
-    box-shadow: 0 0 8px blue;
-    text-shadow: 0px 0px 2px blue;
-}
-
 
 /* ------------------------------------------------------------------------------- */
 /* ----------------------------------- TAB BAR ----------------------------------- */
@@ -188,10 +232,70 @@
     display: flex;
     flex-direction: row;
     position: absolute;
-    width: 100%;
+    left: 75px;
+    top: 25px;
+    width: 300px;
+    height: 60px;
     justify-content: space-between;
     font-size: 16px;
 }
+
+.forbiddenAlpha.sheet .scroll .tabsBar .scrollMark
+{
+    /* Bookmark image */
+    background-image:url(../assets/wax.png);
+    background-size: cover;
+    background-position: center;
+    overflow: visible;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    margin: 5px 10px;
+    text-align: center;
+}
+
+.forbiddenAlpha.sheet .scroll .tabsBar .scrollMark:hover img
+{
+    /* Bookmark image */
+    opacity: 1;
+}
+
+.forbiddenAlpha.sheet .scroll .tabsBar .scrollMark img
+{
+    /* Bookmark image */
+    width: 20px;
+    height: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 12px;
+    border: none;
+    opacity: 0.3;
+}
+
+.forbiddenAlpha.sheet .scroll .tabsBar .active img
+{
+    /* Bookmark image */
+    opacity: 1;
+    width: 26px;
+    height: 26px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 8px;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .forbiddenAlpha.sheet .scroll .tabsBar .tabItem:hover
 {

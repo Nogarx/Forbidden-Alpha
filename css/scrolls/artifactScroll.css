@@ -1,0 +1,68 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.artifactScroll .artifactScrollTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+.artifactScroll .artifactScrollTitle .name
+{
+    padding-bottom: 25px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ IMAGE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.artifactScroll .artifactScrollImage
+{
+    height: 90px;
+    width: 360px;
+    padding-bottom: 15px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.artifactScroll .artifactScrollDescription
+{
+    display: flex;
+    width: 360px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.artifactScroll .artifactScrollDescription .rank,
+.artifactScroll .artifactScrollDescription .origin
+{
+    height: 45px;
+    width: 180px;
+}
+
+.artifactScroll .artifactScrollDescription .details
+{
+    margin: 5px 0px;
+    width: 360px;
+    height: 250px;
+    text-align: center;
+}
+
+.artifactScroll .artifactScrollDescription .details textarea
+{
+    margin: 10px 10px;
+    width: 340px;
+    height: 250px;
+    overflow:hidden;
+}

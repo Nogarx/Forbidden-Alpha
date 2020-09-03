@@ -1,0 +1,55 @@
+<div class="scrollContent">
+    <div class="recipeTab">
+        <!--TITLE-->
+        <div class="recipeTitle ">
+            <div class="centeredRow"> <label>{{item.name}}</label></div>
+            <div class="centeredRow"> <label>{{localize "RECIPE.LABEL"}}</label></div>
+        </div>
+    
+        <!--CRAFTING-->
+        <div class="recipeBody">
+
+            <div class="singleColumn">
+                <div class="centeredRow">
+                    <!--TALENT-->
+                    <div class="talent verticalElement">
+                        <label> {{localize "RECIPE.TALENT"}}: </label>          
+                        <input name="data.crafting.talent.value" type="text" value="{{data.crafting.talent.value}}" />  
+                    </div>
+            
+                    <!--TIME-->
+                    <div class="time verticalElement">
+                        <label> {{localize "RECIPE.TIME"}}: </label>          
+                        <input name="data.crafting.time.value" type="text" value="{{data.crafting.time.value}}" />  
+                    </div>
+                </div>
+            
+                <!--MATERIALS-->
+                <div class="centeredRow">
+                    <div class="materials verticalElement">
+                        <label> {{localize "RECIPE.MATERIALS"}}: </label>  
+                        <textarea name="data.crafting.materials.value">{{data.crafting.materials.value}}</textarea>        
+                    </div>
+                </div>
+            
+                <!--TOOLS-->
+                <div class="centeredRow">
+                    <div class="tools verticalElement">
+                        <label> {{localize "RECIPE.TOOLS"}}: </label>  
+                        <textarea name="data.crafting.tools.value">{{data.crafting.tools.value}}</textarea>        
+                    </div>
+                </div>
+            
+                <!--OTHER-->
+                <div class="centeredRow">
+                    <div class="other verticalElement">
+                        <label> {{localize "RECIPE.OTHER"}}: </label>  
+                        <textarea name="data.crafting.other.value">{{data.crafting.other.value}}</textarea>        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
+</div>

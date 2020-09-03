@@ -1,0 +1,33 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="scroll">
+        <div class="scrollContent">
+            <div class="singleColumn">
+
+                <!--TITLE-->
+                <div class="singleColumn">
+                    <label> {{localize data.modifierName.label}} </label>
+                    <div class="centeredRow bigInput"><input name="name" type="text" value="{{item.name}}" /></div>
+                </div>
+
+                <div class="singleColumn"> 
+                    <label> {{localize data.skillDice.label}} </label>
+                    <div class="centeredRow smallInput"><input name="data.skillDice.value" type="number" value="{{data.skillDice.value}}" /> </div>
+                </div>
+
+                <div class="singleColumn">
+                    <label> {{localize data.artifactDice.label}} </label>
+                    <div class="centeredRow"><select name="data.artifactDice.value">
+                        {{#select data.artifactDice.value}}
+                        <option hidden disabled selected value> {{localize "ARTIFACT_BONUS.LABEL"}} </option>
+                        <option value="none">{{localize "DICE.NONE"}}</option>
+                        <option value="d8">{{localize "DICE.EIGHT"}}</option>               
+                        <option value="d10">{{localize "DICE.TEN"}}</option>        
+                        <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
+                        {{/select}}
+                    </select></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>

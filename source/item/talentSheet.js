@@ -10,7 +10,7 @@ export class ForbiddenAlphaTalentSheet extends ForbiddenAlphaItemSheet
     {
         return mergeObject(super.defaultOptions, {
         classes: ["forbiddenAlpha", "sheet", "item"],
-        template: "systems/forbiddenAlpha/templates/item/abilityScroll.html",
+        template: "systems/forbiddenAlpha/templates/item/talentSheet.html",
         width: 450,
         height: 600,
         resizable: false,

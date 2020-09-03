@@ -1,0 +1,45 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="scroll">
+        <div class="scrollContent">
+            <div class="monsterAttackScroll singleColumn">
+                <!--TITLE-->
+                <div class="monsterAttackScrollTitle">
+                    <div class="centeredRow"> <label>{{localize data.scrollTitle.label}}</label> </div>
+                    <div class="centeredRow name"> <input name="name" type="text" value="{{item.name}}" /> </div>
+
+                </div>
+                <!--ITEM IMAGE-->
+                <div class="monsterAttackScrollImage">
+                    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+                </div>
+                <!--ITEM DESCRIPTION-->
+                <div class="monsterAttackScrollDescription">
+                    <div class="singleColumn">
+
+                        <div class="centeredRow"> 
+
+                            <div class="baseDice verticalElement"> 
+                                <label>{{localize data.baseDice.label}}:</label>
+                                <input name="data.baseDice.value" type="number" value="{{data.baseDice.value}}" />  
+                            </div>
+
+                            <div class="damage verticalElement"> 
+                                <label>{{localize data.damage.label}}:</label>
+                                <input name="data.damage.value" type="text" value="{{data.damage.value}}" />  
+                            </div>
+    
+                        </div>
+
+                        <div class="centeredRow"> 
+                            <div class="description verticalElement">  
+                                <label>{{localize data.description.label}}:</label>
+                                <textarea name="data.description.value">{{data.description.value}}</textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

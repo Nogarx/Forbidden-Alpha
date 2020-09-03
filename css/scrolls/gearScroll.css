@@ -1,0 +1,87 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.gearScroll .gearScrollTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: row;
+
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+.gearScroll .gearScrollTitle .image
+{
+    height: 90px;
+    width: 90px;
+}
+
+.gearScroll .gearScrollTitle .name
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 260px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- PROPERTIES ---------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.gearScroll .gearScrollProperties
+{
+    display: flex;
+    width: 360px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.gearScroll .gearScrollProperties .price,
+.gearScroll .gearScrollProperties .supply,
+.gearScroll .gearScrollProperties .weight
+{
+    margin: 5px 0px;
+    height: 45px;
+    width: 120px;
+}
+
+.gearScroll .gearScrollProperties .price input
+{
+    width: 30px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.gearScroll .gearScrollDescription
+{
+    display: flex;
+    width: 360px;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.gearScroll .gearScrollDescription .features,
+.gearScroll .gearScrollDescription .drawback
+{
+    height: 120px;
+    width: 360px;
+}
+
+.gearScroll .gearScrollDescription .features textarea,
+.gearScroll .gearScrollDescription .drawback textarea
+{
+    margin: 10px 10px;
+    width: 340px;
+    height: 100px;
+    overflow:hidden;
+}

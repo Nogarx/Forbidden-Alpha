@@ -5,10 +5,57 @@
         <div class="pageTitle">{{localize "COMBAT.LABEL"}}</div>
         <!--CONTNENT-->
         <div class="pageContent"> 
-            <!--ADD ATTRIBUTES TO PAGE-->
-            <div class="talentList">
 
+            <div class="itemList">
+
+                <!--ARMOR-->
+                <div class="itemHeader">
+                    <b class="combatArmor">{{localize "BOOK.ARMOR_HEADER"}}</b>
+                    <b class="combatRating">{{localize "BOOK.ARMOR_RATING"}}</b>
+                </div>
+                <div> 
+                    {{#each actor.items as |item|}}
+                    {{#if item.isArmor}}
+                    <div class="combatItem" data-item-id="{{item._id}}">
+                
+                        <div class="combatArmor">
+                            <div class="image-container"><div class="image" style="background-image: url('{{item.img}}')"></div></div>
+                            <label> {{item.name}}</label>
+                        </div>
+                        <div class="combatRating">
+                            <label> {{item.data.armorRating.value}} / {{item.data.armorRating.maximum}}</label>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
+
+                <!--WEAPON-->
+                <div class="itemHeader">
+                    <b class="combatWeapon">{{localize "BOOK.WEAPON_HEADER"}}</b>
+                    <b class="combatDamage">{{localize "BOOK.WEAPON_DAMAGE"}}</b>
+                    <b class="combatBonus">{{localize "BOOK.WEAPON_BONUS"}}</b>
+                </div>
+                <div> 
+                    {{#each actor.items as |item|}}
+                    {{#if item.isWeapon}}
+                    <div class="combatItem" data-item-id="{{item._id}}">
+                        <div class="combatWeapon">
+                            <div class="image-container"><div class="image" style="background-image: url('{{item.img}}')"></div></div>
+                            <label> {{item.name}}</label>
+                        </div>
+                        <div class="combatDamage">
+                            <label> {{item.data.damage.value}} </label>
+                        </div>
+                        <div class="combatBonus">
+                            <label> {{item.data.gearBonus.value}} / {{item.data.gearBonus.maximum}}</label>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
             </div>
+
         </div>
     </div>
     <!--RIGHT PAGE-->

@@ -10,11 +10,10 @@ export class ForbiddenAlphaSpellSheet extends ForbiddenAlphaItemSheet
     {
         return mergeObject(super.defaultOptions, {
         classes: ["forbiddenAlpha", "sheet", "item"],
-        template: "systems/forbiddenAlpha/templates/item/abilityScroll.html",
+        template: "systems/forbiddenAlpha/templates/item/spellSheet.html",
         width: 450,
         height: 600,
-        resizable: false,
-        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+        resizable: false
         });
     }
 

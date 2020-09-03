@@ -1,0 +1,112 @@
+<div class="bookTab">
+    <!--LEFT PAGE-->
+    <div class="leftPage">
+
+        <!--TITLE-->
+        <div class="pageTitle">{{localize "BUILDINGS.LABEL"}}</div>
+
+        <!--CONTNENT-->
+        <div class="pageContent"> 
+
+            <div class="singleColumn">
+                <!--BUILDINGS NAV-->
+                <div class="itemHeader">
+                    <b class="gearType">{{localize "BOOK.BUILDING_HEADER"}}</b>
+                    <a class="button itemCreate" title="Add Building" data-type="building"><i class="fas fa-plus"></i></a>
+                </div>
+                <div> 
+                    {{#each actor.items as |item|}}
+                    {{#if item.isBuilding}}
+                    <div class="buildingItem item" data-item-id="{{item._id}}">
+                        <div class="name">
+                            <div class="image-container"><div class="image" style="background-image: url('{{item.img}}')"></div></div>
+                            <a class="item-control itemSelection" title="Select Item">{{item.name}}</a>
+                        </div>
+                        <div class="buttons">
+                            <a class="item-control itemEdit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-post" title="Post Item"><i class="fas fa-comment"></i></a>
+                            <a class="item-control itemDelete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--RIGHT PAGE-->
+    <div class="rightPage">
+
+        <!--TITLE-->
+        <div class="pageTitle">{{localize "BUILDINGS.LABEL"}}</div>
+
+        <!--CONTNENT-->
+        <div class="pageContent"> 
+
+            <!--BUILDING DETAILS-->
+            <div class="singleColumn">
+                <label>AQUI</label>
+
+                {{#each actor.items as |item|}}
+                
+                {{#if item.data.selected}}
+                    <label>{{item.name}}: SIP</label>
+                {{else}}
+                    <label>{{item.name}}: {{item.data.description.value}}</label>
+                {{/if}}
+
+                {{/each}}
+                <label>AQUI</label>
+
+
+
+                <!--TITLE-->
+                <div class="buildingTitle ">
+                    <div class="centeredRow"> <input name="name" type="text" value="{{data.items.lastSelectionId.name}}" /> </div>
+                </div>
+                
+                <!--ITEM IMAGE-->
+                <div class="buildingImage">
+                    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+                </div>
+
+                <div class="buildingRow">
+                    <!--TIME-->
+                    <div class="buildingProperty">
+                        <label> {{localize data.crafting.time.label}} </label>          
+                        <input name="data.crafting.time.value" type="text" value="{{data.crafting.time.value}}" />  
+                    </div>
+
+                    <!--TOOLS-->
+                    <div class="buildingProperty">
+                        <label> {{localize data.crafting.tools.label}} </label>          
+                        <input name="data.crafting.tools.value" type="text" value="{{data.crafting.tools.value}}" />  
+                    </div>
+                </div>
+
+                <div class="buildingRow">
+                    <!--TALENT-->
+                    <div class="buildingProperty">
+                        <label> {{localize data.crafting.talent.label}} </label>          
+                        <input name="data.crafting.talent.value" type="text" value="{{data.crafting.talent.value}}" />  
+                    </div>
+
+                    <!--MATERIALS-->
+                    <div class="buildingProperty">
+                        <label> {{localize data.crafting.material.label}} </label>          
+                        <input name="data.crafting.material.value" type="text" value="{{data.crafting.material.value}}" />  
+                    </div>
+                </div>
+
+                <!--EFFECT-->
+                <div class="buildingRow"> <label> {{localize data.description.label}} </label> </div>
+                <div class="textBuildingRow">
+                    <textarea name="data.description.value">{{data.description.value}}</textarea>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
