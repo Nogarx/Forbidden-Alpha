@@ -494,11 +494,6 @@
 			{
 				"label": "BUILDING.NUMBER",
 				"value": 0
-			},
-			"requirement":
-			{
-				"label": "BUILDING.REQUIREMENT",
-				"value": ""
 			}
 		},
 
@@ -531,7 +526,8 @@
 			"templates": 
 			[
 				"common",
-				"commerce"
+				"commerce",
+				"crafting"
 			]
 		},
 
@@ -691,7 +687,8 @@
 		{
 			"templates": 
 			[
-				"common"
+				"common",
+				"crafting"
 			],
 			"damage":
 			{

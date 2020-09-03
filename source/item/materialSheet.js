@@ -13,7 +13,8 @@ export class ForbiddenAlphaMaterialSheet extends ForbiddenAlphaItemSheet
         template: "systems/forbiddenAlpha/templates/item/materialSheet.html",
         width: 450,
         height: 600,
-        resizable: false
+        resizable: false,
+        tabs: [{navSelector: ".materialTabsBar", contentSelector: ".materialTabs", initial: "main" }]
         });
     }
 

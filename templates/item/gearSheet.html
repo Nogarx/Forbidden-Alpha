@@ -1,85 +1,106 @@
 <form class="{{cssClass}}" autocomplete="off">
     <div class="scroll">
-        <div class="scrollContent">
-            <div class="gearScroll">
 
-                <!--TITLE-->
-                <div class="gearScrollTitle">
-                    <div class="image"> <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" /> </div>
-                    <div class="name"> <input name="name" type="text" value="{{item.name}}" /> </div>
-                </div>
+        <nav class="gearTabsBar tabsBar" data-group="primary">
+            <b class="item scrollMark" data-tab="main"><img src="systems/forbiddenAlpha/assets/icons/mainMark.png"></b>
+            <b class="item scrollMark" data-tab="crafting"><img src="systems/forbiddenAlpha/assets/icons/craftingMark.png"></b>
+        </nav>
 
-                <!--PROPERTIES-->
-                <div class="gearScrollProperties">
-                    <div class="singleColumn">
-
-                        <div class="centeredRow">
-
-                            <!--PRICE-->
-                            <div class="price verticalElement">
-                                <label> {{localize data.commerce.price.label}} </label>          
-                                <div>
-                                    <input name="data.commerce.price.valueCopper" type="number" value="{{data.commerce.price.valueCopper}}" />  
-                                    /
-                                    <input name="data.commerce.price.valueSilver" type="number" value="{{data.commerce.price.valueSilver}}" />  
-                                    /
-                                    <input name="data.commerce.price.valueGold" type="number" value="{{data.commerce.price.valueGold}}" />  
+        <div class="gearTabs">
+            <!--MAIN TAB-->
+            <div class="tab" data-group="primary" data-tab="main">
+                <div class="scroll"> 
+                    <div class="scrollContent">
+                        <div class="gearScroll">
+            
+                            <!--TITLE-->
+                            <div class="gearScrollTitle">
+                                <div class="image"> <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" /> </div>
+                                <div class="name"> <input name="name" type="text" value="{{item.name}}" /> </div>
+                            </div>
+            
+                            <!--PROPERTIES-->
+                            <div class="gearScrollProperties">
+                                <div class="singleColumn">
+            
+                                    <div class="centeredRow">
+            
+                                        <!--PRICE-->
+                                        <div class="price verticalElement">
+                                            <label> {{localize data.commerce.price.label}} </label>          
+                                            <div>
+                                                <input name="data.commerce.price.valueCopper" type="number" value="{{data.commerce.price.valueCopper}}" />  
+                                                /
+                                                <input name="data.commerce.price.valueSilver" type="number" value="{{data.commerce.price.valueSilver}}" />  
+                                                /
+                                                <input name="data.commerce.price.valueGold" type="number" value="{{data.commerce.price.valueGold}}" />  
+                                            </div>
+                                        </div>
+                                                                
+                                        <!--SUPPLY-->
+                                        <div class="supply verticalElement">
+                                            <label> {{localize data.commerce.supply.label}} </label>          
+                                            <select name="data.commerce.supply.value">
+                                                {{#select data.commerce.supply.value}}
+                                                <option hidden disabled selected value> {{localize "SUPPLY.LABEL"}} </option>
+                                                <option value="common">{{localize "SUPPLY.COMMON"}}</option>
+                                                <option value="uncommon">{{localize "SUPPLY.UNCOMMON"}}</option>        
+                                                <option value="rare">{{localize "SUPPLY.RARE"}}</option>                         
+                                                {{/select}}
+                                            </select>
+                                        </div>
+            
+                                        <!--WEIGHT-->
+                                        <div class="weight verticalElement">
+                                            <label> {{localize data.common.weight.label}} </label>
+                                            <select name="data.common.weight.value">
+                                                {{#select data.common.weight.value}}
+                                                <option hidden disabled selected value> {{localize "WEIGHT.LABEL"}} </option>
+                                                <option value="tiny">{{localize "WEIGHT.TINY"}}</option>
+                                                <option value="light">{{localize "WEIGHT.LIGHT"}}</option>   
+                                                <option value="regular">{{localize "WEIGHT.REGULAR"}}</option>         
+                                                <option value="heavy">{{localize "WEIGHT.HEAVY"}}</option>                                
+                                                {{/select}}
+                                            </select>
+                                        </div>
+                                    </div>
+            
                                 </div>
                             </div>
-                                                    
-                            <!--SUPPLY-->
-                            <div class="supply verticalElement">
-                                <label> {{localize data.commerce.supply.label}} </label>          
-                                <select name="data.commerce.supply.value">
-                                    {{#select data.commerce.supply.value}}
-                                    <option hidden disabled selected value> {{localize "SUPPLY.LABEL"}} </option>
-                                    <option value="common">{{localize "SUPPLY.COMMON"}}</option>
-                                    <option value="uncommon">{{localize "SUPPLY.UNCOMMON"}}</option>        
-                                    <option value="rare">{{localize "SUPPLY.RARE"}}</option>                         
-                                    {{/select}}
-                                </select>
+            
+                            <!--DETAILS-->
+                            <div class="gearScrollDescription">
+                                <div class="singleColumn">
+                                    <!--FEATURES-->
+                                    <div class="centeredRow">
+                                        <div class="features verticalElement">
+                                            <label> {{localize data.common.features.label}} </label>          
+                                            <textarea name="data.common.features.value">{{data.common.features.value}}</textarea>
+                                        </div>
+                                    </div>
+            
+                                    <!--DRAWBACK-->
+                                    <div class="centeredRow">
+                                        <div class="drawback verticalElement">
+                                            <label> {{localize data.common.drawback.label}} </label>          
+                                            <textarea name="data.common.drawback.value">{{data.common.drawback.value}}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <!--WEIGHT-->
-                            <div class="weight verticalElement">
-                                <label> {{localize data.common.weight.label}} </label>
-                                <select name="data.common.weight.value">
-                                    {{#select data.common.weight.value}}
-                                    <option hidden disabled selected value> {{localize "WEIGHT.LABEL"}} </option>
-                                    <option value="tiny">{{localize "WEIGHT.TINY"}}</option>
-                                    <option value="light">{{localize "WEIGHT.LIGHT"}}</option>   
-                                    <option value="regular">{{localize "WEIGHT.REGULAR"}}</option>         
-                                    <option value="heavy">{{localize "WEIGHT.HEAVY"}}</option>                                
-                                    {{/select}}
-                                </select>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!--DETAILS-->
-                <div class="gearScrollDescription">
-                    <div class="singleColumn">
-                        <!--FEATURES-->
-                        <div class="centeredRow">
-                            <div class="features verticalElement">
-                                <label> {{localize data.common.features.label}} </label>          
-                                <textarea name="data.common.features.value">{{data.common.features.value}}</textarea>
-                            </div>
-                        </div>
-
-                        <!--DRAWBACK-->
-                        <div class="centeredRow">
-                            <div class="drawback verticalElement">
-                                <label> {{localize data.common.drawback.label}} </label>          
-                                <textarea name="data.common.drawback.value">{{data.common.drawback.value}}</textarea>
-                            </div>
+            
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <!--RECIPE TAB-->
+            <div class="tab" data-group="primary" data-tab="crafting">
+                <div class="scroll"> 
+                    {{> systems/forbiddenAlpha/templates/item/recipeTab.html}}
+                </div>
             </div>
         </div>
+
     </div>
 </form>
