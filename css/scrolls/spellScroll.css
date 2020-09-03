@@ -1,0 +1,75 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.spellScroll .spellScrollTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+.spellScroll .spellScrollTitle .name
+{
+    padding-bottom: 25px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ IMAGE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.spellScroll .spellScrollImage
+{
+    height: 90px;
+    width: 360px;
+    padding-bottom: 15px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.spellScroll .spellScrollDescription
+{
+    display: flex;
+    width: 360px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.spellScroll .spellScrollDescription .rank,
+.spellScroll .spellScrollDescription .range,
+.spellScroll .spellScrollDescription .duration,
+.spellScroll .spellScrollDescription .ingredient
+{
+    margin: 5px 0px;
+    height: 45px;
+    width: 180px;
+}
+
+.spellScroll .spellScrollDescription .duration input,
+.spellScroll .spellScrollDescription .ingredient input
+{
+    width: 150px;
+}
+
+.spellScroll .spellScrollDescription .description
+{
+    width: 360px;
+    height: 180px;
+    text-align: center;
+}
+
+.spellScroll .spellScrollDescription .description textarea
+{
+    margin: 10px 10px;
+    width: 340px;
+    height: 150px;
+}

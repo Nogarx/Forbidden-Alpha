@@ -1,0 +1,75 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.hirelingScroll .hirelingScrollTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+.hirelingScroll .hirelingScrollTitle .name
+{
+    padding-bottom: 25px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ IMAGE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.hirelingScroll .hirelingScrollImage
+{
+    height: 90px;
+    width: 360px;
+    padding-bottom: 15px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.hirelingScroll .hirelingScrollDescription
+{
+    display: flex;
+    width: 360px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.hirelingScroll .hirelingScrollDescription .salary,
+.hirelingScroll .hirelingScrollDescription .number,
+.hirelingScroll .hirelingScrollDescription .supply
+{
+    margin: 5px 0px;
+    height: 45px;
+    width: 120px;
+}
+
+.hirelingScroll .hirelingScrollDescription .salary input,
+.hirelingScroll .hirelingScrollDescription .number input
+{
+    width: 30px;
+}
+
+.hirelingScroll .hirelingScrollDescription .description
+{
+    margin: 5px 0px;
+    width: 360px;
+    height: 180px;
+    text-align: center;
+}
+
+.hirelingScroll .hirelingScrollDescription .description textarea
+{
+    margin: 10px 10px;
+    width: 340px;
+    height: 150px;
+}

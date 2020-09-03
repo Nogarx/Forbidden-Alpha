@@ -13,8 +13,7 @@ export class ForbiddenAlphaGearSheet extends ForbiddenAlphaItemSheet
         template: "systems/forbiddenAlpha/templates/item/gearSheet.html",
         width: 450,
         height: 600,
-        resizable: false,
-        tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+        resizable: false
         });
     }
 

@@ -1,0 +1,80 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.criticalInjuryScroll .criticalInjuryScrollTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+.criticalInjuryScroll .criticalInjuryScrollTitle .name
+{
+    padding-bottom: 25px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ IMAGE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.criticalInjuryScroll .criticalInjuryScrollImage
+{
+    height: 90px;
+    width: 360px;
+    padding-bottom: 15px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.criticalInjuryScroll .criticalInjuryScrollDescription
+{
+    display: flex;
+    width: 360px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.criticalInjuryScroll .criticalInjuryScrollDescription .healingTime,
+.criticalInjuryScroll .criticalInjuryScrollDescription .timeLimit
+{
+    margin: 5px 0px;
+    height: 45px;
+    width: 180px;
+}
+
+.criticalInjuryScroll .criticalInjuryScrollDescription .lethal
+{
+    margin: 5px 0px;
+    height: 45px;
+    width: 90px;
+}
+
+.criticalInjuryScroll .criticalInjuryScrollDescription .healingTime input,
+.criticalInjuryScroll .criticalInjuryScrollDescription .timeLimit input
+{
+    width: 180px;
+}
+
+.criticalInjuryScroll .criticalInjuryScrollDescription .description
+{
+    width: 360px;
+    height: 180px;
+    text-align: center;
+}
+
+.criticalInjuryScroll .criticalInjuryScrollDescription .description textarea
+{
+    margin: 10px 10px;
+    width: 340px;
+    height: 150px;
+}

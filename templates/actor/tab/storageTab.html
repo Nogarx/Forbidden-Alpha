@@ -1,0 +1,51 @@
+<div class="bookTab">
+    <!--LEFT PAGE-->
+    <div class="leftPage">
+
+        <!--TITLE-->
+        <div class="pageTitle">{{localize "STORAGE.LABEL"}}</div>
+
+        <!--CONTNENT-->
+        <div class="pageContent"> 
+
+            <!--GEAR NAV-->
+            <nav class="storageTabs">
+                <b class="item" data-tab="gear">{{localize "BOOK.GEAR_HEADER"}}</b>
+                <b class="item" data-tab="materials">{{localize "BOOK.MATERIAL_HEADER"}}</b>
+                <b class="item" data-tab="armor">{{localize "BOOK.ARMOR_HEADER"}}</b>
+                <b class="item" data-tab="weapon">{{localize "BOOK.WEAPON_HEADER"}}</b>
+            </nav>
+
+        </div>
+    </div>
+    <!--RIGHT PAGE-->
+    <div class="rightPage">
+
+        <!--TITLE-->
+        <div class="pageTitle">{{localize "STORAGE.LABEL"}}</div>
+
+        <!--CONTNENT-->
+        <div class="pageContent"> 
+
+            <div class="singleColumn">
+                <!--GEAR LIST-->
+                <div class="gearItemList itemList">
+                    <div class="tab" data-tab="gear">
+                        {{> systems/forbiddenAlpha/templates/actor/tab/gearGearTab.html}}
+                    </div>
+                    <div class="tab" data-tab="materials">
+                        {{> systems/forbiddenAlpha/templates/actor/tab/gearMaterialTab.html}}
+                    </div>
+                    <div class="tab" data-tab="armor">
+                        {{> systems/forbiddenAlpha/templates/actor/tab/gearArmorTab.html}}
+                    </div>
+                    <div class="tab" data-tab="weapon">
+                        {{> systems/forbiddenAlpha/templates/actor/tab/gearWeaponTab.html}}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

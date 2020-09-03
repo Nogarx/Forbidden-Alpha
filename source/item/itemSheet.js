@@ -21,11 +21,28 @@ export class ForbiddenAlphaItemSheet extends ItemSheet
 
     activateListeners(html) 
     {
-      super.activateListeners(html);
+		super.activateListeners(html);
 
-      // Everything below here is only needed if the sheet is editable
-      if (!this.options.editable) return;
+		// Everything below here is only needed if the sheet is editable
+		if (!this.options.editable) return;
 
-      // Roll handlers, click handlers, etc. would go here.
+		/*
+		$(document)
+		.one('focus.textarea', '.autoExpand', function(){
+			var savedValue = this.value;
+			this.value = '';
+			this.baseScrollHeight = this.scrollHeight;
+			this.value = savedValue;
+		})
+		.on('input.textarea', '.autoExpand', function(){
+			var minRows = this.getAttribute('data-min-rows')|0,
+				rows;
+			this.rows = minRows;
+			rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 16);
+			this.rows = minRows + rows;
+		});
+		*/
+
+		// Roll handlers, click handlers, etc. would go here.
     }
 }

@@ -48,9 +48,9 @@ export class ForbiddenAlphaActor extends Actor
 		  item.isCriticalInjury = item.type === "criticalInjury";
 		  item.isGear = item.type === "gear";
 		  item.isHireling = item.type === "hireling";
+		  item.isItemModifier = item.type === "itemModifier";
 		  item.isMaterial = item.type === "material";
-		  item.isMonsterSpell = item.type === "monsterSpell";
-		  item.isMonsterTalent = item.type === "monsterTalent";
+		  item.isMonsterAttack = item.type === "monsterAttack";
 		  item.isSpell = item.type === "spell";
 		  item.isTalent = item.type === "talent";
 		  item.isWeapon = item.type === "weapon";

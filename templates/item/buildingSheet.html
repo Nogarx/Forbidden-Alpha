@@ -1,52 +1,100 @@
 <form class="{{cssClass}}" autocomplete="off">
     <div class="scroll">
         <div class="scrollContent">
-            <div class="singleColumn">
+            <div class="buildingScroll">
+
 
                 <!--TITLE-->
-                <div class="buildingTitle ">
-                    <div class="centeredRow"> <input name="name" type="text" value="{{item.name}}" /> </div>
-                </div>
-                
-                <!--ITEM IMAGE-->
-                <div class="buildingImage">
-                    <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
-                </div>
-
-                <div class="buildingRow">
-                    <!--TIME-->
-                    <div class="buildingProperty">
-                        <label> {{localize data.crafting.time.label}} </label>          
-                        <input name="data.crafting.time.value" type="text" value="{{data.crafting.time.value}}" />  
-                    </div>
-
-                    <!--TOOLS-->
-                    <div class="buildingProperty">
-                        <label> {{localize data.crafting.tools.label}} </label>          
-                        <input name="data.crafting.tools.value" type="text" value="{{data.crafting.tools.value}}" />  
+                <div class="buildingScrollTitle">
+                    <div class="image"> <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" /> </div>
+                    <div class="name"> 
+                        <input name="name" type="text" value="{{item.name}}" /> 
                     </div>
                 </div>
 
-                <div class="buildingRow">
-                    <!--TALENT-->
-                    <div class="buildingProperty">
-                        <label> {{localize data.crafting.talent.label}} </label>          
-                        <input name="data.crafting.talent.value" type="text" value="{{data.crafting.talent.value}}" />  
+                <!--PROPERTIES-->
+                <div class="buildingScrollProperties">
+
+                    <div class="singleColumn">
+
+                        <!--NUMBER-->
+                        <div class="centeredRow">
+                            <div class="number horizontalElement"> 
+                                <label>{{localize data.number.label}}:</label>
+                                <input name="data.number.value" type="number" value="{{data.number.value}}" />  
+                            </div>
+                        </div>
+
+                        <!--TABS-->
+                        <div class="tabsHolder">
+                            <nav class="buildingTabs" data-group="primary">
+                                <b class="item" data-tab="main">{{localize data.description.label}}</b>
+                                <b class="item" data-tab="crafting">{{localize "CRAFTING.LABEL"}}</b>
+                            </nav>
+                        </div>
+
                     </div>
 
-                    <!--MATERIALS-->
-                    <div class="buildingProperty">
-                        <label> {{localize data.crafting.material.label}} </label>          
-                        <input name="data.crafting.material.value" type="text" value="{{data.crafting.material.value}}" />  
+                </div>
+
+                <!--DETAILS-->
+                <div class="buildingScrollDetails">
+                    <div class="singleColumn">
+
+    
+                        <div class="buildingBody">
+                            <div class="tab" data-group="primary" data-tab="main">
+    
+                                <!--DESCRIPTION-->
+                                <div class="centeredRow">
+                                    <div class="description verticalElement"> 
+                                        <textarea name="data.description.value">{{data.description.value}}</textarea>
+                                    </div>
+                                </div>
+    
+                            </div>
+    
+                            <div class="tab" data-group="primary" data-tab="crafting">
+    
+                                <!--CRAFTING-->
+                                <div class="centeredRow">
+                                    <!--REQUIREMENT-->
+                                    <div class="requirement verticalElement">
+                                        <label> {{localize data.requirement.label}}: </label>          
+                                        <input name="data.requirement.value" type="text" value="{{data.requirement.value}}" />  
+                                    </div>
+                                </div>
+     
+                                <div class="centeredRow">
+                                    <!--MATERIAL-->
+                                    <div class="material verticalElement">
+                                        <label> {{localize data.crafting.material.label}}: </label>          
+                                        <input name="data.crafting.material.value" type="text" value="{{data.crafting.material.value}}" />  
+                                    </div>
+                                </div>
+
+                                <div class="centeredRow">
+                                    <!--TALENT-->
+                                    <div class="talent verticalElement">
+                                        <label> {{localize data.crafting.talent.label}}: </label>          
+                                        <input name="data.crafting.talent.value" type="text" value="{{data.crafting.talent.value}}" />  
+                                    </div>
+                                </div>
+
+                                <div class="centeredRow">
+                                    <!--TOOLS-->
+                                    <div class="tools verticalElement">
+                                        <label> {{localize data.crafting.tools.label}}: </label>          
+                                        <input name="data.crafting.tools.value" type="text" value="{{data.crafting.tools.value}}" />  
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
                     </div>
-                </div>
 
-                <!--EFFECT-->
-                <div class="buildingRow"> <label> {{localize data.description.label}} </label> </div>
-                <div class="textBuildingRow">
-                    <textarea name="data.description.value">{{data.description.value}}</textarea>
                 </div>
-
             </div>
         </div>
     </div>

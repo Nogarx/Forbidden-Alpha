@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.monsterAttackScroll .monsterAttackScrollTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+.monsterAttackScroll .monsterAttackScrollTitle .name
+{
+    padding-bottom: 25px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ IMAGE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.monsterAttackScroll .monsterAttackScrollImage
+{
+    height: 90px;
+    width: 360px;
+    padding-bottom: 15px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.monsterAttackScroll .monsterAttackScrollDescription
+{
+    display: flex;
+    width: 360px;
+    height: 270px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.monsterAttackScroll .monsterAttackScrollDescription .baseDice,
+.monsterAttackScroll .monsterAttackScrollDescription .damage
+{
+    height: 45px;
+    width: 180px;
+}
+
+.monsterAttackScroll .monsterAttackScrollDescription .baseDice input,
+.monsterAttackScroll .monsterAttackScrollDescription .damage input
+{
+    width: 30px;
+}
+
+.monsterAttackScroll .monsterAttackScrollDescription .description
+{
+    margin: 10px 0px;
+    width: 360px;
+    height: 205px;
+    text-align: center;
+}
+
+.monsterAttackScroll .monsterAttackScrollDescription .description textarea
+{
+    width: 340px;
+    height: 195px;
+}

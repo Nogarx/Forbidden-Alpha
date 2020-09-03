@@ -1,0 +1,87 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.armorScroll .armorScrollTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: row;
+
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+.armorScroll .armorScrollTitle .image
+{
+    height: 90px;
+    width: 90px;
+}
+
+.armorScroll .armorScrollTitle .name
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 260px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- PROPERTIES ---------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.armorScroll .armorScrollProperties
+{
+    display: flex;
+    width: 360px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.armorScroll .armorScrollProperties .armorRating,
+.armorScroll .armorScrollProperties .bodyPart,
+.armorScroll .armorScrollProperties .weight
+{
+    margin: 5px 0px;
+    height: 45px;
+    width: 120px;
+}
+
+.armorScroll .armorScrollProperties .armorRating input
+{
+    width: 30px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.armorScroll .armorScrollDescription
+{
+    display: flex;
+    width: 360px;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.armorScroll .armorScrollDescription .features,
+.armorScroll .armorScrollDescription .drawback
+{
+    height: 120px;
+    width: 360px;
+}
+
+.armorScroll .armorScrollDescription .features textarea,
+.armorScroll .armorScrollDescription .drawback textarea
+{
+    margin: 10px 10px;
+    width: 340px;
+    height: 100px;
+    overflow:hidden;
+}

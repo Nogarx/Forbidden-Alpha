@@ -1,0 +1,91 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.weaponScroll .weaponScrollTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: row;
+
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+.weaponScroll .weaponScrollTitle .image
+{
+    height: 90px;
+    width: 90px;
+}
+
+.weaponScroll .weaponScrollTitle .name
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 260px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- PROPERTIES ---------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.weaponScroll .weaponScrollProperties
+{
+    display: flex;
+    width: 360px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.weaponScroll .weaponScrollProperties .centeredRow .damage,
+.weaponScroll .weaponScrollProperties .centeredRow .gearBonus,
+.weaponScroll .weaponScrollProperties .centeredRow .range,
+.weaponScroll .weaponScrollProperties .centeredRow .type,
+.weaponScroll .weaponScrollProperties .centeredRow .grip,
+.weaponScroll .weaponScrollProperties .centeredRow .weight
+{
+    margin: 5px 0px;
+    height: 45px;
+    width: 120px;
+}
+
+.weaponScroll .weaponScrollProperties .centeredRow .damage input,
+.weaponScroll .weaponScrollProperties .centeredRow .gearBonus input
+{
+    width: 30px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.weaponScroll .weaponScrollDescription
+{
+    display: flex;
+    width: 360px;
+    height: 240px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.weaponScroll .weaponScrollDescription .features,
+.weaponScroll .weaponScrollDescription .drawback
+{
+    height: 120px;
+    width: 360px;
+}
+
+.weaponScroll .weaponScrollDescription .features textarea,
+.weaponScroll .weaponScrollDescription .drawback textarea
+{
+    margin: 10px 10px;
+    width: 340px;
+    height: 100px;
+    overflow:hidden;
+}

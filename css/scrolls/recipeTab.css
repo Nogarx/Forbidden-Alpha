@@ -1,0 +1,61 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.recipeTab .recipeTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.recipeTab .recipeBody
+{
+    display: flex;
+    width: 360px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.recipeTab .recipeBody .talent,
+.recipeTab .recipeBody .time
+{
+    margin: 5px 0px;
+    height: 45px;
+    width: 180px;
+}
+
+.recipeTab .recipeBody .talent input,
+.recipeTab .recipeBody .time input
+{
+    width: 150px;
+}
+
+.recipeTab .recipeBody .materials,
+.recipeTab .recipeBody .tools,
+.recipeTab .recipeBody .other
+{
+    width: 360px;
+    height: 100px;
+    text-align: center;
+}
+
+.recipeTab .recipeBody .materials textarea,
+.recipeTab .recipeBody .tools textarea,
+.recipeTab .recipeBody .other textarea
+{
+    margin: 10px 10px;
+    width: 340px;
+    height: 150px;
+}

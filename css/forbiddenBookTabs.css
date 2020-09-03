@@ -190,6 +190,47 @@
 }
 
 /* ------------------------------------------------------------------------------- */
+/* --------------------------------- COMBAT TAB ---------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.book .pageContent .combatItem
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    align-items: center;
+    margin: 5px 0px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+
+    /* Debug */
+    /*background-color: rgba(0, 255, 0, 0.25);*/
+}
+
+.book .pageContent .combatItem:nth-child(even)
+{
+    border-radius: 4px;
+    background: rgba(26, 26, 26, 0.1);
+}
+
+.book .pageContent .itemList .itemHeader .combatArmor { width: 60%; }
+.book .pageContent .itemList .itemHeader .combatRaiting { width: 20%; }
+
+.book .pageContent .combatItem .combatArmor { width: 60%; }
+.book .pageContent .combatItem .combatRaiting { width: 20%;  }
+
+.book .pageContent .itemList .itemHeader .combatWeapon { width: 60%; }
+.book .pageContent .itemList .itemHeader .combatDamage { width: 20%; }
+.book .pageContent .itemList .itemHeader .combatBonus { width: 20%; }
+
+.book .pageContent .combatItem .combatWeapon { width: 60%; }
+.book .pageContent .combatItem .combatDamage { width: 20%; }
+.book .pageContent .combatItem .combatBonus { width: 20%; }
+
+/* ------------------------------------------------------------------------------- */
 /* ---------------------------------- GEAR TAB ----------------------------------- */
 /* ------------------------------------------------------------------------------- */
 
@@ -255,6 +296,49 @@
     text-shadow: 0px 0px 4px red;
 }
 
+.book .pageContent .abilityItem,
+.book .pageContent .gearItem
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    align-items: center;
+    margin: 5px 0px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+
+    /* Debug */
+    /*background-color: rgba(0, 255, 0, 0.25);*/
+}
+
+.book .pageContent .abilityItem:nth-child(even),
+.book .pageContent .gearItem:nth-child(even)
+{
+    border-radius: 4px;
+    background: rgba(26, 26, 26, 0.1);
+}
+
+.book .pageContent .itemList .itemHeader .gearType { width: 40%; }
+.book .pageContent .itemList .itemHeader .gearBonus { width: 20%; }
+.book .pageContent .itemList .itemHeader .gearWeight { width: 22.5%; }
+.book .pageContent .itemList .itemHeader .button { width: 17.5%; }
+
+.book .pageContent .gearItem .name { width: 40%; }
+.book .pageContent .gearItem .bonus { width: 20%; }
+.book .pageContent .gearItem .weight { width: 22.5%;  }
+.book .pageContent .gearItem .buttons { width: 17.5%; }
+
+.book .pageContent .itemList .itemHeader .abilityName { width: 60%; }
+.book .pageContent .itemList .itemHeader .abilityRank { width: 22.5%; }
+.book .pageContent .itemList .itemHeader .button { width: 17.5%; }
+
+.book .pageContent .abilityItem .name { width: 60%; }
+.book .pageContent .abilityItem .rank { width: 22.5%; }
+.book .pageContent .abilityItem .buttons { width: 17.5%; }
+
 /* ------------------------------------------------------------------------------- */
 /* -------------------------------- BIOGRAPHY TAB -------------------------------- */
 /* ------------------------------------------------------------------------------- */
@@ -278,4 +362,44 @@
 
     /* Debug */
     /*background-color: rgba(0, 255, 0, 0.25);*/
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ STRONGHOLD TABS -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .pageContent .storageTabs
+{
+    /* Box transform */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+
+    /* Debug */
+    /*background-color: rgba(255, 0, 0, 0.25);*/
+}
+
+.forbiddenAlpha.sheet .book .pageContent .storageTabs .item
+{
+    display: flex;
+    height: 25%;
+    align-items: center;
+    font-size: 22px;
+}
+
+.forbiddenAlpha.sheet .book .pageContent .storageTabs .item:hover
+{
+    cursor: pointer;
+    text-shadow: 0px 0px 4px rgba(255,0,0,0.5);
+}
+
+.forbiddenAlpha.sheet .book .pageContent .storageTabs .active
+{
+    /* Bookmark image */
+    text-shadow: 0px 0px 4px red;
 }
