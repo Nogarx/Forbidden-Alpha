@@ -468,7 +468,12 @@
 			{
 				"label": "ARMOR.BODY_PART",
 				"value": ""
-			}
+			},
+			"isEquiped":
+			{
+				"label": "ARMOR.IS_EQUIPED",
+				"value": false
+			} 
 		},
 
 		"artifact": 
@@ -715,7 +720,12 @@
 			{
 				"label": "WEAPON.TYPE",
 				"value": ""
-			}
+			},
+			"isEquiped":
+			{
+				"label": "ARMOR.IS_EQUIPED",
+				"value": false
+			} 
 		}
 	}
 }
