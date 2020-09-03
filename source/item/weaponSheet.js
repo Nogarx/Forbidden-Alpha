@@ -13,7 +13,8 @@ export class ForbiddenAlphaWeaponSheet extends ForbiddenAlphaItemSheet
         template: "systems/forbiddenAlpha/templates/item/weaponSheet.html",
         width: 450,
         height: 600,
-        resizable: false
+        resizable: false,
+        tabs: [{navSelector: ".weaponTabsBar", contentSelector: ".weaponTabs", initial: "main" }]
         });
     }
 
