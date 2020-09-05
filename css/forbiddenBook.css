@@ -161,6 +161,20 @@
     /*background-color: rgba(255, 0, 0, 0.25);*/
 }
 
+.forbiddenAlpha.sheet .book .tabsBarButtons
+{
+    /* Box transform */
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: -1%;
+    right: 50px;
+    height: 5%;
+    width: 180px;
+    justify-content: center;
+}
+
+.forbiddenAlpha.sheet .book .tabsBarButtons .bookMark,
 .forbiddenAlpha.sheet .book .tabsBar .bookMark
 {
     /* Bookmark image */
@@ -175,12 +189,14 @@
     text-align: center;
 }
 
+.forbiddenAlpha.sheet .book .tabsBarButtons .bookMark:hover img,
 .forbiddenAlpha.sheet .book .tabsBar .bookMark:hover img
 {
     /* Bookmark image */
     opacity: 1;
 }
 
+.forbiddenAlpha.sheet .book .tabsBarButtons .bookMark img,
 .forbiddenAlpha.sheet .book .tabsBar .bookMark img
 {
     /* Bookmark image */
@@ -204,14 +220,6 @@
     margin-top: 4px;
     border: none;
 }
-
-.forbiddenAlpha.sheet .book .active image
-{
-    /* Bookmark image */
-    filter: invert(100%);
-}
-
-
 
 
 /* ------------------------------------------------------------------------------- */
