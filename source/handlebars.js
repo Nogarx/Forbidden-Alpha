@@ -19,12 +19,14 @@ function preloadHandlebarsTemplates()
 	  "systems/forbiddenAlpha/templates/actor/tab/hirelingTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/storageTab.html",
 
+
+	  "systems/forbiddenAlpha/templates/actor/bookTabsBar.html",
+
 	  "systems/forbiddenAlpha/templates/item/spellSheet.html",
 	  "systems/forbiddenAlpha/templates/item/talentSheet.html",
 	  "systems/forbiddenAlpha/templates/item/monsterAttackSheet.html",
-
+	  "systems/forbiddenAlpha/templates/item/scrollTabsBar.html",
 	  "systems/forbiddenAlpha/templates/item/recipeTab.html",
-
 	  "systems/forbiddenAlpha/templates/item/armorSheet.html",
 	  "systems/forbiddenAlpha/templates/item/artifactSheet.html",
 	  "systems/forbiddenAlpha/templates/item/buildingSheet.html",

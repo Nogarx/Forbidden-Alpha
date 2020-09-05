@@ -14,7 +14,7 @@ export class ForbiddenAlphaWeaponSheet extends ForbiddenAlphaItemSheet
         width: 450,
         height: 600,
         resizable: false,
-        tabs: [{navSelector: ".weaponTabsBar", contentSelector: ".weaponTabs", initial: "main" }]
+        tabs: [{navSelector: ".tabsBar", contentSelector: ".tabsContent", initial: "main" }]
         });
     }
 

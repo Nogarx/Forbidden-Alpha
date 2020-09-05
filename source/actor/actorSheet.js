@@ -46,6 +46,36 @@ export class ForbiddenAlphaActorSheet extends ActorSheet
             });
         });
 
+        /////////////////////////
+        ///// Custom header /////
+        /////////////////////////
+
+        html.find('.closeWindow').click(ev => 
+        {
+            super.close();
+        });
+
+        html.find('.openConfiguration').click(ev => 
+        {
+            this._onConfigureSheet(ev)
+        });
+    
+		const bookSheet = html.find('.scrollBorder')[0];
+		if (bookSheet)
+		{
+			// Make sheet's borders draggable
+			new Draggable(this, html, bookSheet, this.options.resizable);
+	
+			// Make sheet's borders minimizable
+			if ( this.options.minimizable ) 
+			{
+				bookSheet.addEventListener('dblclick', this._onToggleMinimize.bind(this));
+			}
+        }
+        
+        /////////////////////////
+        /////////////////////////
+
         // Rollable abilities.
         /*
         html.find('.rollable').click(this._onRoll.bind(this));

@@ -37,7 +37,17 @@
 {
     /* CUSTOM HEADERS */
     z-index: 15;
-    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0; 
+    pointer-events:none;
+}
+
+.minimized .window-header 
+{
+    /* CUSTOM HEADERS */
+    z-index: 15;
+    opacity: 1; 
+    background-color: rgba(26, 26, 26, 1);
+    pointer-events: all;
 }
 
 .forbiddenAlpha .window-content

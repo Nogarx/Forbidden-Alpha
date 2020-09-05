@@ -14,7 +14,7 @@ export class ForbiddenAlphaBuildingSheet extends ForbiddenAlphaItemSheet
         width: 450,
         height: 600,
         resizable: false,
-        tabs: [{ navSelector: ".buildingTabsBar", contentSelector: ".buildingTabs", initial: "main" }]
+        tabs: [{navSelector: ".tabsBar", contentSelector: ".tabsContent", initial: "main" }]
         });
     }
 

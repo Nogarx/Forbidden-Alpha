@@ -13,7 +13,8 @@ export class ForbiddenAlphaMonsterAttackSheet extends ForbiddenAlphaItemSheet
         template: "systems/forbiddenAlpha/templates/item/monsterAttackSheet.html",
         width: 450,
         height: 600,
-        resizable: false
+        resizable: false,
+        tabs: [{navSelector: ".tabsBar", contentSelector: ".tabsContent", initial: "main" }]
         });
     }
 
