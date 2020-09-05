@@ -13,7 +13,8 @@ export class ForbiddenAlphaCriticalInjurySheet extends ForbiddenAlphaItemSheet
         template: "systems/forbiddenAlpha/templates/item/criticalInjurySheet.html",
         width: 450,
         height: 600,
-        resizable: false
+        resizable: false,
+        tabs: [{navSelector: ".tabsBar", contentSelector: ".tabsContent", initial: "main" }]
         });
     }
 

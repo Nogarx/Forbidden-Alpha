@@ -1,12 +1,13 @@
 <form class="{{cssClass}}" autocomplete="off">
     <div class="scroll">
 
-        <nav class="weaponTabsBar tabsBar" data-group="primary">
+        <nav class="tabsBar" data-group="primary">
             <b class="item scrollMark" data-tab="main"><img src="systems/forbiddenAlpha/assets/icons/mainMark.png"></b>
             <b class="item scrollMark" data-tab="crafting"><img src="systems/forbiddenAlpha/assets/icons/craftingMark.png"></b>
+            {{> systems/forbiddenAlpha/templates/item/scrollTabsBar.html}}
         </nav>
 
-        <div class="weaponTabs">
+        <div class="tabsContent">
             <!--MAIN TAB-->
             <div class="tab" data-group="primary" data-tab="main">
                 <div class="scroll"> 

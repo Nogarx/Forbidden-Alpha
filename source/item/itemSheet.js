@@ -26,6 +26,32 @@ export class ForbiddenAlphaItemSheet extends ItemSheet
 		// Everything below here is only needed if the sheet is editable
 		if (!this.options.editable) return;
 
+        html.find('.closeWindow').click(ev => 
+		{
+			super.close();
+		});
+
+		html.find('.openConfiguration').click(ev => 
+		{
+			this._onConfigureSheet(ev)
+		});
+
+
+		// Get custom header.
+		const scrollSheet = html.find('.scrollBorder')[0];
+		if (scrollSheet)
+		{
+			// Make sheet's borders draggable
+			new Draggable(this, html, scrollSheet, this.options.resizable);
+	
+			// Make sheet's borders minimizable
+			if ( this.options.minimizable ) 
+			{
+				scrollSheet.addEventListener('dblclick', this._onToggleMinimize.bind(this));
+			}
+		}
+
+
 		/*
 		$(document)
 		.one('focus.textarea', '.autoExpand', function(){

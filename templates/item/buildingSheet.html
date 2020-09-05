@@ -1,65 +1,64 @@
 <form class="{{cssClass}}" autocomplete="off">
     <div class="scroll">
 
-        <nav class="buildingTabsBar tabsBar" data-group="primary">
+        <nav class="tabsBar" data-group="primary">
             <b class="item scrollMark" data-tab="main"><img src="systems/forbiddenAlpha/assets/icons/mainMark.png"></b>
             <b class="item scrollMark" data-tab="crafting"><img src="systems/forbiddenAlpha/assets/icons/craftingMark.png"></b>
+
+            {{> systems/forbiddenAlpha/templates/item/scrollTabsBar.html}}
+
         </nav>
 
-        <div class="buildingTabs">
+        <div class="tabsContent">
             <!--MAIN TAB-->
             <div class="tab" data-group="primary" data-tab="main">
-                <div class="scroll"> 
-                    <div class="scrollContent">
-                        <div class="buildingScroll">
-            
-                            <!--TITLE-->
-                            <div class="buildingScrollTitle">
-                                <div class="image"> <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" /> </div>
-                                <div class="name"> 
-                                    <input name="name" type="text" value="{{item.name}}" /> 
-                                </div>
+                <div class="scrollContent">
+                    <div class="buildingScroll">
+        
+                        <!--TITLE-->
+                        <div class="buildingScrollTitle">
+                            <div class="image"> <img class="item-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" /> </div>
+                            <div class="name"> 
+                                <input name="name" type="text" value="{{item.name}}" /> 
                             </div>
-            
-                            <!--PROPERTIES-->
-                            <div class="buildingScrollProperties">
-            
-                                <div class="singleColumn">
-            
-                                    <!--NUMBER-->
-                                    <div class="centeredRow">
-                                        <div class="number horizontalElement"> 
-                                            <label>{{localize data.number.label}}:</label>
-                                            <input name="data.number.value" type="number" value="{{data.number.value}}" />  
-                                        </div>
-                                    </div>
-                                </div>
-            
-                            </div>
-            
-                            <!--DETAILS-->
-                            <div class="buildingScrollDetails">
-                                <div class="singleColumn">
-                                    <!--DESCRIPTION-->
-                                    <div class="centeredRow">
-                                        <div class="description verticalElement"> 
-                                            <label>{{localize data.description.label}}</label>
-                                            <textarea name="data.description.value">{{data.description.value}}</textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-            
                         </div>
+        
+                        <!--PROPERTIES-->
+                        <div class="buildingScrollProperties">
+        
+                            <div class="singleColumn">
+        
+                                <!--NUMBER-->
+                                <div class="centeredRow">
+                                    <div class="number horizontalElement"> 
+                                        <label>{{localize data.number.label}}:</label>
+                                        <input name="data.number.value" type="number" value="{{data.number.value}}" />  
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <!--DETAILS-->
+                        <div class="buildingScrollDetails">
+                            <div class="singleColumn">
+                                <!--DESCRIPTION-->
+                                <div class="centeredRow">
+                                    <div class="description verticalElement"> 
+                                        <label>{{localize data.description.label}}</label>
+                                        <textarea name="data.description.value">{{data.description.value}}</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
                     </div>
                 </div>
             </div>
 
             <!--RECIPE TAB-->
             <div class="tab" data-group="primary" data-tab="crafting">
-                <div class="scroll"> 
-                    {{> systems/forbiddenAlpha/templates/item/recipeTab.html}}
-                </div>
+                {{> systems/forbiddenAlpha/templates/item/recipeTab.html}}
             </div>
         </div>
 
