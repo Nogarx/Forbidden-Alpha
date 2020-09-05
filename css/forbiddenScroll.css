@@ -239,13 +239,28 @@
     flex-direction: row;
     position: absolute;
     top: -5px;
-    right: 15px;
+    right: 196px;
     width: auto;
     height: 60px;
     justify-content: space-between;
     font-size: 16px;
 }
 
+.forbiddenAlpha.sheet .scroll .tabsBarButtons
+{
+    /* Box transform */
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    width: 186px;
+    height: 60px;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.forbiddenAlpha.sheet .scroll .tabsBarButtons .scrollMark,
 .forbiddenAlpha.sheet .scroll .tabsBar .scrollMark
 {
     /* Bookmark image */
@@ -265,22 +280,7 @@
     padding: 0px 5px;
 }
 
-.forbiddenAlpha.sheet .scroll .tabsBar .scrollMark:hover img
-{
-    /* Bookmark image */
-    opacity: 1;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.forbiddenAlpha.sheet .scroll .tabsBar .scrollBorder:hover img
-{
-    /* Bookmark image */
-    opacity: 1;
-    cursor: move;
-    z-index: 100;
-}
-
+.forbiddenAlpha.sheet .scroll .tabsBarButtons .scrollMark img,
 .forbiddenAlpha.sheet .scroll .tabsBar .scrollMark img
 {
     /* Bookmark image */
@@ -291,6 +291,15 @@
     margin-top: 9px;
     border: none;
     opacity: 0.3;
+    z-index: 100;
+}
+
+.forbiddenAlpha.sheet .scroll .tabsBarButtons .scrollMark:hover img,
+.forbiddenAlpha.sheet .scroll .tabsBar .scrollMark:hover img
+{
+    /* Bookmark image */
+    opacity: 1;
+    cursor: pointer;
     z-index: 100;
 }
 
