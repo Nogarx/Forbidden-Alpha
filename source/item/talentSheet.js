@@ -14,7 +14,8 @@ export class ForbiddenAlphaTalentSheet extends ForbiddenAlphaItemSheet
         width: 450,
         height: 600,
         resizable: false,
-        tabs: [{navSelector: ".tabsBar", contentSelector: ".tabsContent", initial: "main" }]
+        tabs: [{navSelector: ".tabsBar", contentSelector: ".tabsContent", initial: "main" },
+        {navSelector: ".detailsBar", contentSelector: ".detailsContent", initial: "main" }]
         });
     }
 
