@@ -22,7 +22,6 @@
                     <div class="singleColumn">
 
                         <div class="centeredRow"> 
-
                             <div class="rank verticalElement"> 
                                 <label>{{localize data.rank.label}}:</label>
                                 <select name="data.rank.value">
@@ -46,9 +45,48 @@
                                     {{/select}}
                                 </select>
                             </div>
-    
                         </div>
 
+                        <!--BAR-->
+                        <nav class="detailsBar" data-group="primary">
+                            <b class="item" data-tab="description">{{localize data.description.label}}</b>
+
+                            {{#ifCond data.origin.value "kin"}}
+                            {{else}}
+                                {{#ifLessEqual "1" data.rank.value}}
+                                    <b class="item" data-tab="rankOne">{{localize data.rank.label}} 1</b>
+                                {{/ifLessEqual}}
+                                {{#ifLessEqual "2" data.rank.value}}
+                                    <b class="item" data-tab="rankTwo">{{localize data.rank.label}} 2</b>
+                                {{/ifLessEqual}}
+                                {{#ifLessEqual "3" data.rank.value}}
+                                    <b class="item" data-tab="rankThree">{{localize data.rank.label}} 3</b>
+                                {{/ifLessEqual}}
+                            {{/ifCond}}
+                        </nav>
+                        
+                        <!--DETAILS-->
+                        <div class="detailsContent">
+                            <div class="tab details" data-group="primary" data-tab="description">
+                                <textarea name="data.description.value">{{data.description.value}}</textarea>
+                            </div>
+                            <div class="tab details" data-group="primary" data-tab="rankOne">
+                                <textarea name="data.rankOne.value">{{data.rankOne.value}}</textarea>
+                            </div>
+                            <div class="tab details" data-group="primary" data-tab="rankTwo">
+                                <textarea name="data.rankTwo.value">{{data.rankTwo.value}}</textarea>
+                            </div>
+                            <div class="tab details" data-group="primary" data-tab="rankThree">
+                                <textarea name="data.rankThree.value">{{data.rankThree.value}}</textarea>
+                            </div>
+                        </div>
+
+                        
+
+
+
+
+                        <!--
                         <div class="centeredRow"> 
                             <div class="details verticalElement">  
                                 <label>{{localize data.description.label}}:</label>
@@ -89,7 +127,7 @@
 
                         {{/ifCond}}
 
-
+                        -->
 
 
                     </div>

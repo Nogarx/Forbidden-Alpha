@@ -89,6 +89,7 @@
     background:  transparent;
 }
 
+.forbiddenAlpha.sheet .scroll .scrollContent textarea::-webkit-scrollbar-thumb,
 .forbiddenAlpha.sheet .scroll .scrollContent::-webkit-scrollbar-thumb 
 {
     outline: none;
@@ -97,12 +98,14 @@
     border: none;
 }
 
-.forbiddenAlpha.sheet .scroll .scrollContent::-webkit-scrollbar-track-piece:end {
+.forbiddenAlpha.sheet .scroll .scrollContent::-webkit-scrollbar-track-piece:end 
+{
     background: transparent;
     margin-bottom: 30px; 
 }
 
-.forbiddenAlpha.sheet .scroll .scrollContent::-webkit-scrollbar-track-piece:start {
+.forbiddenAlpha.sheet .scroll .scrollContent::-webkit-scrollbar-track-piece:start 
+{
     background: transparent;
     margin-top: 30px;
 }
