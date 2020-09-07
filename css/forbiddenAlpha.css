@@ -19,6 +19,9 @@
 :root
 {
     --font-book: "Kingthings";
+    --label-shadow-color: 0px 0px 1px rgba(0,255,0,0.25);
+    --border-shadow-color: 0px 0px 2px rgba(0,255,0,0.25);
+    --highlight-color: 0px 0px 4px rgba(0,0,255,0.75);
 }
 
 .window-app 
@@ -60,3 +63,198 @@
     height: 100%;
     overflow: hidden;
 }
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ LABEL ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet label
+{
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    margin: 5px 8px;
+    text-shadow: var(--label-shadow-color);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ INPUT ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet input
+{
+    /* Transform */
+    line-height: inherit;
+    
+    /* Style */
+    box-shadow: none;
+    background: transparent;
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+
+    border: 0 none;
+    border-radius: 8px;
+    background-color: rgba(26, 26, 26, 0.055);
+}
+
+.forbiddenAlpha.sheet input[type="number"]::-webkit-outer-spin-button,
+.forbiddenAlpha.sheet input[type="number"]::-webkit-inner-spin-button 
+{
+    /*Disable number spinner*/
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.forbiddenAlpha.sheet input:hover,
+.forbiddenAlpha.sheet input:focus
+{
+    outline: none !important;
+    border-color: var(--highlight-color);
+    box-shadow: var(--highlight-color);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ---------------------------------- TEXTAREA ----------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet textarea
+{
+    /* Transform */
+    resize: none;
+    overflow-y: auto;
+    overflow-x: none;
+
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: justify;
+    white-space: normal;
+
+    border: 0 none;
+    border-radius: 8px;
+    background-color: rgba(26, 26, 26, 0.055);
+}
+
+.forbiddenAlpha.sheet textarea:hover,
+.forbiddenAlpha.sheet textarea:focus
+{
+    outline: none !important;
+    border-color: var(--highlight-color);
+    box-shadow: var(--highlight-color);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ----------------------------------- SELECT ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet select
+{
+    /* Transform */
+    line-height: inherit;
+    
+    /* Style */
+    box-shadow: none;
+    background: transparent;
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align-last:center;
+    align-self: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: 0 none;
+    border-radius: 8px;
+    background-color: rgba(26, 26, 26, 0.055);
+}
+
+.forbiddenAlpha.sheet select:hover,
+.forbiddenAlpha.sheet select:focus
+{
+    outline: none !important;
+    border-color: var(--highlight-color);
+    box-shadow: var(--highlight-color);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ----------------------------------- BUTTON ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet button 
+{
+    /* Transform */
+    line-height: inherit;
+    
+    /* Style */
+    border: 0 none;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
+
+    /* Font */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+}
+
+.forbiddenAlpha.sheet a:hover,
+.forbiddenAlpha.sheet b:hover,
+.forbiddenAlpha.sheet button:hover
+{
+    text-shadow: var(--highlight-color);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ IMAGE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet img
+{
+    height: 100%;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+.forbiddenAlpha.sheet img:hover
+{
+    box-shadow: inset var(--highlight-color);
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ---------------------------------- SCROLLBAR ---------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+::-webkit-scrollbar 
+{
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    outline: none;
+    border-radius: 8px;
+    background: rgb(26, 26, 26);
+    border: none;
+}
+
+::-webkit-scrollbar-track-piece:end 
+{
+    background: transparent;
+    margin-bottom: 2px; 
+}
+

@@ -22,21 +22,18 @@
     /* Box transform */
     display: flex;
     position: absolute;
-    top: 3%;
-    left: 6%;
-    width: 42%;
-    height: 94%;
+    top: 12px;
+    left: 50px;
+    width: 430px;
+    height: 626px;
     overflow: hidden;
     justify-content: center;
 
     /* Border pattern*/
     background-image:url(../assets/bookBorder.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     background-position: center;
-
-    /* Debug */
-    /*background-color: rgba(255, 0, 0, 0.25);*/
 }
 
 .forbiddenAlpha.sheet .book .rightPage 
@@ -44,21 +41,18 @@
     /* Box transform */
     display: flex;
     position: absolute;
-    top: 3%;
-    left: 51.5%;
-    width: 42%;
-    height: 94%;
+    top: 12px;
+    right: 55px;
+    width: 430px;
+    height: 626px;
     overflow: hidden;
     justify-content: center;
 
     /* Border pattern*/
     background-image:url(../assets/bookBorder.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     background-position: center;
-
-    /* Debug */
-    /*background-color: rgba(255, 0, 0, 0.25);*/
 }
 
 .forbiddenAlpha.sheet .book .pageTitle 
@@ -66,8 +60,8 @@
     /* Box transform */
     display: flex;
     position: absolute;
-    width: 70%;
-    height: 10%;
+    width: 200px;
+    height: 60px;
     overflow: visible;
     justify-content: center;
     align-items: center;
@@ -78,9 +72,6 @@
     font-size: 36px;
     font-weight: italic;
     text-decoration: underline;
-
-    /* Debug */
-    /*background-color: rgba(255, 0, 0, 0.25);*/
 }
 
 .forbiddenAlpha.sheet .book .pageContent 
@@ -88,13 +79,28 @@
     /* Box transform */
     display: flex;
     position: relative;
-    top: 10%;
-    width: 88%;
-    height: 84%;
+    top: 60px;
+    width: 360px;
+    height: 520px;
     overflow: hidden;
+}
 
-    /* Debug */
-    /*background-color: rgba(255, 0, 0, 0.25);*/
+.forbiddenAlpha.sheet .book .pageContent  .verticalElement
+{
+    /* Box transform */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forbiddenAlpha.sheet .book .pageContent  .horizontalElement
+{
+    /* Box transform */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -105,40 +111,88 @@
 {
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 340px;
+    height: 520px;
+
+    border-radius: 8px;
+    border: 5px rgba(26, 26, 26, 0.85) double;
+}
+
+.forbiddenAlpha.sheet .book .pageContent .itemList .itemListContainer
+{
+    right: 5px;
+    width: 330px;
+    height: 490px;
+    box-sizing: border-box;
     overflow-y: auto;
-
-    /* Debug */
-    /*background-color: rgba(255, 0, 0, 0.25);*/
-}
-
-.forbiddenAlpha.sheet .book .pageContent .itemList::-webkit-scrollbar 
-{
-    width: 8px;
-    background: rgba(26, 26, 26, 0.1);
-}
-
-.forbiddenAlpha.sheet .book .pageContent .itemList::-webkit-scrollbar-thumb 
-{
-    outline: none;
-    border-radius: 3px;
-    background: rgb(26, 26, 26);
-    border: none;
+    overflow-x: none;
 }
 
 .forbiddenAlpha.sheet .book .pageContent .itemHeader
 {
+    height: 30px;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 330px;
     align-items: center;
-    border-bottom: 2px rgb(26, 26, 26) solid;
+    border-bottom: 2px rgba(26, 26, 26, 0.85) solid;
     font-size: 16px;
     font-weight: normal;
     text-align: center;
 
-    /* Debug */
-    /*background-color: rgba(0, 255, 0, 0.25);*/
+}
+
+.forbiddenAlpha.sheet .book .pageContent .itemList .item
+{
+    display: flex;
+    flex-direction: row;
+    width: 330px;
+    height: 50px;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+.forbiddenAlpha.sheet .book .pageContent .itemList .item:nth-child(odd)
+{
+    border-radius: 4px;
+    background: rgba(26, 26, 26, 0.1);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ----------------------------------- DATABAR ----------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .pageContent .databar
+{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    border: 5px rgba(26, 26, 26, 0.85) double;
+}
+
+.forbiddenAlpha.sheet .book .pageContent .databar:hover,
+.forbiddenAlpha.sheet .book .pageContent .databar:hover .dataItem
+{
+    box-shadow: var(--highlight-color);
+}
+
+.forbiddenAlpha.sheet .book .pageContent .databar .dataItem
+{
+    margin: 2px 2px;
+    border-radius: 8px;
+    background-color: rgba(26, 26, 26, 0.9);
+    /*border: 3px rgba(26, 26, 26, 0.85) solid;*/
+}
+
+.forbiddenAlpha.sheet .book .pageContent .databar .dataItemMissing
+{
+    margin: 2px 2px;
+    border-radius: 8px;
+    border: 2px rgba(26, 26, 26, 0.85) solid;
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -149,28 +203,25 @@
 {
     /* Box transform */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: absolute;
-    top: -1%;
-    left: 10%;
-    height: 5%;
-    width: 80%;
+    right: -10px;
+    top: 30px;
+    height: auto;
+    width: 50px;
     justify-content: center;
-
-    /* Debug */
-    /*background-color: rgba(255, 0, 0, 0.25);*/
 }
 
 .forbiddenAlpha.sheet .book .tabsBarButtons
 {
     /* Box transform */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: absolute;
-    top: -1%;
-    right: 50px;
-    height: 5%;
-    width: 180px;
+    top: 30px;
+    left: -15px;
+    height: auto;
+    width: 50px;
     justify-content: center;
 }
 
@@ -178,15 +229,31 @@
 .forbiddenAlpha.sheet .book .tabsBar .bookMark
 {
     /* Bookmark image */
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
     background-image:url(../assets/bookMarkBackground.png);
     background-size: cover;
     background-position: center;
-    overflow: visible;
     width: 50px;
     height: 50px;
     z-index: 10;
-    margin: 5px 10px;
-    text-align: center;
+}
+
+.forbiddenAlpha.sheet .book .tabsBarButtons .bookMark
+{
+    transform: rotate(90deg);
+}
+
+.forbiddenAlpha.sheet .book .tabsBar .bookMark
+{
+    transform: rotate(-90deg);
+}
+
+.forbiddenAlpha.sheet .book .tabsBarButtons .bookMark img,
+.forbiddenAlpha.sheet .book .tabsBar .bookMark img
+{
+    transform: rotate(90deg);
 }
 
 .forbiddenAlpha.sheet .book .tabsBarButtons .bookMark:hover img,
@@ -202,9 +269,8 @@
     /* Bookmark image */
     width: 26px;
     height: 26px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 8px;
+    margin-top: -8px;
+
     border: none;
     opacity: 0.3;
 }
@@ -215,146 +281,81 @@
     opacity: 1;
     width: 34px;
     height: 34px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 4px;
+    margin-top: -4px;
     border: none;
 }
 
-
-/* ------------------------------------------------------------------------------- */
-/* ----------------------------------- INPUTS ------------------------------------ */
-/* ------------------------------------------------------------------------------- */
-
-.forbiddenAlpha .book .pageContent label
+.forbiddenAlpha.sheet .book .tabsBarButtons .bookMark img:hover,
+.forbiddenAlpha.sheet .book .tabsBar .bookMark img:hover
 {
-    /* Text */
-    color: rgb(26, 26, 26);
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
-    text-align: center;
-    align-self: center;
-    margin: 0px 8px;
+    box-shadow: none;
 }
 
-.forbiddenAlpha .book .pageContent textarea
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------- COMMON FORMATS -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.book .bookTab .singleColumn
 {
-    /* Transform */
-    width: auto;
-    height: auto;
-    resize: none;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    justify-content: center;
+    align-content: space-between;
 
-    /* Text */
-    color: rgb(26, 26, 26);
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
-    text-align: justify;
-    white-space: normal;
+    /* Debug */
+    /*background-color: rgba(255, 0, 0, 0.25);*/
+}
 
-    border: 0 none;
-    border-radius: 8px;
-    background-color: rgba(26, 26, 26, 0.055);
+.book  .bookTab .centeredRow
+{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8px;
+    /* Debug */
+    /*background-color: rgba(255, 0, 0, 0.25);*/
+}
+
+.book .bookTab .centeredRow input
+{
+    width: 3em;
 
     /* Debug */
     /*background-color: rgba(0, 255, 0, 0.25);*/
 }
 
-.forbiddenAlpha .book .pageContent textarea:hover,
-.forbiddenAlpha .book .pageContent textarea:focus
+.book .bookTab .centeredRow select
 {
-    outline: none !important;
-    border-color: blue;
-    box-shadow: 0 0 8px blue;
+    width: 5em;
+
+    /* Debug */
+    /*background-color: rgba(0, 255, 0, 0.25);*/
 }
 
-.forbiddenAlpha .book .pageContent button 
+.book .bookTab .centeredRow textarea
 {
-    /* Transform */
-    width: auto;
-    height: auto;
-    padding: 2px 4px;
-    line-height: inherit;
+    width: 90%;
+    height: 100px;
+
+
+    /* Debug */
+    /*background-color: rgba(0, 255, 0, 0.25);*/
+}
+
+
+.book .bookTab .wrapColumns
+{
+    display: flex;
+    flex-wrap: wrap;
     
-    /* Style */
-    border: 0 none;
-    border-radius: 3px;
-    box-shadow: none;
-    background: transparent;
-    cursor: pointer;
-    color: rgb(26, 26, 26);
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
+    /* Debug */
+    /*background-color: rgba(255, 0, 0, 0.25);*/
 }
 
-.forbiddenAlpha .book .pageContent button:hover
+.book .bookTab
 {
-    text-shadow: 0px 0px 2px red;
-}
-
-.forbiddenAlpha .book .pageContent input
-{
-    /* Transform */
-    width: auto;
-    height: auto;
-    padding: 2px 4px;
-    line-height: inherit;
-    
-    /* Style */
-    border: none;
-    border-radius: 8px;
-    box-shadow: none;
-    background: transparent;
-    color: rgb(26, 26, 26);
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
-    text-align: center;
-}
-
-.forbiddenAlpha .book .pageContent input:hover
-{
-    border-color: blue;
-    box-shadow: 0 0 8px blue;
-    text-shadow: 0px 0px 2px blue;
-}
-
-.forbiddenAlpha .book .pageContent input[type="number"]::-webkit-outer-spin-button,
-.forbiddenAlpha .book .pageContent input[type="number"]::-webkit-inner-spin-button 
-{
-    /*Disable number spinner*/
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.forbiddenAlpha .book .pageContent select
-{
-    /* Transform */
-    width: auto;
-    height: auto;
-    padding: 0px 4px;
-    line-height: inherit;
-    
-    /* Style */
-    border: none;
-    border-radius: 8px;
-    box-shadow: none;
-    background: transparent;
-    color: rgb(26, 26, 26);
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: bold;
-    text-align: center;
-    align-self: center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
-.forbiddenAlpha .book .pageContent select:hover
-{
-    border-color: blue;
-    box-shadow: 0 0 8px blue;
-    text-shadow: 0px 0px 2px blue;
+    font-size: 17px;
 }

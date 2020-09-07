@@ -42,13 +42,26 @@ function preloadHandlebarsTemplates()
   
 function registerHandlebarsHelpers() 
 {
+	Handlebars.registerHelper("databarIterator", function (current, maximum, block) 
+	{
+		var acc = "";
+		for (var i = 0; i < maximum; ++i) 
+		{
+		  block.data.index = i;
+		  block.data.missing = i >= current;
+		  acc += block.fn(this);
+		}
+		return acc;
+	});
+
+
 	Handlebars.registerHelper('ifLessEqual', function(v1, v2, options) 
 	{
 		if(v1 <= v2) {
 		  return options.fn(this);
 		}
 		return options.inverse(this);
-	  });
+	});
 
 	Handlebars.registerHelper('ifCond', function(v1, v2, options) 
 	{

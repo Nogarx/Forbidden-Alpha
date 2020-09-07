@@ -4,13 +4,12 @@
 
 .monsterAttackScroll .monsterAttackScrollTitle
 {
-    height: 90px;
+    height: 70px;
     width: 360px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: space-between;
-    padding-top: 10px 0px;
     font-size: 24px;
 }
 
@@ -25,9 +24,11 @@
 
 .monsterAttackScroll .monsterAttackScrollImage
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 90px;
     width: 360px;
-    padding-bottom: 15px;
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -38,7 +39,7 @@
 {
     display: flex;
     width: 360px;
-    height: 270px;
+    height: 280px;
     justify-content: center;
     align-items: center;
     font-size: 16px;

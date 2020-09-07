@@ -1,4 +1,4 @@
-<div class="bookTab">
+<div class="bookTab gearTab">
     <!--LEFT PAGE-->
     <div class="leftPage">
 
@@ -10,79 +10,97 @@
 
             
             <div class="singleColumn">
+
+                <!--GEAR NAV-->
+                <div class="subtitle"> {{localize "BOOK.INVENTORY"}} </div>
+                <div class="centeredRow">
+                    <nav class="gearNav">
+                        <b class="item tabItem" data-tab="gear">{{localize "BOOK.GEAR_HEADER"}}</b>
+                        <b class="item tabItem" data-tab="materials">{{localize "BOOK.MATERIAL_HEADER"}}</b>
+                        <b class="item tabItem" data-tab="armor">{{localize "BOOK.ARMOR_HEADER"}}</b>
+                        <b class="item tabItem" data-tab="weapon">{{localize "BOOK.WEAPON_HEADER"}}</b>
+                    </nav>
+                </div>
+
                 <!--MONEY-->
                 <div class="subtitle"> {{localize "BOOK.MONEY"}} </div>
                 <div class="centeredRow">
-                    <label>{{localize data.coins.bronze.label}}</label>
-                    <input name="data.coins.bronze.value" type="number" value="{{data.coins.bronze.value}}" data-dtype="Number" />
+                    <div class="coins verticalElement">
+                        <label>{{localize data.coins.bronze.label}}</label>
+                        <input name="data.coins.bronze.value" type="number" value="{{data.coins.bronze.value}}" data-dtype="Number" />
+                    </div>
+                    <div class="coins verticalElement">
+                        <label>{{localize data.coins.silver.label}}</label>
+                        <input name="data.coins.silver.value" type="number" value="{{data.coins.silver.value}}" data-dtype="Number" />
+                    </div>
+                    <div class="coins verticalElement">
+                        <label>{{localize data.coins.gold.label}}</label>
+                        <input name="data.coins.gold.value" type="number" value="{{data.coins.gold.value}}" data-dtype="Number" />
+                    </div>
                 </div>
-                <div class="centeredRow">
-                    <label>{{localize data.coins.silver.label}}</label>
-                    <input name="data.coins.silver.value" type="number" value="{{data.coins.silver.value}}" data-dtype="Number" />
-                </div>
-                <div class="centeredRow">
-                    <label>{{localize data.coins.gold.label}}</label>
-                    <input name="data.coins.gold.value" type="number" value="{{data.coins.gold.value}}" data-dtype="Number" />
-                </div>
+
 
                 <!--CONSUMABLES-->
                 <div class="subtitle"> {{localize "BOOK.CONSUMABLES"}} </div>
-                
-                <!--FOOD-->
                 <div class="centeredRow">
-                    <button class="rollConsumable">{{localize data.consumables.food.label}}</button>
-                    <select name="data.consumables.food.value">
-                        {{#select data.consumables.food.value}}
-                        <option value="none">{{localize "DICE.NONE"}}</option>
-                        <option value="d6">{{localize "DICE.SIX"}}</option>      
-                        <option value="d8">{{localize "DICE.EIGHT"}}</option>               
-                        <option value="d10">{{localize "DICE.TEN"}}</option>        
-                        <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
-                        {{/select}}
-                    </select>
+                    <!--FOOD-->
+                    <div class="consumable verticalElement">
+                        <button class="rollConsumable consumableButton">{{localize data.consumables.food.label}}</button>
+                        <select name="data.consumables.food.value">
+                            {{#select data.consumables.food.value}}
+                            <option value="none">{{localize "DICE.NONE"}}</option>
+                            <option value="d6">{{localize "DICE.SIX"}}</option>      
+                            <option value="d8">{{localize "DICE.EIGHT"}}</option>               
+                            <option value="d10">{{localize "DICE.TEN"}}</option>        
+                            <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
+                            {{/select}}
+                        </select>
+                    </div>
+
+                    <!--WATER-->
+                    <div class="consumable verticalElement">
+                        <button class="rollConsumable">{{localize data.consumables.water.label}}</button>
+                        <select name="data.consumables.water.value">
+                            {{#select data.consumables.water.value}}
+                            <option value="none">{{localize "DICE.NONE"}}</option>
+                            <option value="d6">{{localize "DICE.SIX"}}</option>      
+                            <option value="d8">{{localize "DICE.EIGHT"}}</option>               
+                            <option value="d10">{{localize "DICE.TEN"}}</option>        
+                            <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
+                            {{/select}}
+                        </select>
+                    </div>
+
+                    <!--ARROWS-->
+                    <div class="consumable verticalElement">
+                        <button class="rollConsumable">{{localize data.consumables.arrows.label}}</button>
+                        <select name="data.consumables.arrows.value">
+                            {{#select data.consumables.arrows.value}}
+                            <option value="none">{{localize "DICE.NONE"}}</option>
+                            <option value="d6">{{localize "DICE.SIX"}}</option>      
+                            <option value="d8">{{localize "DICE.EIGHT"}}</option>               
+                            <option value="d10">{{localize "DICE.TEN"}}</option>        
+                            <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
+                            {{/select}}
+                        </select>
+                    </div>
+
+                    <!--TORCHES-->
+                    <div class="consumable verticalElement">
+                        <button class="rollConsumable">{{localize data.consumables.torches.label}}</button>
+                        <select name="data.consumables.torches.value">
+                            {{#select data.consumables.torches.value}}
+                            <option value="none">{{localize "DICE.NONE"}}</option>
+                            <option value="d6">{{localize "DICE.SIX"}}</option>      
+                            <option value="d8">{{localize "DICE.EIGHT"}}</option>               
+                            <option value="d10">{{localize "DICE.TEN"}}</option>        
+                            <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
+                            {{/select}}
+                        </select>
+                    </div>
                 </div>
 
-                <!--WATER-->
-                <div class="centeredRow">
-                    <button class="rollConsumable">{{localize data.consumables.water.label}}</button>
-                    <select name="data.consumables.water.value">
-                        {{#select data.consumables.water.value}}
-                        <option value="none">{{localize "DICE.NONE"}}</option>
-                        <option value="d6">{{localize "DICE.SIX"}}</option>      
-                        <option value="d8">{{localize "DICE.EIGHT"}}</option>               
-                        <option value="d10">{{localize "DICE.TEN"}}</option>        
-                        <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
-                        {{/select}}
-                    </select>
-                </div>
 
-                <!--ARROWS-->
-                <div class="centeredRow">
-                    <button class="rollConsumable">{{localize data.consumables.arrows.label}}</button>
-                    <select name="data.consumables.arrows.value">
-                        {{#select data.consumables.arrows.value}}
-                        <option value="none">{{localize "DICE.NONE"}}</option>
-                        <option value="d6">{{localize "DICE.SIX"}}</option>      
-                        <option value="d8">{{localize "DICE.EIGHT"}}</option>               
-                        <option value="d10">{{localize "DICE.TEN"}}</option>        
-                        <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
-                        {{/select}}
-                    </select>
-                </div>
-
-                <!--TORCHES-->
-                <div class="centeredRow">
-                    <button class="rollConsumable">{{localize data.consumables.torches.label}}</button>
-                    <select name="data.consumables.torches.value">
-                        {{#select data.consumables.torches.value}}
-                        <option value="none">{{localize "DICE.NONE"}}</option>
-                        <option value="d6">{{localize "DICE.SIX"}}</option>      
-                        <option value="d8">{{localize "DICE.EIGHT"}}</option>               
-                        <option value="d10">{{localize "DICE.TEN"}}</option>        
-                        <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
-                        {{/select}}
-                    </select>
-                </div>
                 
             </div>
 
@@ -96,19 +114,9 @@
 
         <!--CONTNENT-->
         <div class="pageContent"> 
-
             <div class="singleColumn">
-
-                <!--GEAR NAV-->
-                <nav class="gearTabs">
-                    <b class="item tabItem" data-tab="gear">{{localize "BOOK.GEAR_HEADER"}}</b>
-                    <b class="item tabItem" data-tab="materials">{{localize "BOOK.MATERIAL_HEADER"}}</b>
-                    <b class="item tabItem" data-tab="armor">{{localize "BOOK.ARMOR_HEADER"}}</b>
-                    <b class="item tabItem" data-tab="weapon">{{localize "BOOK.WEAPON_HEADER"}}</b>
-                </nav>
-
                 <!--GEAR LIST-->
-                <div class="gearItemList itemList">
+                <div class="itemList gearItemList">
                     <div class="tab" data-tab="gear">
                         {{> systems/forbiddenAlpha/templates/actor/tab/gearGearTab.html}}
                     </div>

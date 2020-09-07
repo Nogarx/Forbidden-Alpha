@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- COMBAT TAB ---------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.book .pageContent .combatItem
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    align-items: center;
+    margin: 5px 0px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+
+    /* Debug */
+    /*background-color: rgba(0, 255, 0, 0.25);*/
+}
+
+.book .pageContent .combatItem:nth-child(odd)
+{
+    border-radius: 4px;
+    background: rgba(26, 26, 26, 0.1);
+}
+
+.book .pageContent .itemList .itemHeader .combatArmor { width: 60%; }
+.book .pageContent .itemList .itemHeader .combatRaiting { width: 20%; }
+
+.book .pageContent .combatItem .combatArmor { width: 60%; }
+.book .pageContent .combatItem .combatRaiting { width: 20%;  }
+
+.book .pageContent .itemList .itemHeader .combatWeapon { width: 60%; }
+.book .pageContent .itemList .itemHeader .combatDamage { width: 20%; }
+.book .pageContent .itemList .itemHeader .combatBonus { width: 20%; }
+
+.book .pageContent .combatItem .combatWeapon { width: 60%; }
+.book .pageContent .combatItem .combatDamage { width: 20%; }
+.book .pageContent .combatItem .combatBonus { width: 20%; }

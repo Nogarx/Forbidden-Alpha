@@ -10,7 +10,7 @@ export class ForbiddenAlphaCombatModifierSheet extends ForbiddenAlphaItemSheet
     {
         return mergeObject(super.defaultOptions, {
         classes: ["forbiddenAlpha", "sheet", "item"],
-        template: "systems/forbiddenAlpha/templates/item/itemModifierSheet.html",
+        template: "systems/forbiddenAlpha/templates/item/combatModifierSheet.html",
         width: 450,
         height: 600,
         resizable: false,
