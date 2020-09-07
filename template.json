@@ -13,23 +13,27 @@
 		{
 			"attributes":{ "attributes":
 			{
-				"Strenght": 
+				"strenght": 
 				{
+					"damage": 0,
 					"value": 0,
 					"label": "ATTRIBUTES.STRENGHT"
 				},
 				"agility": 
 				{
+					"damage": 0,
 					"value": 0,
 					"label": "ATTRIBUTES.AGILITY"
 				},
 				"wits": 
 				{
+					"damage": 0,
 					"value": 0,
 					"label": "ATTRIBUTES.WITS"
 				},
 				"empathy": 
 				{
+					"damage": 0,
 					"value": 0,
 					"label": "ATTRIBUTES.EMPATHY"
 				}
@@ -150,7 +154,7 @@
 				"profession":
 				{
 					"value": "",
-					"label": "MAIN.PROFESION"
+					"label": "MAIN.PROFESSION"
 				},
 				"reputation":
 				{
@@ -393,7 +397,7 @@
 				"weight":
 				{
 					"label": "ITEM.WEIGHT",
-					"value": ""
+					"value": "tiny"
 				}
 			}},
 			"crafting": {"crafting":
@@ -502,6 +506,26 @@
 			}
 		},
 
+		"combatModifier":
+		{
+			"modifierName":
+			{
+				"label": "MODIFIER.MODIFIER_NAME",
+				"value": ""
+			},
+			"skillDice":
+			{
+				"label": "MODIFIER.SKILL_DICE",
+				"value": 0
+			},
+			"artifactDice":
+			{
+				"label": "MODIFIER.ARTIFACT_DICE",
+				"value": ""
+			}
+		},
+
+
 		"criticalInjury": 
 		{
 			"lethal":
@@ -533,7 +557,12 @@
 				"common",
 				"commerce",
 				"crafting"
-			]
+			],
+			"units":
+			{
+				"label": "ITEM.UNITS",
+				"value": 0
+			}
 		},
 
 		"hireling": 
@@ -559,25 +588,6 @@
 			"supply":
 			{
 				"label": "HIRELING.SUPPLY",
-				"value": ""
-			}
-		},
-
-		"combatModifier":
-		{
-			"modifierName":
-			{
-				"label": "MODIFIER.MODIFIER_NAME",
-				"value": ""
-			},
-			"skillDice":
-			{
-				"label": "MODIFIER.SKILL_DICE",
-				"value": 0
-			},
-			"artifactDice":
-			{
-				"label": "MODIFIER.ARTIFACT_DICE",
 				"value": ""
 			}
 		},

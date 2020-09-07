@@ -16,6 +16,11 @@
                 <div> 
                     {{#each actor.items as |item|}}
                     {{#if item.isArmor}}
+                    {{#if item.data.isEquiped.value}}
+
+                
+
+
                     <div class="combatItem" data-item-id="{{item._id}}">
                 
                         <div class="combatArmor">
@@ -26,6 +31,7 @@
                             <label> {{item.data.armorRating.value}} / {{item.data.armorRating.maximum}}</label>
                         </div>
                     </div>
+                    {{/if}}
                     {{/if}}
                     {{/each}}
                 </div>
@@ -39,6 +45,7 @@
                 <div> 
                     {{#each actor.items as |item|}}
                     {{#if item.isWeapon}}
+                    {{#if item.data.isEquiped.value}}
                     <div class="combatItem" data-item-id="{{item._id}}">
                         <div class="combatWeapon">
                             <div class="image-container"><div class="image" style="background-image: url('{{item.img}}')"></div></div>
@@ -51,6 +58,7 @@
                             <label> {{item.data.gearBonus.value}} / {{item.data.gearBonus.maximum}}</label>
                         </div>
                     </div>
+                    {{/if}}
                     {{/if}}
                     {{/each}}
                 </div>

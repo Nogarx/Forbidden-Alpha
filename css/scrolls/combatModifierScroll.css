@@ -1,0 +1,18 @@
+.combatModifierScroll
+{
+    height: 450px;
+    width: 360px;
+}
+
+.combatModifierScroll .name,
+.combatModifierScroll .skillBonus,
+.combatModifierScroll .artifactBonus
+{
+    height: 150px;
+}
+
+.combatModifierScroll .name input
+{
+    height: 30px;
+    width: 250px;
+}

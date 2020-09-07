@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ STRONGHOLD TABS -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .pageContent .storageTabs
+{
+    /* Box transform */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+
+    /* Debug */
+    /*background-color: rgba(255, 0, 0, 0.25);*/
+}
+
+.forbiddenAlpha.sheet .book .pageContent .storageTabs .item
+{
+    display: flex;
+    height: 25%;
+    align-items: center;
+    font-size: 22px;
+}
+
+.forbiddenAlpha.sheet .book .pageContent .storageTabs .item:hover
+{
+    cursor: pointer;
+    text-shadow: var(--highlight-shadow-color);
+}
+
+.forbiddenAlpha.sheet .book .pageContent .storageTabs .active
+{
+    /* Bookmark image */
+    text-shadow: var(--highlight-shadow-color);
+}

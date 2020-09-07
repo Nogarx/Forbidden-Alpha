@@ -14,7 +14,7 @@ export class ForbiddenAlphaMonsterSheet extends ForbiddenAlphaActorSheet
         height: 700,
         resizable: false,
         tabs:[{ navSelector: ".tabsBar", contentSelector: ".bookBody", initial: "mainMonster" },
-        {navSelector: ".gearTabs", contentSelector: ".gearItemList", initial: "gear"}]
+        {navSelector: ".gearNav", contentSelector: ".gearItemList", initial: "gear"}]
         });
     }
 }

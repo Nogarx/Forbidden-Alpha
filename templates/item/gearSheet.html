@@ -26,7 +26,6 @@
                             <div class="singleColumn">
         
                                 <div class="centeredRow">
-        
                                     <!--PRICE-->
                                     <div class="price verticalElement">
                                         <label> {{localize data.commerce.price.label}} </label>          
@@ -38,7 +37,17 @@
                                             <input name="data.commerce.price.valueGold" type="number" value="{{data.commerce.price.valueGold}}" />  
                                         </div>
                                     </div>
-                                                            
+
+                                    <!--UNITS-->
+                                    <div class="price verticalElement">
+                                        <label> {{localize data.units.label}} </label>          
+                                        <div>
+                                            <input name="data.units.value" type="number" value="{{data.units.value}}" />  
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="centeredRow">
                                     <!--SUPPLY-->
                                     <div class="supply verticalElement">
                                         <label> {{localize data.commerce.supply.label}} </label>          

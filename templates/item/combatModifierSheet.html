@@ -6,32 +6,52 @@
         </div>
 
         <div class="scrollContent">
-            <div class="singleColumn">
-
-                <!--TITLE-->
+            <div class="combatModifierScroll">
                 <div class="singleColumn">
-                    <label> {{localize data.modifierName.label}} </label>
-                    <div class="centeredRow bigInput"><input name="name" type="text" value="{{item.name}}" /></div>
-                </div>
 
-                <div class="singleColumn"> 
-                    <label> {{localize data.skillDice.label}} </label>
-                    <div class="centeredRow smallInput"><input name="data.skillDice.value" type="number" value="{{data.skillDice.value}}" /> </div>
-                </div>
+                    <div class="centeredRow">
+                        <div class="name verticalElement">
+                            <label> {{localize data.modifierName.label}} </label>
+                            <input name="name" type="text" value="{{item.name}}"/>
+                        </div>
+                    </div>
 
-                <div class="singleColumn">
-                    <label> {{localize data.artifactDice.label}} </label>
-                    <div class="centeredRow"><select name="data.artifactDice.value">
-                        {{#select data.artifactDice.value}}
-                        <option hidden disabled selected value> {{localize "ARTIFACT_BONUS.LABEL"}} </option>
-                        <option value="none">{{localize "DICE.NONE"}}</option>
-                        <option value="d8">{{localize "DICE.EIGHT"}}</option>               
-                        <option value="d10">{{localize "DICE.TEN"}}</option>        
-                        <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
-                        {{/select}}
-                    </select></div>
-                </div>
+                    <div class="centeredRow">
+                        <div class="skillBonus verticalElement">
+                            <label> {{localize data.skillDice.label}} </label>
+                            <select name="data.skillDice.value">
+                                {{#select data.skillDice.value}}
+                                <option value="0">0</option>
+                                <option value="1">1</option>               
+                                <option value="2">2</option>        
+                                <option value="3">3</option>     
+                                <option value="4">4</option>      
+                                <option value="5">5</option>      
+                                <option value="6">6</option>           
+                                <option value="7">7</option>   
+                                <option value="8">8</option>   
+                                <option value="9">9</option>            
+                                {{/select}}
+                            </select>
+                        </div>
+                    </div>
 
+                    <div class="centeredRow">
+                        <div class="artifactBonus verticalElement">
+                            <label> {{localize data.artifactDice.label}} </label>
+                            <select name="data.artifactDice.value">
+                                {{#select data.artifactDice.value}}
+                                <option hidden disabled selected value> {{localize "ARTIFACT_BONUS.LABEL"}} </option>
+                                <option value="none">{{localize "DICE.NONE"}}</option>
+                                <option value="d8">{{localize "DICE.EIGHT"}}</option>               
+                                <option value="d10">{{localize "DICE.TEN"}}</option>        
+                                <option value="d12">{{localize "DICE.TWELVE"}}</option>                   
+                                {{/select}}
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
         

@@ -4,19 +4,13 @@
 
 .hirelingScroll .hirelingScrollTitle
 {
-    height: 90px;
+    height: 70px;
     width: 360px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-content: space-between;
-    padding-top: 10px 0px;
     font-size: 24px;
-}
-
-.hirelingScroll .hirelingScrollTitle .name
-{
-    padding-bottom: 25px;
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -25,9 +19,11 @@
 
 .hirelingScroll .hirelingScrollImage
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 90px;
     width: 360px;
-    padding-bottom: 15px;
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -38,7 +34,7 @@
 {
     display: flex;
     width: 360px;
-    height: 250px;
+    height: 280px;
     justify-content: center;
     align-items: center;
     font-size: 16px;

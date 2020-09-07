@@ -1,19 +1,26 @@
-<div class="bookTab">
+<div class="bookTab mainTab">
+    
     <!--LEFT PAGE-->
     <div class="leftPage">
         <!--CONTNENT-->
         <div class="pageContent"> 
+
             <!--CHARACTER IMAGE-->
             <div class="profileImage">
                 <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
             </div>
+
             <!--TITLE-->
-            <div class="bookTitle ">{{localize "BOOKTITLE.LABEL"}}</div>
+            <div class="bookTitle ">
+                <label>{{localize "BOOKTITLE.LABEL"}}</label>
+            </div>
             <div class="bookTitleName">
                 <input name="name" type="text" value="{{actor.name}}" />
             </div>
+
         </div>
     </div>
+
     <!--RIGHT PAGE-->
     <div class="rightPage">
         <!--CONTNENT-->
@@ -22,57 +29,105 @@
             <div class="singleColumn">
                 
                 <div class="centeredRow">
-                    <label>{{localize "MAIN.KIN"}}:</label>
-                    <select name="data.main.kin.value">
-                        {{#select data.main.kin.value}}
-                        <option hidden disabled selected value> {{localize "KIN.LABEL"}} </option>
-                        <option value="human">{{localize "KIN.HUMAN"}}</option>
-                        <option value="elf">{{localize "KIN.ELF"}}</option>
-                        <option value="halfElf">{{localize "KIN.HALF_ELF"}}</option>
-                        <option value="dwarf">{{localize "KIN.DWARF"}}</option>
-                        <option value="halfling">{{localize "KIN.HALFLING"}}</option>
-                        <option value="wolfkin">{{localize "KIN.WOLFKIN"}}</option>
-                        <option value="orc">{{localize "KIN.ORC"}}</option>
-                        <option value="goblin">{{localize "KIN.GOBLIN"}}</option>                          
-                        {{/select}}
-                    </select>
+                    <!--KIN-->
+                    <div class="kin verticalElement">
+                        <label>{{localize "MAIN.KIN"}}:</label>
+                        <select name="data.main.kin.value">
+                            {{#select data.main.kin.value}}
+                            <option hidden disabled selected value> {{localize "KIN.LABEL"}} </option>
+                            <option value="human">{{localize "KIN.HUMAN"}}</option>
+                            <option value="elf">{{localize "KIN.ELF"}}</option>
+                            <option value="halfElf">{{localize "KIN.HALF_ELF"}}</option>
+                            <option value="dwarf">{{localize "KIN.DWARF"}}</option>
+                            <option value="halfling">{{localize "KIN.HALFLING"}}</option>
+                            <option value="wolfkin">{{localize "KIN.WOLFKIN"}}</option>
+                            <option value="orc">{{localize "KIN.ORC"}}</option>
+                            <option value="goblin">{{localize "KIN.GOBLIN"}}</option>                          
+                            {{/select}}
+                        </select>
+                    </div>
+
+                    <!--PROFESSION-->
+                    <div class="profession verticalElement">
+                        <label>{{localize "MAIN.PROFESSION"}}:</label>
+                        <select name="data.main.profession.value">
+                            {{#select data.main.profession.value}}
+                            <option hidden disabled selected value> {{localize "PROFESSION.LABEL"}} </option>
+                            <option value="druid">{{localize "PROFESSION.DRUID"}}</option>
+                            <option value="fighter">{{localize "PROFESSION.FIGHTER"}}</option>
+                            <option value="hunter">{{localize "PROFESSION.HUNTER"}}</option>
+                            <option value="minstrel">{{localize "PROFESSION.MINSTREL"}}</option>
+                            <option value="peddler">{{localize "PROFESSION.PEDDLER"}}</option>
+                            <option value="rider">{{localize "PROFESSION.RIDER"}}</option>
+                            <option value="rogue">{{localize "PROFESSION.ROGUE"}}</option>
+                            <option value="sorcerer">{{localize "PROFESSION.SORCERER"}}</option>                          
+                            {{/select}}
+                        </select>
+                    </div>
+
+                    <!--AGE-->
+                    <div class="age verticalElement">
+                        <label>{{localize "BIOGRAPHY.AGE"}}:</label> 
+                        <input name="data.biography.age.value" type="number" value="{{data.biography.age.value}}" data-dtype="Number" /> 
+                    </div>
                 </div>      
 
-                <div class="centeredRow">
-                    <label>{{localize "MAIN.PROFESION"}}:</label>
-                    <select name="data.main.profession.value">
-                        {{#select data.main.profession.value}}
-                        <option hidden disabled selected value> {{localize "PROFESSION.LABEL"}} </option>
-                        <option value="druid">{{localize "PROFESSION.DRUID"}}</option>
-                        <option value="fighter">{{localize "PROFESSION.FIGHTER"}}</option>
-                        <option value="hunter">{{localize "PROFESSION.HUNTER"}}</option>
-                        <option value="minstrel">{{localize "PROFESSION.MINSTREL"}}</option>
-                        <option value="peddler">{{localize "PROFESSION.PEDDLER"}}</option>
-                        <option value="rider">{{localize "PROFESSION.RIDER"}}</option>
-                        <option value="rogue">{{localize "PROFESSION.ROGUE"}}</option>
-                        <option value="sorcerer">{{localize "PROFESSION.SORCERER"}}</option>                          
-                        {{/select}}
-                    </select>
-                </div>
-
                 <div class="centeredRow"> 
-                    <label>{{localize "BIOGRAPHY.AGE"}}:</label> 
-                    <input name="data.biography.age.value" type="number" value="{{data.biography.age.value}}" data-dtype="Number" /> 
+                    <!--EXPERIENCE-->
+                    <div class="experience verticalElement">
+                        <div class="experienceBar databar" data-variable="experience" data-maximum=30 data-group="main">
+                            {{#databarIterator data.main.experience.value 30}}
+                            {{#if @missing}}
+                                <div class="dataItemMissing"></div>
+                            {{else}}
+                                <div class="dataItem"></div>
+                            {{/if}}
+                            {{/databarIterator}}
+                        </div>
+                        <div class="horizontalElement">
+                            <label>{{localize "MAIN.EXPERIENCE"}}:</label> 
+                            <input name="data.main.experience.value" type="number" value="{{data.main.experience.value}}" data-dtype="Number" /> 
+                        </div>
+                    </div>
+                </div>   
+
+                
+                <div class="centeredRow"> 
+                    <!--REPUTATION-->
+                    <div class="reputation verticalElement">
+                        <div class="reputationBar databar" data-variable="reputation" data-maximum=10 data-group="main">
+                            {{#databarIterator data.main.reputation.value 10}}
+                            {{#if @missing}}
+                                <div class="dataItemMissing"></div>
+                            {{else}}
+                                <div class="dataItem"></div>
+                            {{/if}}
+                            {{/databarIterator}}
+                        </div>
+                        <div class="horizontalElement">
+                            <label>{{localize "MAIN.REPUTATION"}}:</label> 
+                            <input name="data.main.reputation.value" type="number" value="{{data.main.reputation.value}}" data-dtype="Number" /> 
+                        </div>
+                    </div>
                 </div>   
 
                 <div class="centeredRow">  
-                    <label>{{localize "MAIN.EXPERIENCE"}}:</label> 
-                    <input name="data.main.experience.value" type="number" value="{{data.main.experience.value}}" data-dtype="Number" /> 
-                </div>
-
-                <div class="centeredRow">  
-                    <label>{{localize "MAIN.REPUTATION"}}:</label>
-                    <input name="data.main.reputation.value" type="number" value="{{data.main.reputation.value}}" data-dtype="Number" /> 
-                </div>
-
-                <div class="centeredRow">  
-                    <label>{{localize "MAIN.WILLPOWER"}}:</label>
-                    <input name="data.main.willpower.value" type="number" value="{{data.main.willpower.value}}" data-dtype="Number" /> 
+                    <!--WILLPOWER-->
+                    <div class="willpower verticalElement">
+                        <div class="willpowerBar databar" data-variable="willpower" data-maximum=10 data-group="main">
+                            {{#databarIterator data.main.willpower.value 10}}
+                            {{#if @missing}}
+                                <div class="dataItemMissing"></div>
+                            {{else}}
+                                <div class="dataItem"></div>
+                            {{/if}}
+                            {{/databarIterator}}
+                        </div>
+                        <div class="horizontalElement">
+                            <label>{{localize "MAIN.WILLPOWER"}}:</label> 
+                            <input name="data.main.willpower.value" type="number" value="{{data.main.willpower.value}}" data-dtype="Number" /> 
+                        </div>
+                    </div>
                 </div>
 
             </div>

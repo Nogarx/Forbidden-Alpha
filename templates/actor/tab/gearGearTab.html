@@ -1,23 +1,23 @@
 <div class="itemHeader">
-    <b class="gearType">{{localize "BOOK.GEAR_HEADER"}}</b>
-    <b class="gearBonus">{{localize "BOOK.GEAR_QUANTITY"}}</b>
-    <b class="gearWeight">{{localize "BOOK.WEIGHT"}}</b>
-    <a class="button itemCreate" title="Add Gear" data-type="gear"><i class="fas fa-plus"></i></a>
+    <div class="biggerColumn"><label>{{localize "BOOK.GEAR_HEADER"}}</label></div>
+    <div class="regularColumn"><label>{{localize "BOOK.UNITS"}}</label></div>
+    <div class="regularColumn"><label>{{localize "BOOK.WEIGHT"}}</label></div>
+    <div class="regularColumn"><a class="button itemCreate" title="Add Gear" data-type="gear"><i class="fas fa-plus"></i></a></div>
 </div>
-<div> 
+<div class="itemListContainer"> 
     {{#each actor.items as |item|}}
     {{#if item.isGear}}
-    <div class="gearItem item" data-item-id="{{item._id}}">
+    <div class="item" data-item-id="{{item._id}}">
 
-        <div class="name">
+        <div class="biggerColumn">
             <div class="image-container"><div class="image" style="background-image: url('{{item.img}}')"></div></div>
             <label> {{item.name}}</label>
         </div>
-        <div class="bonus">
-            <label> 5 </label>
+        <div class="regularColumn">
+            <label> {{item.data.units.value}} </label>
         </div>
-        <div class="weight"><label>{{item.data.common.weight.value}}</label></div>
-        <div class="buttons">
+        <div class="regularColumn"><label>{{item.data.common.weight.value}}</label></div>
+        <div class="regularColumn">
             <a class="item-control itemEdit" title="Edit Item"><i class="fas fa-edit"></i></a>
             <a class="item-control item-post" title="Post Item"><i class="fas fa-comment"></i></a>
             <a class="item-control itemDelete" title="Delete Item"><i class="fas fa-trash"></i></a>
