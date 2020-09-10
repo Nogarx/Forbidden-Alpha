@@ -1,0 +1,77 @@
+<div class="bookTab monsterAttackTab">
+    <!--LEFT PAGE-->
+    <div class="leftPage">
+        <!--TITLE-->
+        <div class="pageTitle">{{localize "MONSTER_ATTACK.LABEL"}}</div>
+        <!--CONTNENT-->
+        <div class="pageContent"> 
+
+            <!--INDEX-->
+            <div class="itemList">
+                <div class="itemHeader">
+                    <div class="bigColumn"><label>{{localize "BOOK.MONSTER_ATTACK_HEADER"}}</label></div>
+                    <div class="regularColumn"><label>{{localize "MONSTER_ATTACK.DAMAGE"}}</label></div>
+                </div>
+                <div class="itemListContainer"> 
+                    {{#each actor.items as |item|}}
+                    {{#if item.isMonsterAttack}}
+                    <div class="item itemContext itemSelector {{#if item.data.isSelected}}active{{/if}}" data-item-id="{{item._id}}" data-target="selectorTargetNotes" data-item-type="monsterAttack">
+                        <div class="bigColumn">
+                            <div class="centeredRow">
+                                <div class="image"><img src={{item.img}}></div>
+                                <div class="name"><label> {{item.name}}</label></div>
+                            </div>
+                        </div>
+                        <div class="regularColumn">
+                            <label> {{data.damage.value}}</label>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    <div class="item itemCreate" data-type="monsterAttack"><button>{{localize "BOOK.ADD_MONSTER_ATTACK"}}</button></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--RIGHT PAGE-->
+    <div class="rightPage">
+        
+        <!--TITLE-->
+        <div class="pageTitle">{{localize "MONSTER_ATTACK.LABEL"}}</div>
+
+        <div class="pageContent"> 
+            <div class="singleColumn">
+                {{#if data.auxiliar.itemSelected}}
+                    {{#each actor.items as |item|}}
+                    {{#if item.data.isSelected}}
+                        <!--NAME-->
+                        <div class="centeredRow monsterAttackName">
+                            <textarea name="{{item.name}}" disabled>{{item.name}}</textarea>
+                        </div>
+                        <div class="centeredRow monsterAttackDetails">
+                            <div class="baseDice verticalElement">
+                                <label> {{localize data.baseDice.label}}: </label>     
+                                <input name="data.baseDice.value" type="number" value="{{data.baseDice.value}}" disabled/>  
+                            </div>
+                            <div class="damage verticalElement">
+                                <label> {{localize data.damage.label}}: </label>     
+                                <input name="data.damage.value" type="number" value="{{data.damage.value}}" disabled/>  
+                            </div>
+                        </div>
+                        <!--DETAILS-->
+                        <div class="monsterAttackDescription">
+                            <textarea name="data.description.value" disabled>{{data.description.value}}</textarea>
+                        </div>
+                    {{/if}}
+                    {{/each}}
+                {{else}}
+                    <div class="centeredRow monsterAttackName">
+                        <label>{{localize "BOOK.SELECT_MONSTER_ATTACK"}}</label>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+
+    </div>
+</div>

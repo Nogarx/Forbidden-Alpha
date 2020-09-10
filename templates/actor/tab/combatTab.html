@@ -1,4 +1,4 @@
-<div class="bookTab">
+<div class="bookTab combatTab">
     <!--LEFT PAGE-->
     <div class="leftPage">
         <!--TITLE-->
@@ -6,63 +6,103 @@
         <!--CONTNENT-->
         <div class="pageContent"> 
 
-            <div class="itemList">
+            <div class="singleColumn">
+
 
                 <!--ARMOR-->
-                <div class="itemHeader">
-                    <b class="combatArmor">{{localize "BOOK.ARMOR_HEADER"}}</b>
-                    <b class="combatRating">{{localize "BOOK.ARMOR_RATING"}}</b>
-                </div>
-                <div> 
-                    {{#each actor.items as |item|}}
-                    {{#if item.isArmor}}
-                    {{#if item.data.isEquiped.value}}
-
-                
-
-
-                    <div class="combatItem" data-item-id="{{item._id}}">
-                
-                        <div class="combatArmor">
-                            <div class="image-container"><div class="image" style="background-image: url('{{item.img}}')"></div></div>
-                            <label> {{item.name}}</label>
-                        </div>
-                        <div class="combatRating">
-                            <label> {{item.data.armorRating.value}} / {{item.data.armorRating.maximum}}</label>
-                        </div>
+                <div class="itemList">
+                    <div class="itemHeader">
+                        <div class="hugeColumn"><b>{{localize "BOOK.ARMOR_HEADER"}}</b></div>
+                        <div class="regularColumn"><b>{{localize "BOOK.ARMOR_RATING"}}</b></div>
+                        <div class="regularColumn"><b>{{localize "BOOK.ARMOR_BODY_PART"}}</b></div>
                     </div>
-                    {{/if}}
-                    {{/if}}
-                    {{/each}}
+                    <div class="itemListContainer"> 
+                        {{#each actor.items as |item|}}
+                        {{#if item.isArmor}}
+                        {{#if item.data.isEquiped.value}}
+                        <div class="item" data-item-id="{{item._id}}">
+                            <div class="hugeColumn">
+                                <div class="centeredRow">
+                                    <div class="image"><img src={{item.img}}></div>
+                                    <div class="name"><label> {{item.name}}</label></div>
+                                </div>
+                            </div>
+                            <div class="regularColumn">
+                                <label> {{item.data.armorRating.value}} / {{item.data.armorRating.maximum}}</label>
+                            </div>
+                            <div class="regularColumn">
+                                <label> {{item.data.bodyPart.value}}</label>
+                            </div>
+                        </div>
+                        {{/if}}
+                        {{/if}}
+                        {{/each}}
+                    </div>
                 </div>
 
                 <!--WEAPON-->
-                <div class="itemHeader">
-                    <b class="combatWeapon">{{localize "BOOK.WEAPON_HEADER"}}</b>
-                    <b class="combatDamage">{{localize "BOOK.WEAPON_DAMAGE"}}</b>
-                    <b class="combatBonus">{{localize "BOOK.WEAPON_BONUS"}}</b>
-                </div>
-                <div> 
-                    {{#each actor.items as |item|}}
-                    {{#if item.isWeapon}}
-                    {{#if item.data.isEquiped.value}}
-                    <div class="combatItem" data-item-id="{{item._id}}">
-                        <div class="combatWeapon">
-                            <div class="image-container"><div class="image" style="background-image: url('{{item.img}}')"></div></div>
-                            <label> {{item.name}}</label>
-                        </div>
-                        <div class="combatDamage">
-                            <label> {{item.data.damage.value}} </label>
-                        </div>
-                        <div class="combatBonus">
-                            <label> {{item.data.gearBonus.value}} / {{item.data.gearBonus.maximum}}</label>
-                        </div>
+                <div class="itemList">
+                    <div class="itemHeader">
+                        <div class="hugeColumn"><b>{{localize "BOOK.WEAPON_HEADER"}}</b></div>
+                        <div class="regularColumn"><b>{{localize "BOOK.WEAPON_BONUS"}}</b></div>
+                        <div class="regularColumn"><b>{{localize "BOOK.WEAPON_DAMAGE"}}</b></div>
                     </div>
-                    {{/if}}
-                    {{/if}}
-                    {{/each}}
+                    <div class="itemListContainer"> 
+                        {{#each actor.items as |item|}}
+                        {{#if item.isWeapon}}
+                        {{#if item.data.isEquiped.value}}
+                        <div class="item" data-item-id="{{item._id}}">
+                            <div class="hugeColumn">
+                                <div class="centeredRow">
+                                    <div class="image"><img src={{item.img}}></div>
+                                    <div class="name"><label> {{item.name}}</label></div>
+                                </div>
+                            </div>
+                            <div class="regularColumn">
+                                <label> {{item.data.gearBonus.value}} / {{item.data.gearBonus.maximum}}</label>
+                            </div>
+                            <div class="regularColumn">
+                                <label> {{item.data.damage.value}} </label>
+                            </div>
+                        </div>
+                        {{/if}}
+                        {{/if}}
+                        {{/each}}
+                    </div>
                 </div>
-            </div>
+
+                <!--CRITICAL INJURY-->
+                <div class="itemList">
+                    <div class="itemHeader">
+                        <div class="injuryName"><b>{{localize "BOOK.CRITICAL_INJURY_HEADER"}}</b></div>
+                        <div class="injuryTime"><b>{{localize "BOOK.HEALING_TIME"}}</b></div>
+                    </div>
+                    <div class="itemListContainer"> 
+                        {{#each actor.items as |item|}}
+                        {{#if item.isCriticalInjury}}
+                        <div class="item itemContext" data-item-id="{{item._id}}">
+                            <div class="injuryName">
+                                <div class="centeredRow">
+                                    <div class="image"><img src={{item.img}}></div>
+                                    <div class="name"><label> {{item.name}}</label></div>
+                                </div>
+                            </div>
+                            <div class="injuryTime">
+                                {{#ifCond item.data.lethal.value "yes"}}
+                                    <label>{{item.data.timeLimit.value}} <i class="fas fa-skull"></i> </label>
+                                {{else}}
+                                    <label>{{item.data.healingTime.value}}</label>
+                                {{/ifCond}}
+                            </div>
+                        </div>
+                        {{/if}}
+                        {{/each}}
+                        <div class="item itemCreate" data-type="criticalInjury"><button>{{localize "BOOK.ADD_CRITICAL_INJURY"}}</button></div>
+                    </div>
+                </div>
+
+
+        </div>
 
         </div>
     </div>

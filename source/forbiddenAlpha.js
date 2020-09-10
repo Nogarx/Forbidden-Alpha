@@ -9,6 +9,7 @@ import { ForbiddenAlphaTalentSheet } from "./item/talentSheet.js";
 import { ForbiddenAlphaSpellSheet } from "./item/spellSheet.js";
 import { ForbiddenAlphaWeaponSheet } from "./item/weaponSheet.js";
 import { ForbiddenAlphaArmorSheet } from "./item/armorSheet.js";
+import { ForbiddenAlphaBookChapterSheet } from "./item/bookChapterSheet.js";
 import { ForbiddenAlphaCriticalInjurySheet } from "./item/criticalInjurySheet.js";
 import { ForbiddenAlphaMonsterAttackSheet } from "./item/monsterAttackSheet.js";
 import { ForbiddenAlphaBuildingSheet } from "./item/buildingSheet.js";
@@ -53,6 +54,7 @@ Hooks.once('init', async function()
 	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaSpellSheet, { types: ["spell"], makeDefault: true });
 	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaWeaponSheet, { types: ["weapon"], makeDefault: true });
 	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaArmorSheet, { types: ["armor"], makeDefault: true });
+	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaBookChapterSheet, { types: ["bookChapter"], makeDefault: true });
 	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaCriticalInjurySheet, { types: ["criticalInjury"], makeDefault: true });
 	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaMonsterAttackSheet, { types: ["monsterAttack"], makeDefault: true });
 	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaBuildingSheet, { types: ["building"], makeDefault: true });

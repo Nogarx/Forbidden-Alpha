@@ -44,6 +44,7 @@ export class ForbiddenAlphaActor extends Actor
 		{
 		  item.isArmor = item.type === "armor";
 		  item.isArtifact = item.type === "artifact";
+		  item.isBookChapter = item.type === "bookChapter"
 		  item.isBuilding = item.type === "building";
 		  item.isCriticalInjury = item.type === "criticalInjury";
 		  item.isGear = item.type === "gear";
@@ -54,6 +55,7 @@ export class ForbiddenAlphaActor extends Actor
 		  item.isSpell = item.type === "spell";
 		  item.isTalent = item.type === "talent";
 		  item.isWeapon = item.type === "weapon";
+		  item.isSelected = false;
 		}
 	}
 

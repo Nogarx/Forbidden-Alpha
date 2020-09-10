@@ -2,12 +2,13 @@
     <div class="book">
 
         <nav class="tabsBar" data-group="primary">
-            <b class="item bookMark" data-tab="main"><img src="systems/forbiddenAlpha/assets/icons/mainMark.png"></b>
-            <b class="item bookMark" data-tab="skill"><img src="systems/forbiddenAlpha/assets/icons/skillMark.png"></b>
-            <b class="item bookMark" data-tab="combat"><img src="systems/forbiddenAlpha/assets/icons/combatMark.png"></b>
-            <b class="item bookMark" data-tab="talent"><img src="systems/forbiddenAlpha/assets/icons/talentMark.png"></b>
-            <b class="item bookMark" data-tab="gear"><img src="systems/forbiddenAlpha/assets/icons/gearMark.png"></b>
-            <b class="item bookMark" data-tab="biography"><img src="systems/forbiddenAlpha/assets/icons/biographyMark.png"></b>
+            <b class="item bookMark clearSelection" data-tab="main"><img src="systems/forbiddenAlpha/assets/icons/mainMark.png"></b>
+            <b class="item bookMark clearSelection" data-tab="skill"><img src="systems/forbiddenAlpha/assets/icons/skillMark.png"></b>
+            <b class="item bookMark clearSelection" data-tab="combat"><img src="systems/forbiddenAlpha/assets/icons/combatMark.png"></b>
+            <b class="item bookMark clearSelection" data-tab="talent"><img src="systems/forbiddenAlpha/assets/icons/talentMark.png"></b>
+            <b class="item bookMark clearSelection" data-tab="gear"><img src="systems/forbiddenAlpha/assets/icons/gearMark.png"></b>
+            <b class="item bookMark clearSelection" data-tab="biography"><img src="systems/forbiddenAlpha/assets/icons/biographyMark.png"></b>
+            <b class="item bookMark clearSelection" data-tab="notes"><img src="systems/forbiddenAlpha/assets/icons/notesMark.png"></b>
         </nav>
         <div class="tabsBarButtons">
             {{> systems/forbiddenAlpha/templates/actor/bookTabsBar.html}}
@@ -32,6 +33,15 @@
             <div class="tab" data-group="primary" data-tab="biography">
                 {{> systems/forbiddenAlpha/templates/actor/tab/biographyTab.html}}
             </div>
+            <div class="tab" data-group="primary" data-tab="notes">
+                {{> systems/forbiddenAlpha/templates/actor/tab/notesTab.html}}
+            </div>
+        </div>
+
+        <div class="itemContextMenu" data-item-id="">
+            <a class="item-control contextEdit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-post" title="Post Item"><i class="fas fa-comment"></i></a>
+            <a class="item-control contextDelete" title="Delete Item"><i class="fas fa-trash"></i></a>
         </div>
 
     </div>

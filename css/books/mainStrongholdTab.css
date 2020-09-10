@@ -1,0 +1,81 @@
+/* ------------------------------------------------------------------------------- */
+/* ---------------------------------- MAIN TAB ----------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.book .mainStrongholdTab .profileImage
+{
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.book .mainStrongholdTab .bookTitle 
+{
+    /* Box transform */
+    display: flex;
+    position: absolute;
+    top: 340px;
+    width: 360px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.book .mainStrongholdTab .bookTitleName 
+{
+    /* Box transform */
+    display: flex;
+    position: absolute;
+    top: 400px;
+    left: 10px;
+    width: 340px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: 36px;
+    font-weight: italic;
+}
+
+.book .mainStrongholdTab .bookTitleName input
+{
+    width: 340px;
+    height: 80px;
+    background-color: transparent;
+    text-shadow: var(--label-shadow-color);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- PROPERTIES ---------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.book .mainStrongholdTab .details
+{
+    width: 360px;
+    height: 520px;
+}
+
+.book .mainStrongholdTab .details input
+{
+    width: 30px;
+}
+
+.book .mainStrongholdTab .details textarea
+{
+    margin: 5px 10px;
+    width: 340px;
+    height: 120px;
+}

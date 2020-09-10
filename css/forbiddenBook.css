@@ -122,10 +122,9 @@
 {
     right: 5px;
     width: 330px;
-    height: 490px;
     box-sizing: border-box;
     overflow-y: auto;
-    overflow-x: none;
+    overflow-x: hidden;
 }
 
 .forbiddenAlpha.sheet .book .pageContent .itemHeader
@@ -147,12 +146,17 @@
     display: flex;
     flex-direction: row;
     width: 330px;
-    height: 50px;
+    height: 40px;
     overflow: hidden;
     align-items: center;
     text-align: center;
     font-size: 14px;
     font-weight: normal;
+}
+
+.forbiddenAlpha.sheet .book .pageContent .itemList .item:hover
+{
+    box-shadow: inset var(--highlight-color);
 }
 
 
@@ -161,6 +165,57 @@
     border-radius: 4px;
     background: rgba(26, 26, 26, 0.1);
 }
+  
+.forbiddenAlpha.sheet .book .pageContent .itemList .item .image 
+{
+    background-size: 32px;
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+}
+
+.forbiddenAlpha.sheet .book .itemContextMenu
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    margin: none;
+    width: 75px;
+    height:25px;
+    background: rgba(26, 26, 26, 0.8);
+    color:rgba(255, 255, 255, 0.9);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.forbiddenAlpha.sheet .book .pageContent .itemList .button 
+{
+    /* Transform */
+    line-height: inherit;
+    
+    /* Style */
+    border: 0 none;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
+
+    /* Font */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+}
+
+.forbiddenAlpha.sheet .book .pageContent .itemList button 
+{
+    height: 50px
+}
+
+.forbiddenAlpha.sheet .book .pageContent .itemList .name { width: calc(100% - 60px); }
+.forbiddenAlpha.sheet .book .pageContent .itemList .image { width: 60px; height: 40px; }
 
 /* ------------------------------------------------------------------------------- */
 /* ----------------------------------- DATABAR ----------------------------------- */
@@ -183,7 +238,7 @@
 .forbiddenAlpha.sheet .book .pageContent .databar .dataItem
 {
     margin: 2px 2px;
-    border-radius: 8px;
+    border-radius: 4px;
     background-color: rgba(26, 26, 26, 0.9);
     /*border: 3px rgba(26, 26, 26, 0.85) solid;*/
 }
@@ -191,9 +246,23 @@
 .forbiddenAlpha.sheet .book .pageContent .databar .dataItemMissing
 {
     margin: 2px 2px;
-    border-radius: 8px;
-    border: 2px rgba(26, 26, 26, 0.85) solid;
+    border-radius: 4px;
+    background-color: rgba(26, 26, 26, 0.2);
 }
+
+.forbiddenAlpha.sheet .book .pageContent .databar .dataItemContinuous
+{
+    margin: 2px 0px;
+    background-color: rgba(26, 26, 26, 0.9);
+    /*border: 3px rgba(26, 26, 26, 0.85) solid;*/
+}
+
+.forbiddenAlpha.sheet .book .pageContent .databar .dataItemMissingContinuous
+{
+    margin: 2px 0px;
+    background-color: rgba(26, 26, 26, 0.2);
+}
+
 
 /* ------------------------------------------------------------------------------- */
 /* ----------------------------------- TAB BAR ----------------------------------- */
@@ -238,6 +307,11 @@
     width: 50px;
     height: 50px;
     z-index: 10;
+}
+
+.forbiddenAlpha.sheet .book .tabsBar .bookMark.active
+{
+    margin: 30px -15px;
 }
 
 .forbiddenAlpha.sheet .book .tabsBarButtons .bookMark
@@ -314,7 +388,6 @@
     flex-basis: 100%;
     justify-content: center;
     align-items: center;
-    padding-bottom: 8px;
     /* Debug */
     /*background-color: rgba(255, 0, 0, 0.25);*/
 }

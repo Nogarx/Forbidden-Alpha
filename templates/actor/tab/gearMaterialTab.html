@@ -1,27 +1,24 @@
 <div class="itemHeader">
-    <div class="biggerColumn"><label>{{localize "BOOK.MATERIAL_HEADER"}}</label></div>
+    <div class="bigColumn"><label>{{localize "BOOK.MATERIAL_HEADER"}}</label></div>
     <div class="regularColumn"><label>{{localize "BOOK.UNITS"}}</label></div>
     <div class="regularColumn"><label>{{localize "BOOK.WEIGHT"}}</label></div>
-    <div class="regularColumn"><a class="button itemCreate" title="Add Material" data-type="material"><i class="fas fa-plus"></i></a></div>
 </div>
-<div> 
+<div class="itemListContainer"> 
     {{#each actor.items as |item|}}
     {{#if item.isMaterial}}
-    <div class="item" data-item-id="{{item._id}}">
-        <div class="biggerColumn">
-            <div class="image-container"><div class="image" style="background-image: url('{{item.img}}')"></div></div>
-            <label> {{item.name}}</label>
+    <div class="item itemContext" data-item-id="{{item._id}}">
+        <div class="bigColumn">
+            <div class="centeredRow">
+                <div class="image"><img src={{item.img}}></div>
+                <div class="name"><label> {{item.name}}</label></div>
+            </div>
         </div>
         <div class="regularColumn">
             <label> {{item.data.units.value}} </label>
         </div>
         <div class="regularColumn"><label>{{item.data.common.weight.value}}</label></div>
-        <div class="regularColumn">
-            <a class="item-control itemEdit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-post" title="Post Item"><i class="fas fa-comment"></i></a>
-            <a class="item-control itemDelete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
     </div>
     {{/if}}
     {{/each}}
+    <div class="item itemCreate" data-type="material"><button>{{localize "BOOK.ADD_MATERIAL"}}</button></div>
 </div>

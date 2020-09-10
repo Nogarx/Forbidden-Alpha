@@ -77,7 +77,9 @@
     text-shadow: var(--highlight-color);
 }
 
+
+.book .gearTab .pageContent .itemList .regularColumn { width: 80px; }
+.book .gearTab .pageContent .itemList .bigColumn { width: 200px; }
+
 .book .gearTab .pageContent .itemList .smallColumn { width: 30px; }
-.book .gearTab .pageContent .itemList .regularColumn { width: 60px; }
-.book .gearTab .pageContent .itemList .bigColumn { width: 120px; }
-.book .gearTab .pageContent .itemList .biggerColumn { width: 150px;  }
+.book .gearTab .pageContent .itemList .mediumColumn { width: 170px; }

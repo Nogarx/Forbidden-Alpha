@@ -1,0 +1,67 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ CUSTOM ITEMLIST -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .hirelingTab .pageContent .itemList
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+    height: 520px;
+}
+
+.book .hirelingTab .pageContent .itemList .regularColumn { width: 100px; }
+.book .hirelingTab .pageContent .itemList .bigColumn { width: 260px; }
+
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ CHAPTER DISPLAY -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .hirelingTab .hirelingName
+{
+    height: 100px;
+    width: 360px;;
+}
+
+.forbiddenAlpha.sheet .book .hirelingTab .hirelingName textarea 
+{
+    width: 340px;
+    height: 40px;
+    margin: 10px;
+
+    font-weight: bold;
+    text-align: center;
+    white-space: normal;
+}
+
+.forbiddenAlpha.sheet .book .hirelingTab .hirelingDetails
+{
+    height: 100px;
+    width: 360px;
+}
+
+.forbiddenAlpha.sheet .book .hirelingTab .hirelingDetails .salary,
+.forbiddenAlpha.sheet .book .hirelingTab .hirelingDetails .supply
+{
+    height: 100px;
+    width: 180px;
+}
+
+.forbiddenAlpha.sheet .book .hirelingTab .hirelingDetails .salary input
+{
+    width: 30px;
+}
+
+.forbiddenAlpha.sheet .book .hirelingTab .hirelingDescription
+{
+    width: 360px;
+    height: 350px;
+}
+.forbiddenAlpha.sheet .book .hirelingTab .hirelingDescription textarea
+{
+    width: 340px;
+    height: 330px;
+    margin: 10px;
+}
+

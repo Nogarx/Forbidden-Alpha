@@ -1,0 +1,86 @@
+/* ------------------------------------------------------------------------------- */
+/* ---------------------------------- MAIN TAB ----------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.book .mainMonsterTab .profileImage
+{
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.book .mainMonsterTab .bookTitle 
+{
+    /* Box transform */
+    display: flex;
+    position: absolute;
+    top: 340px;
+    width: 360px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.book .mainMonsterTab .bookTitleName 
+{
+    /* Box transform */
+    display: flex;
+    position: absolute;
+    top: 400px;
+    left: 10px;
+    width: 340px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: 36px;
+    font-weight: italic;
+}
+
+.book .mainMonsterTab .bookTitleName input
+{
+    width: 340px;
+    height: 80px;
+    background-color: transparent;
+    text-shadow: var(--label-shadow-color);
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- PROPERTIES ---------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.book .mainMonsterTab .storyTitle
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    height: 60px;
+    font-size: 30px;
+}
+
+.book .mainMonsterTab .story
+{
+    width: 360px;
+    height: 460px;
+}
+
+.book .mainMonsterTab .story textarea
+{
+    margin: 5px 10px;
+    width: 340px;
+    height: 450px;
+}

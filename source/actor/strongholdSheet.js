@@ -6,7 +6,8 @@ import { ForbiddenAlphaActorSheet } from "./actorSheet.js";
 export class ForbiddenAlphaStrongholdSheet extends ForbiddenAlphaActorSheet 
 {
     /** @override */
-    static get defaultOptions() {
+    static get defaultOptions() 
+    {
         return mergeObject(super.defaultOptions, {
         classes: ["forbiddenAlpha", "sheet", "actor"],
         template: "systems/forbiddenAlpha/templates/actor/strongholdSheet.html",
@@ -14,8 +15,18 @@ export class ForbiddenAlphaStrongholdSheet extends ForbiddenAlphaActorSheet
         height: 700,
         resizable: false,
         tabs: [{ navSelector: ".tabsBar", contentSelector: ".bookBody", initial: "main" },
-        {navSelector: ".storageTabs", contentSelector: ".gearItemList", initial: "gear"}]
+        {navSelector: ".storageNav", contentSelector: ".gearItemList", initial: "gear"}]
         });
+    }
+
+    /** @override */
+    _onChangeTab(event, tabs, active) 
+    {
+        if (active === "storage") 
+        {
+            this._tabs[1].activate("gear");
+        }
+        super._onChangeTab();
     }
 }
   

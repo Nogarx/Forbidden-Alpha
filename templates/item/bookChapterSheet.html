@@ -1,0 +1,30 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="scroll">
+
+        <div class="tabsBarButtons">
+            {{> systems/forbiddenAlpha/templates/item/scrollTabsBar.html}}
+        </div>
+
+        <div class="scrollContent">
+            <div class="bookChapterScroll">
+                <!--TITLE-->
+                <div class="bookChapterScrollTitle ">
+                    <div class="centeredRow name"> <input name="name" type="text" value="{{item.name}}" /> </div>
+
+                </div>
+
+                <!--TEXT-->
+                <div class="bookChapterScrollDescription">
+                    <div class="singleColumn">
+                        <div class="centeredRow"> 
+                            <div class="details verticalElement">  
+                                <textarea name="data.text.value">{{data.text.value}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>

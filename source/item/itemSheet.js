@@ -36,7 +36,6 @@ export class ForbiddenAlphaItemSheet extends ItemSheet
 			this._onConfigureSheet(ev)
 		});
 
-
 		// Get custom header.
 		const scrollSheet = html.find('.scrollBorder')[0];
 		if (scrollSheet)
@@ -50,25 +49,5 @@ export class ForbiddenAlphaItemSheet extends ItemSheet
 				scrollSheet.addEventListener('dblclick', this._onToggleMinimize.bind(this));
 			}
 		}
-
-
-		/*
-		$(document)
-		.one('focus.textarea', '.autoExpand', function(){
-			var savedValue = this.value;
-			this.value = '';
-			this.baseScrollHeight = this.scrollHeight;
-			this.value = savedValue;
-		})
-		.on('input.textarea', '.autoExpand', function(){
-			var minRows = this.getAttribute('data-min-rows')|0,
-				rows;
-			this.rows = minRows;
-			rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 16);
-			this.rows = minRows + rows;
-		});
-		*/
-
-		// Roll handlers, click handlers, etc. would go here.
     }
 }

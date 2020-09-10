@@ -1,0 +1,51 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ CUSTOM ITEMLIST -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .buildingTab .pageContent .itemList
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+    height: 520px;
+}
+
+.book .buildingTab .pageContent .itemList .regularColumn { width: 100px; }
+.book .buildingTab .pageContent .itemList .bigColumn { width: 260px; }
+
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ CHAPTER DISPLAY -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .buildingTab .buildingName
+{
+    height: 100px;
+    width: 360px;;
+}
+
+.forbiddenAlpha.sheet .book .buildingTab .buildingName textarea 
+{
+    width: 340px;
+    height: 40px;
+    margin: 10px;
+
+    font-weight: bold;
+    text-align: center;
+    white-space: normal;
+}
+
+
+
+.forbiddenAlpha.sheet .book .buildingTab .buildingDescription
+{
+    width: 360px;
+    height: 450px;
+}
+.forbiddenAlpha.sheet .book .buildingTab .buildingDescription textarea
+{
+    width: 340px;
+    height: 430px;
+    margin: 10px;
+}
+
