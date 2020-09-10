@@ -18,5 +18,15 @@ export class ForbiddenAlphaCharacterSheet extends ForbiddenAlphaActorSheet
         {navSelector: ".gearNav", contentSelector: ".gearItemList", initial: "gear"}]
         });
     }
+
+    /** @override */
+    _onChangeTab(event, tabs, active) 
+    {
+        if (active === "gear") 
+        {
+            this._tabs[1].activate("gear");
+        }
+        super._onChangeTab();
+    }
 }
   

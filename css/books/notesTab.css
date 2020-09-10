@@ -1,0 +1,132 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ CUSTOM ITEMLIST -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .notesTab .pageContent .itemList
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+    height: 520px;
+    border: none;
+}
+
+.forbiddenAlpha.sheet .book .notesTab .pageContent .itemList .itemListContainer
+{
+    right: 5px;
+    width: 330px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.forbiddenAlpha.sheet .book .notesTab .pageContent .itemHeader
+{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 330px;
+    align-items: center;
+    border-bottom: 2px rgba(26, 26, 26, 0.85) solid;
+    font-size: 24px;
+    justify-content: center;
+    font-weight: normal;
+    text-align: center;
+}
+
+.forbiddenAlpha.sheet .book .notesTab .pageContent .itemList .item
+{
+    display: flex;
+    flex-direction: row;
+    width: 330px;
+    height: 40px;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.forbiddenAlpha.sheet .book .notesTab .pageContent .itemList .item .bigColumn { width: 330px; }
+
+.forbiddenAlpha.sheet .book .notesTab .pageContent .itemList .item:nth-child(odd)
+{
+    border-radius: 4px;
+    background: none;
+}
+
+.forbiddenAlpha.sheet .book .itemContextMenu
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    margin: none;
+    width: 75px;
+    height:25px;
+    background: rgba(26, 26, 26, 0.8);
+    color:rgba(255, 255, 255, 0.9);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.forbiddenAlpha.sheet .book .notesTab .pageContent .itemList .button 
+{
+    /* Transform */
+    line-height: inherit;
+    
+    /* Style */
+    border: 0 none;
+    border-radius: 8px;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
+
+    /* Font */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+}
+
+.forbiddenAlpha.sheet .book .notesTab .pageContent .itemList button 
+{
+    height: 50px
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ CHAPTER DISPLAY -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .notesTab .chapterTitle 
+{
+    height: 100px;
+    width: 360px;;
+}
+
+.forbiddenAlpha.sheet .book .notesTab .chapterTitle textarea 
+{
+    width: 340px;
+    height: 40px;
+    margin: 10px;
+
+    font-weight: bold;
+    text-align: center;
+    white-space: normal;
+}
+
+
+
+.forbiddenAlpha.sheet .book .notesTab .bookChapterText
+{
+    width: 360px;
+    height: 450px;
+}
+.forbiddenAlpha.sheet .book .notesTab .bookChapterText textarea
+{
+    width: 340px;
+    height: 430px;
+    margin: 10px;
+}
+

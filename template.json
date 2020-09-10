@@ -295,11 +295,16 @@
 					"value": "",
 					"label": "SITE_DESCRIPTION.SURROUNDING"
 				},
-				"defenseRaiting":
+				"defenseRating":
 				{
 					"value": "",
-					"label": "SITE_DESCRIPTION.DEFENSE_RAITING"
+					"label": "SITE_DESCRIPTION.DEFENSE_RATING"
 				}
+			}},
+			"auxiliar": {"auxiliar":
+			{
+				"itemSelected": false,
+				"currentSelectedItem": ""
 			}}
 		},
 
@@ -313,7 +318,8 @@
 				"biography", 
 				"coins", 
 				"consumables", 
-				"conditions"
+				"conditions",
+				"auxiliar"
 			]
 		},
 
@@ -326,15 +332,22 @@
 				"main", 
 				"coins", 
 				"consumables", 
-				"conditions"
-			]
+				"conditions",
+				"auxiliar"
+			],
+			"description":
+			{
+				"label": "MONSTER.DESCRIPTION",
+				"value": ""
+			}
 		},
 
 		"stronghold": 
 		{
 			"templates": 
 			[
-				"siteDescription"
+				"siteDescription",
+				"auxiliar"
 			]
 		},
 
@@ -342,7 +355,8 @@
 		{
 			"templates": 
 			[
-				"siteDescription"
+				"siteDescription",
+				"auxiliar"
 			]
 		}
 	},
@@ -353,6 +367,7 @@
 		[
 			"armor",		
 			"artifact",
+			"bookChapter",
 			"building",
 			"criticalInjury",
 			"gear",
@@ -488,6 +503,18 @@
 			]
 		},
 
+		"bookChapter": 
+		{
+			"title":
+			{
+				"value": ""
+			},
+			"text":
+			{
+				"value": ""
+			}
+		},
+
 		"building": 
 		{
 			"templates": 
@@ -524,7 +551,6 @@
 				"value": ""
 			}
 		},
-
 
 		"criticalInjury": 
 		{

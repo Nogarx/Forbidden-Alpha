@@ -1,4 +1,4 @@
-<div class="bookTab">
+<div class="bookTab mainMonsterTab">
     <!--LEFT PAGE-->
     <div class="leftPage">
         <!--CONTNENT-->
@@ -8,7 +8,7 @@
                 <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
             </div>
             <!--TITLE-->
-            <div class="bookTitle ">{{localize "MONSTERBOOKTITLE.LABEL"}}</div>
+            <div class="bookTitle ">{{localize "MONSTER_BOOK_TITLE.LABEL"}}</div>
             <div class="bookTitleName">
                 <input name="name" type="text" value="{{actor.name}}" />
             </div>
@@ -18,10 +18,16 @@
     <div class="rightPage">
         <!--CONTNENT-->
         <div class="pageContent"> 
-            
+
             <div class="singleColumn">
-                
+                <div class="storyTitle">
+                    <label>{{localize data.description.label}}</label>
+                </div>
+                <div class="story">
+                    <textarea name="data.description.value">{{data.description.value}}</textarea>
+                </div>
             </div>
+
         </div>
     </div>
 </div>

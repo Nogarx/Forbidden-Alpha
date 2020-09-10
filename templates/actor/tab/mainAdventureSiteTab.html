@@ -1,0 +1,55 @@
+<div class="bookTab mainAdventureSiteTab">
+    
+    <!--LEFT PAGE-->
+    <div class="leftPage">
+        <!--CONTNENT-->
+        <div class="pageContent"> 
+
+            <!--CHARACTER IMAGE-->
+            <div class="profileImage">
+                <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+            </div>
+
+            <!--TITLE-->
+            <div class="bookTitle ">
+                <label>{{localize "BOOK_TITLE.LABEL"}}</label>
+            </div>
+            <div class="bookTitleName">
+                <input name="name" type="text" value="{{actor.name}}" />
+            </div>
+
+        </div>
+    </div>
+
+    <!--RIGHT PAGE-->
+    <div class="rightPage">
+        <!--CONTNENT-->
+        <div class="pageContent"> 
+            
+            <div class="singleColumn">
+                
+                <div class="details verticalElement">
+                    <label>{{localize "SITE_DESCRIPTION.DEFENSE_RATING"}}:</label>
+                    <input name="data.siteDescription.defenseRating.value">{{data.siteDescription.defenseRating.value}}</textarea>
+                </div>      
+
+                <div class="details verticalElement">
+                    <label>{{localize "SITE_DESCRIPTION.LOCATION"}}:</label>
+                    <textarea name="data.siteDescription.location.value">{{data.siteDescription.location.value}}</textarea>
+                </div>
+
+                <div class="details verticalElement">  
+                    <label>{{localize "SITE_DESCRIPTION.DESCRIPTION"}}:</label>
+                    <textarea name="data.siteDescription.description.value">{{data.siteDescription.description.value}}</textarea>
+                </div>
+
+                <div class="details verticalElement">  
+                    <label>{{localize "SITE_DESCRIPTION.SURROUNDING"}}:</label>
+                    <textarea name="data.siteDescription.surrounding.value">{{data.siteDescription.surrounding.value}}</textarea>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+

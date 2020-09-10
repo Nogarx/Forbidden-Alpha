@@ -44,7 +44,7 @@
     pointer-events:none;
 }
 
-.minimized .window-header 
+.minimized .window-header
 {
     /* CUSTOM HEADERS */
     z-index: 15;

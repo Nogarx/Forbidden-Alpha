@@ -27,19 +27,43 @@
 	"BOOK.CONSUMABLES": "Consumables",
 	"BOOK.ARMOR_HEADER": "Armor",
 	"BOOK.ARMOR_RATING": "Rating",
+	"BOOK.ARMOR_BODY_PART": "Body Part",
 	"BOOK.WEIGHT": "Weight",
 	"BOOK.WEAPON_HEADER": "Weapon",
 	"BOOK.WEAPON_BONUS": "Bonus",
 	"BOOK.WEAPON_DAMAGE": "Damage",
 	"BOOK.GEAR_HEADER": "Gear",
 	"BOOK.UNITS": "Units",
+	"BOOK.AMOUNT": "Amount",
 	"BOOK.MATERIAL_HEADER": "Material",
 	"BOOK.TALENT_HEADER": "Talent",
+	"BOOK.CRITICAL_INJURY_HEADER": "Critical Injury",
+	"BOOK.HEALING_TIME": "Healing Time",
 	"BOOK.SPELL_HEADER": "Spell",
 	"BOOK.RANK": "Rank",
 	"BOOK.BUILDING_HEADER": "Building",
+	"BOOK.HIRELING_HEADER": "Hireling",
+	"BOOK.MONSTER_ATTACK_HEADER": "Attack",
 	"BOOK.BUILDING_WORK": "Work",
 	"BOOK.INVENTORY": "Inventory",
+	"BOOK.LETHAL": "Lethal In",
+	"BOOK.ADD_ARMOR": "New Armor",
+	"BOOK.ADD_WEAPON": "New Weapon",
+	"BOOK.ADD_GEAR": "New Gear",
+	"BOOK.ADD_MATERIAL": "New Material",
+	"BOOK.ADD_TALENT": "Learn Talent",
+	"BOOK.ADD_SPELL": "Learn Spell",
+	"BOOK.ADD_CRITICAL_INJURY": "New Wound",
+	"BOOK.ADD_CHAPTER": "Write A New Entry",
+	"BOOK.ADD_BUILDING": "New Construction",
+	"BOOK.ADD_HIRELING": "Recruit hireling",
+	"BOOK.ADD_MONSTER_ATTACK": "New Attack",
+	"BOOK.NOTES_INDEX": "Index",
+
+	"BOOK.SELECT_NOTES": "Select a chapter",
+	"BOOK.SELECT_MONSTER_ATTACK": "Select an attack to display details",
+	"BOOK.SELECT_HIRELING": "Select a hireling to display details",
+	"BOOK.SELECT_BUILDING": "Select a building to display details",
 
 	"BUILDING.REQUIREMENT": "Required Building",
 	"BUILDING.DESCRIPTION": "Description",
@@ -124,6 +148,7 @@
 	"MONSTER_ATTACK.DICE": "Base Dices",
 	"MONSTER_ATTACK.DAMAGE": "Damage",
 	"MONSTER_ATTACK.DESCRIPTION": "Monster Attack Description",
+	"MONSTER.DESCRIPTION": "Story",
 
 	"PROFESSION.LABEL": "Profession",
 	"PROFESSION.DRUID": "Druid",
@@ -158,7 +183,7 @@
 	"SITE_DESCRIPTION.LOCATION": "Location",
 	"SITE_DESCRIPTION.DESCRIPTION": "Description",
 	"SITE_DESCRIPTION.SURROUNDING": "Surrounding",
-	"SITE_DESCRIPTION.DEFENSE_RAITING": "Defense Raiting",
+	"SITE_DESCRIPTION.DEFENSE_RATING": "Defense Rating",
 
 	"SKILLS.LABEL": "Skills",
     "SKILLS.MIGHT": "Might",
@@ -222,17 +247,18 @@
 	"WEIGHT.HEAVY": "Heavy",
 
 
-
+	"MONSTER_ATTACK.LABEL": "Attacks",
 	"COMBAT.LABEL": "Combat",
 	"TALENTS.LABEL": "Talents",
 	"SPELLS.LABEL": "Spells",
 	"GEAR.LABEL": "Gear",
 	"STORAGE.LABEL": "Storage",
-	"HIRELINGS.LABEL": "Hirelings",
-	"BUILDINGS.LABEL": "Buildings",
+	"HIRELING.LABEL": "Hirelings",
+	"BUILDING.LABEL": "Buildings",
+	"NOTES.LABEL": "Notes",
 
-	"BOOKTITLE.LABEL": "The Forbidden Tale Of",
-	"MONSTERBOOKTITLE.LABEL": "The Bestiary"
+	"BOOK_TITLE.LABEL": "The Forbidden Tale Of",
+	"MONSTER_BOOK_TITLE.LABEL": "The Bestiary"
 
 
 }

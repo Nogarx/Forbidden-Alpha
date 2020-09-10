@@ -1,0 +1,67 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ CUSTOM ITEMLIST -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .monsterAttackTab .pageContent .itemList
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 340px;
+    height: 520px;
+}
+
+.book .monsterAttackTab .pageContent .itemList .regularColumn { width: 100px; }
+.book .monsterAttackTab .pageContent .itemList .bigColumn { width: 260px; }
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------ CHAPTER DISPLAY -------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.forbiddenAlpha.sheet .book .monsterAttackTab .monsterAttackName
+{
+    height: 100px;
+    width: 360px;;
+}
+
+.forbiddenAlpha.sheet .book .monsterAttackTab .monsterAttackName textarea 
+{
+    width: 340px;
+    height: 40px;
+    margin: 10px;
+
+    font-weight: bold;
+    text-align: center;
+    white-space: normal;
+}
+
+.forbiddenAlpha.sheet .book .monsterAttackTab .monsterAttackDetails
+{
+    height: 100px;
+    width: 360px;
+}
+
+.forbiddenAlpha.sheet .book .monsterAttackTab .monsterAttackDetails .baseDice,
+.forbiddenAlpha.sheet .book .monsterAttackTab .monsterAttackDetails .damage
+{
+    height: 100px;
+    width: 180px;
+}
+
+.forbiddenAlpha.sheet .book .monsterAttackTab .monsterAttackDetails .damage input,
+.forbiddenAlpha.sheet .book .monsterAttackTab .monsterAttackDetails .baseDice input
+{
+    width: 30px;
+}
+
+.forbiddenAlpha.sheet .book .monsterAttackTab .monsterAttackDescription
+{
+    width: 360px;
+    height: 350px;
+}
+.forbiddenAlpha.sheet .book .monsterAttackTab .monsterAttackDescription textarea
+{
+    width: 340px;
+    height: 330px;
+    margin: 10px;
+}
+

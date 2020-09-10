@@ -1,0 +1,60 @@
+<div class="bookTab notesTab">
+    <!--LEFT PAGE-->
+    <div class="leftPage">
+        <!--TITLE-->
+        <div class="pageTitle">{{localize "NOTES.LABEL"}}</div>
+        <!--CONTNENT-->
+        <div class="pageContent"> 
+
+            <!--INDEX-->
+            <div class="itemList">
+                <div class="itemHeader">
+                    <div class="bigColumn"><label>{{localize "BOOK.NOTES_INDEX"}}</label></div>
+                </div>
+                <div class="itemListContainer"> 
+                    {{#each actor.items as |item|}}
+                    {{#if item.isBookChapter}}
+                    <div class="item itemContext itemSelector {{#if item.data.isSelected}}active{{/if}}" data-item-id="{{item._id}}" data-target="selectorTargetNotes" data-item-type="bookChapter">
+                        <div class="bigColumn">
+                            <label> {{item.name}}</label>
+                        </div>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                    <div class="item itemCreate" data-type="bookChapter"><button>{{localize "BOOK.ADD_CHAPTER"}}</button></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--RIGHT PAGE-->
+    <div class="rightPage">
+        
+        <!--TITLE-->
+        <div class="pageTitle">{{localize "NOTES.LABEL"}}</div>
+
+        <div class="pageContent"> 
+            <div class="singleColumn">
+                {{#if data.auxiliar.itemSelected}}
+                    {{#each actor.items as |item|}}
+                    {{#if item.data.isSelected}}
+                        <!--CHAPTER-->
+                        <div class="centeredRow chapterTitle">
+                            <textarea name="{{item.name}}" disabled>{{item.name}}</textarea>
+                        </div>
+                        <!--TEXT-->
+                        <div class="bookChapterText">
+                            <textarea name="item.data.text.value" disabled>{{item.data.text.value}}</textarea>
+                        </div>
+                    {{/if}}
+                    {{/each}}
+                {{else}}
+                    <div class="centeredRow">
+                        <label>{{localize "BOOK.SELECT_NOTES"}}</label>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
+
+    </div>
+</div>

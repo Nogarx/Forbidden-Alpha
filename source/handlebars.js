@@ -13,15 +13,18 @@ function preloadHandlebarsTemplates()
 	  "systems/forbiddenAlpha/templates/actor/tab/mainMonsterTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/mainStrongholdTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/mainAdventureSiteTab.html",
+	  "systems/forbiddenAlpha/templates/actor/tab/monsterAttackTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/skillTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/talentTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/buildingTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/hirelingTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/storageTab.html",
+	  "systems/forbiddenAlpha/templates/actor/tab/notesTab.html",
 
 
 	  "systems/forbiddenAlpha/templates/actor/bookTabsBar.html",
 
+	  "systems/forbiddenAlpha/templates/item/bookChapterSheet.html",
 	  "systems/forbiddenAlpha/templates/item/spellSheet.html",
 	  "systems/forbiddenAlpha/templates/item/talentSheet.html",
 	  "systems/forbiddenAlpha/templates/item/monsterAttackSheet.html",
@@ -54,22 +57,46 @@ function registerHandlebarsHelpers()
 		return acc;
 	});
 
-
-	Handlebars.registerHelper('ifLessEqual', function(v1, v2, options) 
+	Handlebars.registerHelper('ifLessEqual', function(argA, argB, options) 
 	{
-		if(v1 <= v2) {
+		if(argA <= argB) 
+		{
 		  return options.fn(this);
 		}
-		return options.inverse(this);
+		else
+		{
+			return options.inverse(this);
+		}
 	});
 
-	Handlebars.registerHelper('ifCond', function(v1, v2, options) 
+	Handlebars.registerHelper('ifCond', function(argA, argB, options) 
 	{
-		if(v1 === v2) {
+		if(argA === argB) 
+		{
 		  return options.fn(this);
 		}
-		return options.inverse(this);
-	  });
+		else
+		{
+			return options.inverse(this);
+		}
+	});
+
+	Handlebars.registerHelper('canEquipGear', function(type, options) 
+	{
+		var canEquip = false;
+		if (type === "character" || type ==="monster")
+			canEquip = true;
+
+
+		if(canEquip) 
+		{
+		  return options.fn(this);
+		}
+		else
+		{
+			return options.inverse(this);
+		}
+	});
 
   	Handlebars.registerHelper('concat', function() 
 	{

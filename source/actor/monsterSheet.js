@@ -6,7 +6,8 @@ import { ForbiddenAlphaActorSheet } from "./actorSheet.js";
 export class ForbiddenAlphaMonsterSheet extends ForbiddenAlphaActorSheet 
 {
     /** @override */
-    static get defaultOptions() {
+    static get defaultOptions() 
+    {
         return mergeObject(super.defaultOptions, {
         classes: ["forbiddenAlpha", "sheet", "actor"],
         template: "systems/forbiddenAlpha/templates/actor/monsterSheet.html",
@@ -16,6 +17,16 @@ export class ForbiddenAlphaMonsterSheet extends ForbiddenAlphaActorSheet
         tabs:[{ navSelector: ".tabsBar", contentSelector: ".bookBody", initial: "mainMonster" },
         {navSelector: ".gearNav", contentSelector: ".gearItemList", initial: "gear"}]
         });
+    }
+
+    /** @override */
+    _onChangeTab(event, tabs, active) 
+    {
+        if (active === "gear") 
+        {
+            this._tabs[1].activate("gear");
+        }
+        super._onChangeTab();
     }
 }
   

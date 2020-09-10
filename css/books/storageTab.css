@@ -2,7 +2,7 @@
 /* ------------------------------ STRONGHOLD TABS -------------------------------- */
 /* ------------------------------------------------------------------------------- */
 
-.forbiddenAlpha.sheet .book .pageContent .storageTabs
+.book .storageTab .pageContent .storageNav
 {
     /* Box transform */
     display: flex;
@@ -18,7 +18,7 @@
     /*background-color: rgba(255, 0, 0, 0.25);*/
 }
 
-.forbiddenAlpha.sheet .book .pageContent .storageTabs .item
+.book .storageTab .pageContent .storageNav .item
 {
     display: flex;
     height: 25%;
@@ -26,14 +26,24 @@
     font-size: 22px;
 }
 
-.forbiddenAlpha.sheet .book .pageContent .storageTabs .item:hover
+.book .storageTab .pageContent .storageNav .item:hover
 {
     cursor: pointer;
-    text-shadow: var(--highlight-shadow-color);
+    text-shadow: var(--highlight-color);
 }
 
-.forbiddenAlpha.sheet .book .pageContent .storageTabs .active
+.book .storageTab .pageContent .storageNav .active
 {
     /* Bookmark image */
-    text-shadow: var(--highlight-shadow-color);
+    text-shadow: var(--highlight-color);
 }
+
+/* ------------------------------------------------------------------------------- */
+/* ---------------------------------- INVENTORY ---------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.book .storageTab .pageContent .itemList .regularColumn { width: 80px; }
+.book .storageTab .pageContent .itemList .bigColumn { width: 200px; }
+
+.book .storageTab .pageContent .itemList .smallColumn { width: 30px; }
+.book .storageTab .pageContent .itemList .mediumColumn { width: 170px; }

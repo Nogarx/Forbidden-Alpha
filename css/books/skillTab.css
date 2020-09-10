@@ -19,18 +19,51 @@
     height: 60px;
     top: 20px;
     left: 85px;
-
+    font-size: 30px;
     border: 5px rgb(26, 26, 26) double;
     border-radius: 8px;
 }
 
-.book .skillTab .attribute .attributeInput input
+.book .bookTab .attribute .attributeInput b
 {
-    width: 100%;
-    height: 100%;
-    margin: none;
-    padding: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
 }
+
+.book .bookTab .attribute .attributeDamage
+{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 60px;
+    left: 125px;
+}
+
+
+
+.book .bookTab .attribute .attributeDamage b
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+}
+
+.book .bookTab .attribute .attributeDamage b:hover
+{
+    text-shadow: none;
+}
+
+.book .bookTab .attribute .attributeInput b:hover
+{
+    cursor: pointer;
+}
+
 
 .book .skillTab .attribute .attributeBar
 {
@@ -44,6 +77,17 @@
     left: 140px;
 }
 
+.book .skillTab .attribute .attributeBar .offset
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    margin: 0px 5px;
+    width: 100px;
+    height: 40px;
+}
+
 .book .skillTab .attribute .attributeButton
 {
     position: absolute;
@@ -53,11 +97,13 @@
     left: 130px;
 }
 
+.book .skillTab .attributeBar .dataItemMissingContinuous,
+.book .skillTab .attributeBar .dataItemContinuous,
 .book .skillTab .attributeBar .dataItemMissing,
 .book .skillTab .attributeBar .dataItem
 {
     box-sizing: border-box;
-    flex: 1 1 10px;
+    flex: 1;
     height: 26px;
 }
 
@@ -66,9 +112,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 5px 2.5%;
-    height: 10%;
-    flex-basis: 45%;
+    margin: 5px;
+    height: 50px;
+    width: 170px;
     background-color: rgba(26, 26, 26, 0.055);
 }
 
@@ -76,12 +122,21 @@
 {
     margin: 0% 2%;
     width: 70%;
+    height: 50px;
 }
 
-.book .bookTab .skill input
+.book .bookTab .skill b
 {
-    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0% 2%;
     width: 15%;
+    height: 50px;
+}
+
+.book .bookTab .skill b:hover
+{
+    cursor: pointer;
 }
 

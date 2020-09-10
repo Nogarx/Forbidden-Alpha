@@ -1,0 +1,42 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ TITLE ------------------------------------ */
+/* ------------------------------------------------------------------------------- */
+
+.bookChapterScroll .bookChapterScrollTitle
+{
+    height: 90px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    padding-top: 10px 0px;
+    font-size: 24px;
+}
+
+.bookChapterScroll .bookChapterScrollTitle .name
+{
+    padding-bottom: 25px;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* --------------------------------- DESCRIPTION --------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.bookChapterScroll .bookChapterScrollDescription
+{
+    display: flex;
+    width: 360px;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.bookChapterScroll .bookChapterScrollDescription .details textarea
+{
+    margin: 10px 10px;
+    width: 340px;
+    height: 350px;
+    overflow-y:scroll;
+}
