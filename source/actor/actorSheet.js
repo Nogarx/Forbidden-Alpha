@@ -1,9 +1,14 @@
+import RollDialog from "./../diceDialog.js"
+import DiceSystem from "./../DiceSystem.js"
 /**
 * Extend the basic ActorSheet with some very simple modifications
 * @extends {ActorSheet}
 */
 export class ForbiddenAlphaActorSheet extends ActorSheet 
 {
+    rollDialog = new RollDialog();
+    diceSystem = new DiceSystem();
+
     activateListeners(html) 
     {
         super.activateListeners(html);
@@ -68,6 +73,78 @@ export class ForbiddenAlphaActorSheet extends ActorSheet
             item.update({"data.isEquiped.value": !item.data.data.isEquiped.value});
         });
         ;
+
+        html.find('.postItem').click(event => 
+        {
+            itemContextMenu.style.display = 'none';
+            const itemId = itemContextMenu.getAttribute("itemId");
+            const item = this.actor.getOwnedItem(itemId);
+            item.itemToChat();
+        });
+
+        /////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////// Roll Skill /////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        html.find('.rollAttribute').click(event => 
+        {
+            var attributeName = $(event.currentTarget).data("attribute");
+            var attributeValue = this.actor.data.data.attributes[attributeName].damage;
+            this.rollDialog.rollDialog(attributeName, attributeName, "none", attributeValue, 0, 0, [0,0,0], this.diceSystem, this.actor._id);
+        });
+
+        html.find('.rollSkill').click(event => 
+        {
+            var skillName = $(event.currentTarget).data("skill");
+            var skillValue = this.actor.data.data.skills[skillName].value;
+            var attributeName = this.actor.data.data.skills[skillName].attribute;
+            var attributeValue = this.actor.data.data.attributes[attributeName].damage;
+            this.rollDialog.rollDialog(skillName, attributeName, skillName, attributeValue, skillValue, 0, [0,0,0], this.diceSystem, this.actor._id);
+        });
+
+        html.find('.rollConsumable').click(event => 
+        {
+            var consumableName = $(event.currentTarget).data("consumable");
+            var consumableValue = this.actor.data.data.consumables[consumableName].value;
+            var roll = this.diceSystem.RollConsumable(consumableValue);
+            var result = true;
+            if (roll < 3 )
+                result = false;
+            this.rollDialog.rollConsumableToChat(consumableName, result);
+        });
+       
+        html.find('.rollArmor').click(event => 
+        {
+            const itemId = $(event.currentTarget).data("itemId");
+            const rollName = this.actor.getOwnedItem(itemId).name;
+            const gearBonus = this.actor.getOwnedItem(itemId).data.data.armorRating.value;
+            this.rollDialog.rollDialog(rollName, "none", "none", 0, 0, gearBonus, [0,0,0], this.diceSystem, this.actor._id);
+        });
+
+        html.find('.rollWeapon').click(event => 
+        {
+            const itemId = $(event.currentTarget).data("itemId");
+            const rollName = this.actor.getOwnedItem(itemId).name;
+            const gearBonus = this.actor.getOwnedItem(itemId).data.data.gearBonus.value;
+            const weaponType = this.actor.getOwnedItem(itemId).data.data.type.value;
+            var skillName = ""
+            if (weaponType === "melee")
+            {
+                skillName = "melee"
+            }
+            else if (weaponType === "range")
+            {
+                skillName = "marksmanship"
+            }
+            else
+            {
+                new error("Weapon type not selected");
+            }
+            var skillValue = this.actor.data.data.skills[skillName].value;
+            var attributeName = this.actor.data.data.skills[skillName].attribute;
+            var attributeValue = this.actor.data.data.attributes[attributeName].damage;
+            this.rollDialog.rollDialog(rollName, attributeName, skillName, attributeValue, skillValue, gearBonus, [0,0,0], this.diceSystem, this.actor._id);
+        });
 
         /////////////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////// Custom Header ///////////////////////////////////
@@ -208,14 +285,12 @@ export class ForbiddenAlphaActorSheet extends ActorSheet
             
         });
 
-                console.log(this.actor);
-        console.log(this._tabs[0]);
-
 
         // Rollable abilities.
         /*
         html.find('.rollable').click(this._onRoll.bind(this));
         */
+
     }
 
     _onItemCreate(event) 
@@ -225,5 +300,11 @@ export class ForbiddenAlphaActorSheet extends ActorSheet
         let data = duplicate(header.dataset);
         data["name"] = `New ${data.type.capitalize()}`;
         this.actor.createEmbeddedEntity("OwnedItem", data, { renderSheet: true });
+    }
+
+    _onPushRoll() 
+    {
+        let result = this.diceSystem.PushRoll();
+        this.rollDialog.rollToChat(this.diceSystem.rollName, true, result, this.actor._id);
     }
 }

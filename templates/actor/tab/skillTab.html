@@ -43,7 +43,7 @@
 
                         </div>
                         <div class="attributeButton">
-                            <button class="roll-skill" data-skill="{{key}}">{{localize attribute.label}}</button>
+                            <button class="rollAttribute" data-attribute="{{key}}">{{localize attribute.label}}</button>
                         </div>
                     </div>
 
@@ -67,7 +67,7 @@
             <div class="wrapColumns">
             {{#each actor.data.skills as |skill key|}}
                 <div class="skill">
-                    <button class="roll-skill" data-skill="{{key}}">{{localize skill.label}}</button>
+                    <button class="rollSkill" data-skill="{{key}}">{{localize skill.label}}</button>
                     <b class="skillUpdate" data-skill="{{key}}">{{skill.value}}</b>
                 </div>
             {{/each}}

@@ -1,0 +1,52 @@
+<div class='horizontalElement'>
+
+
+    {{#ifCond attributeLabel "ATTRIBUTES.NONE"}}
+    {{else}}
+    <div class='verticalElement'>
+        <label>{{attributeLabel}}:</label>
+        <input id='attribute' value='{{attributeValue}}' type='number' disabled>
+    </div>
+    {{/ifCond}}
+
+    
+    
+
+    {{#ifCond skillLabel "SKILLS.NONE"}}
+    {{else}}
+    <div class='verticalElement'>
+        <label>{{skillLabel}}:</label>
+        <input id='skill' value='{{skillValue}}' type='number' disabled>
+    </div>
+    {{/ifCond}}
+
+    <div class='verticalElement'>
+        <label>{{gearLabel}}:</label>
+        <input id='gear' value='{{gearValue}}' type='number'>
+    </div>
+
+</div>
+
+<div class='horizontalElement'>    
+
+    <div class='verticalElement'>
+        <label>{{artifactLabel}}:</label>
+        <div class='artifactInput'>
+            <label>D8 :</label><input id='artifactD8'  value='{{artifactD8Value}}' type='number'>
+            <label>D10:</label><input id='artifactD10' value='{{artifactD10Value}}' type='number'>
+            <label>D12:</label><input id='artifactD12' value='{{artifactD12Value}}' type='number'>
+        </div>
+    </div>
+
+</div>
+
+
+<div class='horizontalElement'>
+
+    <div class='verticalElement'>
+        <label>{{modifierLabel}}:</label>
+        <input id='modifier' value='{{modifierValue}}' type='number'>
+    </div>
+
+</div>
+

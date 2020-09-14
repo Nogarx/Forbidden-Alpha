@@ -1,0 +1,48 @@
+<div class="forbiddenAlpha chatItem">
+    <div class="itemContent">
+
+        <div class="verticalElement title">
+            <div class="image"> <img src="{{img}}"/> </div>
+            <label>{{name}}</label>
+        </div>
+
+        <div class="horizontalElement">
+            <div class="verticalElement">
+                <label>{{localize data.rank.label}}</label>    
+                <label>{{localize data.rank.value}}</label>
+            </div>
+            <div class="verticalElement">
+                <label>{{localize data.origin.label}}</label>    
+                <label>{{localize data.origin.value}}</label>
+            </div>
+        </div>
+
+        <div class="verticalElement">
+            <label>{{localize data.description.label}}</label>    
+            <label>{{localize data.description.value}}</label>
+        </div>
+
+        {{#ifCond data.origin.value "kin"}}
+        {{else}}
+            {{#ifLessEqual "1" data.rank.value}}
+                <div class="verticalElement">
+                    <label>{{localize data.rank.label}} 1</label>    
+                    <label>{{localize data.rankOne.value}}</label>
+                </div>
+            {{/ifLessEqual}}
+            {{#ifLessEqual "2" data.rank.value}}
+                <div class="verticalElement">
+                    <label>{{localize data.rank.label}} 2</label>    
+                    <label>{{localize data.rankTwo.value}}</label>
+                </div>
+            {{/ifLessEqual}}
+            {{#ifLessEqual "3" data.rank.value}}
+                <div class="verticalElement">
+                    <label>{{localize data.rank.label}} 3</label>    
+                    <label>{{localize data.rankThree.value}}</label>
+                </div>
+            {{/ifLessEqual}}
+        {{/ifCond}}
+
+    </div>
+</div>

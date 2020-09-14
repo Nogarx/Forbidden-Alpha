@@ -39,7 +39,7 @@ function preloadHandlebarsTemplates()
 	  "systems/forbiddenAlpha/templates/item/iteModifierSheet.html",
 	  "systems/forbiddenAlpha/templates/item/materialSheet.html",
 	  "systems/forbiddenAlpha/templates/item/weaponSheet.html"
-    ];
+	];
     return loadTemplates(templatePaths);
 }
   
@@ -55,6 +55,18 @@ function registerHandlebarsHelpers()
 		  acc += block.fn(this);
 		}
 		return acc;
+	});
+
+	Handlebars.registerHelper('hasElements', function(array, options)
+	{
+		if(array.length > 0) 
+		{
+		  return options.fn(this);
+		}
+		else
+		{
+			return options.inverse(this);
+		}
 	});
 
 	Handlebars.registerHelper('ifLessEqual', function(argA, argB, options) 
@@ -114,6 +126,11 @@ function registerHandlebarsHelpers()
 	Handlebars.registerHelper('toLowerCase', function(str)
 	{
 		return str.toLowerCase();
+	});
+
+	Handlebars.registerHelper('toUpperCase', function(str)
+	{
+		return str.charAt(0).toUpperCase() + str.slice(1);
 	});
 }
 

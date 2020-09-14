@@ -1,0 +1,95 @@
+<div class="forbiddenAlpha chatRoll">
+    <div class="rollContent">
+
+        {{#if isPushed}}
+            <div class="verticalElement title">
+                <label>{{#toUpperCase name}}{{/toUpperCase}}</label>
+                <div class="pushed"><label>({{localize "CHAT.PUSHED"}})</label></div>
+            </div>
+        {{else}}
+            <div class="verticalElement title">
+                <label>{{#toUpperCase name}}{{/toUpperCase}}</label>
+            </div>
+        {{/if}}
+
+
+        {{#hasElements attributeRoll}}
+            <div class="verticalElement">
+                <label>{{localize "CHAT.ATTRIBUTE_DICE"}}</label>
+                <div class="horizontalElement">
+                    {{#each attributeRoll as |value|}}
+                        {{#ifCond value 6}} <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> {{else}}
+                        <img src="systems/forbiddenAlpha/assets/icons/dice.png" title="Roll Dices"> {{/ifCond}}
+                    {{/each}}
+                </div>
+            </div>
+        {{/hasElements}}
+
+        {{#hasElements skillRoll}}
+            <div class="verticalElement">
+                <label>{{localize "CHAT.SKILL_DICE"}}</label>
+                <div class="horizontalElement">
+                    {{#each skillRoll as |value|}}
+                        {{#ifCond value 6}} <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> {{else}}
+                        {{#ifCond value 1}} <img src="systems/forbiddenAlpha/assets/icons/diceFail.png" title="Roll Dices"> {{else}}
+                        <img src="systems/forbiddenAlpha/assets/icons/dice.png" title="Roll Dices"> {{/ifCond}}{{/ifCond}}
+                    {{/each}}
+                </div>
+            </div>
+        {{/hasElements}}
+
+        {{#hasElements gearRoll}}
+            <div class="verticalElement">
+                <label>{{localize "CHAT.GEAR_DICE"}}</label>
+                <div class="horizontalElement">
+                    {{#each gearRoll as |value|}}
+                        {{#ifCond value 6}} <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> {{else}}
+                        {{#ifCond value 1}} <img src="systems/forbiddenAlpha/assets/icons/diceFail.png" title="Roll Dices"> {{else}}
+                        <img src="systems/forbiddenAlpha/assets/icons/dice.png" title="Roll Dices"> {{/ifCond}}{{/ifCond}}
+                    {{/each}}
+                </div>
+            </div>
+        {{/hasElements}}
+
+        {{#hasElements artifactRoll}}
+            <div class="verticalElement">
+                <label>{{localize "CHAT.ARTIFACT_DICE"}}</label>
+                <div class="horizontalElement">
+                    {{#each artifactRoll as |value|}}
+                        {{#ifLessEqual value 5}} 
+                            <img src="systems/forbiddenAlpha/assets/icons/dice.png" title="Roll Dices"> 
+                        {{else}} {{#ifLessEqual value 7}} 
+                            <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> 
+                        {{else}} {{#ifLessEqual value 9}} 
+                            <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> 
+                            <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> 
+                        {{else}} {{#ifLessEqual value 11}} 
+                            <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> 
+                            <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> 
+                            <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> 
+                        {{else}}
+                            <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> 
+                            <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> 
+                            <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> 
+                            <img src="systems/forbiddenAlpha/assets/icons/diceSucess.png" title="Roll Dices"> 
+                        {{/ifLessEqual}}{{/ifLessEqual}}{{/ifLessEqual}}{{/ifLessEqual}}
+                    {{/each}}
+                </div>
+            </div>
+        {{/hasElements}}
+
+
+            
+
+        {{#if isPushed}}
+        {{else}}
+        <div class="pushButton">
+            <button class="pushRoll"  data-user="{{user}}" data-actor="{{actor}}">
+                PUSH!
+            </button>
+        </div>
+        {{/if}}
+        
+
+    </div>
+</div>

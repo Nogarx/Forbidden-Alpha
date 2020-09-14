@@ -20,7 +20,7 @@
                         {{#each actor.items as |item|}}
                         {{#if item.isArmor}}
                         {{#if item.data.isEquiped.value}}
-                        <div class="item" data-item-id="{{item._id}}">
+                        <div class="item rollArmor" data-item-id="{{item._id}}">
                             <div class="hugeColumn">
                                 <div class="centeredRow">
                                     <div class="image"><img src={{item.img}}></div>
@@ -51,7 +51,7 @@
                         {{#each actor.items as |item|}}
                         {{#if item.isWeapon}}
                         {{#if item.data.isEquiped.value}}
-                        <div class="item" data-item-id="{{item._id}}">
+                        <div class="item rollWeapon" data-item-id="{{item._id}}">
                             <div class="hugeColumn">
                                 <div class="centeredRow">
                                     <div class="image"><img src={{item.img}}></div>

@@ -1,0 +1,25 @@
+#chat-log .message
+{
+    background-image:url(../assets/scroll.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    background-color: transparent !important;
+    border: none !important;
+    color: rgb(26,26,26);
+    font-family: var(--font-book);
+}
+
+#chat-log .message .message-header.flexrow
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 25%;
+    color: inherit;
+}
+
+#chat-log .message .message-content
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20%;
+}

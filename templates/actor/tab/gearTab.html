@@ -45,7 +45,7 @@
                 <div class="centeredRow">
                     <!--FOOD-->
                     <div class="consumable verticalElement">
-                        <button class="rollConsumable consumableButton">{{localize data.consumables.food.label}}</button>
+                        <button class="rollConsumable consumableButton" data-consumable="food">{{localize data.consumables.food.label}}</button>
                         <select name="data.consumables.food.value">
                             {{#select data.consumables.food.value}}
                             <option value="none">{{localize "DICE.NONE"}}</option>
@@ -59,7 +59,7 @@
 
                     <!--WATER-->
                     <div class="consumable verticalElement">
-                        <button class="rollConsumable">{{localize data.consumables.water.label}}</button>
+                        <button class="rollConsumable" data-consumable="water">{{localize data.consumables.water.label}}</button>
                         <select name="data.consumables.water.value">
                             {{#select data.consumables.water.value}}
                             <option value="none">{{localize "DICE.NONE"}}</option>
@@ -73,7 +73,7 @@
 
                     <!--ARROWS-->
                     <div class="consumable verticalElement">
-                        <button class="rollConsumable">{{localize data.consumables.arrows.label}}</button>
+                        <button class="rollConsumable" data-consumable="arrows">{{localize data.consumables.arrows.label}}</button>
                         <select name="data.consumables.arrows.value">
                             {{#select data.consumables.arrows.value}}
                             <option value="none">{{localize "DICE.NONE"}}</option>
@@ -87,7 +87,7 @@
 
                     <!--TORCHES-->
                     <div class="consumable verticalElement">
-                        <button class="rollConsumable">{{localize data.consumables.torches.label}}</button>
+                        <button class="rollConsumable" data-consumable="torches">{{localize data.consumables.torches.label}}</button>
                         <select name="data.consumables.torches.value">
                             {{#select data.consumables.torches.value}}
                             <option value="none">{{localize "DICE.NONE"}}</option>

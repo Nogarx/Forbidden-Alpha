@@ -1,0 +1,35 @@
+<div class="forbiddenAlpha chatItem">
+    <div class="itemContent">
+
+        <div class="verticalElement title">
+            <div class="image"> <img src="{{img}}"/> </div>
+            <label>{{name}}</label>
+        </div>
+
+        <div class="horizontalElement">
+            <div class="verticalElement">
+                <label>{{localize data.healingTime.label}}</label>    
+                <label>{{localize data.healingTime.value}}</label>
+            </div>
+        </div>
+
+        <div class="horizontalElement">
+            <div class="verticalElement">
+                <label>{{localize data.lethal.label}}</label>    
+                <label>{{localize data.lethal.value}}</label>
+            </div>
+            {{#ifCond data.lethal.value "yes"}}
+            <div class="verticalElement">
+                <label>{{localize data.timeLimit.label}}</label>    
+                <label>{{localize data.timeLimit.value}}</label>
+            </div>
+            {{/ifCond}}
+        </div>
+
+        <div class="verticalElement">
+            <label>{{localize data.description.label}}</label>    
+            <label>{{localize data.description.value}}</label>
+        </div>
+
+    </div>
+</div>

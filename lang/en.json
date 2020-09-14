@@ -256,6 +256,16 @@
 	"HIRELING.LABEL": "Hirelings",
 	"BUILDING.LABEL": "Buildings",
 	"NOTES.LABEL": "Notes",
+	"ARTIFACT.LABEL": "Artifact",
+	"MODIFIER.LABEL": "Modifier",
+
+	"CHAT.ARTIFACT_DICE": "Artifact Dices",
+	"CHAT.ATTRIBUTE_DICE": "Attribute Dices",
+	"CHAT.GEAR_DICE": "Gear Dices",
+	"CHAT.SKILL_DICE": "Skill Dices",
+	"CHAT.PUSHED": "PUSHED",
+	"CHAT.SUCESS": "Sucess",
+	"CHAT.FAIL": "Fail",
 
 	"BOOK_TITLE.LABEL": "The Forbidden Tale Of",
 	"MONSTER_BOOK_TITLE.LABEL": "The Bestiary"
