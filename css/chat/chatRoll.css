@@ -1,0 +1,79 @@
+
+/*
+#chat-log .message
+{
+    background: none;
+    border: none;
+}
+*/
+
+.message .chatRoll .rollContent .title
+{
+    font-size: 22px;
+}
+
+.message .chatRoll .rollContent .pushed
+{
+    margin-bottom: 8px;
+}
+
+.message .chatRoll .rollContent .pushed label
+{
+    font-size: 16px;
+}
+
+.message .chatRoll .rollContent
+{
+    margin: 10px 0px;
+    border: double rgba(26, 26, 26, 0.75);
+    border-radius: 8px;
+}
+
+.message .chatRoll .rollContent img
+{
+    width: 25px;
+    height: 25px;
+}
+
+.message .chatRoll .verticalElement
+{
+    /* Box transform */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+.message .chatRoll .rollContent .pushButton
+{
+    display: flex;
+    justify-content: center;
+}
+
+.message .chatRoll .rollContent button
+{
+    width: 100px;
+    height: 30px;
+    margin: 10px 0px;
+    border-radius: 8px;
+    color: rgba(255,255,255,0.3);
+    background-color: rgba(26, 26, 26, 1);
+}
+
+.message .chatRoll .rollContent button:hover
+{
+    text-shadow: none;
+    color: rgba(255,255,255,1);
+}
+
+.message .chatRoll .horizontalElement
+{
+
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

@@ -22,7 +22,6 @@ import { initializeHandlebars } from "./handlebars.js";
 
 Hooks.once('init', async function() 
 {
-
 	game.forbiddenAlpha = 
 	{
 		ForbiddenAlphaActor,
@@ -66,4 +65,19 @@ Hooks.once('init', async function()
 
 	// Handlebars initialization.
 	initializeHandlebars();
+});
+
+
+Hooks.once("renderChatLog", async function() 
+{
+	$($("#chat-log")[0]).on("click", ".pushRoll", function () 
+	{
+		let userName = $(this).data("user");
+		if (userName === game.user._id)
+		{
+			this.style.display = 'none';
+			let actorName = $(this).data("actor");
+			game.actors.get(actorName).sheet._onPushRoll();
+		}
+	});
 });

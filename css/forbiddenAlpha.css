@@ -1,15 +1,3 @@
-/*
-.app
-{
-    background-image:url(../assets/emptyBackground.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: transparent;
-	width: 100%;
-    height: 100%;
-}
-*/
-
 @font-face 
 {
     font-family: "Kingthings";
@@ -24,19 +12,17 @@
     --highlight-color: 0px 0px 4px rgba(0,0,255,0.75);
 }
 
-.window-app 
+.forbiddenAlpha.sheet.window-app 
 {
     background-image:url(../assets/emptyBackground.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-color: transparent;
-	width: 100%;
-    height: 100%;
     box-shadow: none;
     overflow: hidden;
 }
 
-.forbiddenAlpha .window-header
+.forbiddenAlpha.sheet .window-header
 {
     /* CUSTOM HEADERS */
     z-index: 15;
@@ -44,7 +30,7 @@
     pointer-events:none;
 }
 
-.minimized .window-header
+.forbiddenAlpha.sheet.minimized .window-header
 {
     /* CUSTOM HEADERS */
     z-index: 15;
@@ -53,7 +39,7 @@
     pointer-events: all;
 }
 
-.forbiddenAlpha .window-content
+.forbiddenAlpha.sheet .window-content
 {
     background-image:url(../assets/emptyBackground.png);
     background-repeat: no-repeat;
@@ -68,7 +54,7 @@
 /* ------------------------------------ LABEL ------------------------------------ */
 /* ------------------------------------------------------------------------------- */
 
-.forbiddenAlpha.sheet label
+.forbiddenAlpha label
 {
     /* Text */
     color: rgb(26, 26, 26);
@@ -85,7 +71,7 @@
 /* ------------------------------------ INPUT ------------------------------------ */
 /* ------------------------------------------------------------------------------- */
 
-.forbiddenAlpha.sheet input
+.forbiddenAlpha input
 {
     /* Transform */
     line-height: inherit;
@@ -104,16 +90,16 @@
     background-color: rgba(26, 26, 26, 0.055);
 }
 
-.forbiddenAlpha.sheet input[type="number"]::-webkit-outer-spin-button,
-.forbiddenAlpha.sheet input[type="number"]::-webkit-inner-spin-button 
+.forbiddenAlpha input[type="number"]::-webkit-outer-spin-button,
+.forbiddenAlpha input[type="number"]::-webkit-inner-spin-button 
 {
     /*Disable number spinner*/
     -webkit-appearance: none;
     margin: 0;
 }
 
-.forbiddenAlpha.sheet input:hover,
-.forbiddenAlpha.sheet input:focus
+.forbiddenAlpha input:hover,
+.forbiddenAlpha input:focus
 {
     outline: none !important;
     border-color: var(--highlight-color);
@@ -124,7 +110,7 @@
 /* ---------------------------------- TEXTAREA ----------------------------------- */
 /* ------------------------------------------------------------------------------- */
 
-.forbiddenAlpha.sheet textarea
+.forbiddenAlpha textarea
 {
     /* Transform */
     resize: none;
@@ -144,8 +130,8 @@
     background-color: rgba(26, 26, 26, 0.055);
 }
 
-.forbiddenAlpha.sheet textarea:hover,
-.forbiddenAlpha.sheet textarea:focus
+.forbiddenAlpha textarea:hover,
+.forbiddenAlpha textarea:focus
 {
     outline: none !important;
     border-color: var(--highlight-color);
@@ -156,7 +142,7 @@
 /* ----------------------------------- SELECT ------------------------------------ */
 /* ------------------------------------------------------------------------------- */
 
-.forbiddenAlpha.sheet select
+.forbiddenAlpha select
 {
     /* Transform */
     line-height: inherit;
@@ -178,8 +164,8 @@
     background-color: rgba(26, 26, 26, 0.055);
 }
 
-.forbiddenAlpha.sheet select:hover,
-.forbiddenAlpha.sheet select:focus
+.forbiddenAlpha select:hover,
+.forbiddenAlpha select:focus
 {
     outline: none !important;
     border-color: var(--highlight-color);
@@ -190,7 +176,7 @@
 /* ----------------------------------- BUTTON ------------------------------------ */
 /* ------------------------------------------------------------------------------- */
 
-.forbiddenAlpha.sheet button 
+.forbiddenAlpha button 
 {
     /* Transform */
     line-height: inherit;
@@ -209,9 +195,9 @@
     font-weight: bold;
 }
 
-.forbiddenAlpha.sheet a:hover,
-.forbiddenAlpha.sheet b:hover,
-.forbiddenAlpha.sheet button:hover
+.forbiddenAlpha a:hover,
+.forbiddenAlpha b:hover,
+.forbiddenAlpha button:hover
 {
     text-shadow: var(--highlight-color);
 }
@@ -220,7 +206,7 @@
 /* ------------------------------------ IMAGE ------------------------------------ */
 /* ------------------------------------------------------------------------------- */
 
-.forbiddenAlpha.sheet img
+.forbiddenAlpha img
 {
     height: 100%;
     width: auto;
@@ -229,7 +215,7 @@
     border: none;
 }
 
-.forbiddenAlpha.sheet img:hover
+.forbiddenAlpha img:hover
 {
     box-shadow: inset var(--highlight-color);
     cursor: pointer;

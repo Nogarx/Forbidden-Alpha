@@ -1,0 +1,164 @@
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------ DIALOG ----------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+.rollDialog
+{
+    
+    background-image:url(./../../assets/dialogScroll.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    
+    box-shadow: none;
+    overflow: hidden;
+    font-family: var(--font-book);
+    font-size: 16px;
+    width: 500px !important;
+    height: 400px !important;
+}
+
+.rollDialog .window-content .window-header
+{
+    /* CUSTOM HEADERS */
+    z-index: 15;
+    background-color: rgba(26, 26, 26, 0.75);
+}
+
+.rollDialog .window-content
+{
+    background: none;
+}
+
+
+.rollDialog .dialog-content .verticalElement
+{
+    /* Box transform */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rollDialog .dialog-content .horizontalElement
+{
+    /* Box transform */
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ------------------------------------- INPUT ----------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+
+.rollDialog .dialog-content
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 375px;
+    height: 200px;
+}
+
+.rollDialog .dialog-content label
+{
+    /* Text */
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+    margin: 5px 8px;
+    text-shadow: var(--label-shadow-color);
+}
+
+.rollDialog .dialog-content .artifactInput
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.rollDialog .dialog-content input
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(26, 26, 26, 0.25);
+    color: rgb(26, 26, 26);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rollDialog .dialog-content input[type="number"]::-webkit-outer-spin-button,
+.rollDialog .dialog-content input[type="number"]::-webkit-inner-spin-button 
+{
+    /*Disable number spinner*/
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* ------------------------------------------------------------------------------- */
+/* ----------------------------------- BUTTONS ----------------------------------- */
+/* ------------------------------------------------------------------------------- */
+
+
+.rollDialog .dialog-buttons
+{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    width: 375px;
+    height: 50px !important;
+}
+
+.rollDialog .dialog-buttons .dialog-button
+{
+    width: 50px !important;
+    height: 75px !important;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.rollDialog .dialog-buttons button
+{
+    background-image:url(./../../assets/waxSeal.png);
+    background-size: cover;
+    background-position: center;
+
+    border: none;
+    background-color: rgba(26, 26, 26, 0.25);
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+.rollDialog .dialog-buttons .dialog-button img
+{
+    /* Bookmark image */
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px;
+    margin-right: 1px;
+    margin-left: 0px;
+    border: none;
+    opacity: 0.3;
+}
+
+.rollDialog .dialog-buttons .dialog-button:hover img
+{
+    /* Bookmark image */
+    opacity: 1;
+    box-shadow: none;
+}
