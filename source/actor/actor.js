@@ -31,10 +31,6 @@ export class ForbiddenAlphaActor extends Actor
 		{
 			this._prepareCharacterData(actorData);
 		}
-		else if (actorData.type === "adventureSite") 
-		{
-			this._prepareCharacterData(actorData);
-		}
 	}
 
 	/* Items Data */

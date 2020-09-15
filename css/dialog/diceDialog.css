@@ -35,9 +35,8 @@
 {
     /* Box transform */
     display: flex;
-    flex: 1;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -45,10 +44,14 @@
 {
     /* Box transform */
     display: flex;
-    flex: 1;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+}
+
+.rollDialog .dialog-content .extraSpace
+{
+    margin: 15px 0px;
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -105,6 +108,12 @@
     /*Disable number spinner*/
     -webkit-appearance: none;
     margin: 0;
+}
+
+.rollDialog .dialog-content .inputUpdate:hover
+{
+    border-radius: 8px;
+    box-shadow: var(--highlight-color);
 }
 
 /* ------------------------------------------------------------------------------- */
