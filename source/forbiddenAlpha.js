@@ -3,7 +3,6 @@ import { ForbiddenAlphaActor } from "./actor/actor.js";
 import { ForbiddenAlphaCharacterSheet } from "./actor/characterSheet.js";
 import { ForbiddenAlphaMonsterSheet } from "./actor/monsterSheet.js";
 import { ForbiddenAlphaStrongholdSheet } from "./actor/strongholdSheet.js";
-import { ForbiddenAlphaAdventureSiteSheet } from "./actor/adventureSiteSheet.js";
 import { ForbiddenAlphaItem } from "./item/item.js";
 import { ForbiddenAlphaTalentSheet } from "./item/talentSheet.js";
 import { ForbiddenAlphaSpellSheet } from "./item/spellSheet.js";
@@ -47,7 +46,6 @@ Hooks.once('init', async function()
 	Actors.registerSheet("forbiddenAlpha", ForbiddenAlphaCharacterSheet, { types: ["character"], makeDefault: true });
 	Actors.registerSheet("forbiddenAlpha", ForbiddenAlphaMonsterSheet, { types: ["monster"], makeDefault: true });
 	Actors.registerSheet("forbiddenAlpha", ForbiddenAlphaStrongholdSheet, { types: ["stronghold"], makeDefault: true });
-	Actors.registerSheet("forbiddenAlpha", ForbiddenAlphaAdventureSiteSheet, { types: ["adventureSite"], makeDefault: true });
 	Items.unregisterSheet("core", ItemSheet);
 	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaTalentSheet, { types: ["talent"], makeDefault: true });
 	Items.registerSheet("forbiddenAlpha", ForbiddenAlphaSpellSheet, { types: ["spell"], makeDefault: true });

@@ -12,7 +12,6 @@ function preloadHandlebarsTemplates()
 	  "systems/forbiddenAlpha/templates/actor/tab/mainTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/mainMonsterTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/mainStrongholdTab.html",
-	  "systems/forbiddenAlpha/templates/actor/tab/mainAdventureSiteTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/monsterAttackTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/skillTab.html",
 	  "systems/forbiddenAlpha/templates/actor/tab/talentTab.html",

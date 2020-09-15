@@ -5,8 +5,7 @@
 		[
 			"character", 
 			"monster", 
-			"stronghold", 
-			"adventureSite"
+			"stronghold"
 		],
 
 		"templates": 
@@ -349,16 +348,8 @@
 				"siteDescription",
 				"auxiliar"
 			]
-		},
-
-		"adventureSite": 
-		{
-			"templates": 
-			[
-				"siteDescription",
-				"auxiliar"
-			]
 		}
+
 	},
 
 	"Item": 

@@ -129,3 +129,15 @@ export default class RollDialog
         ChatMessage.create(chatData);
     }
 }
+
+Hooks.on("renderDialog", async function() 
+{
+    $('.inputUpdate').on('click contextmenu', event => 
+    {
+        var input = $($(event.currentTarget)[0]).find("input")[0];
+        if (event.type === "click") 
+            input.value = parseInt(input.value) - 1;
+        else if (event.type === "contextmenu") 
+            input.value = parseInt(input.value) + 1;
+    });
+});

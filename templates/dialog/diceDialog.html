@@ -10,8 +10,6 @@
     {{/ifCond}}
 
     
-    
-
     {{#ifCond skillLabel "SKILLS.NONE"}}
     {{else}}
     <div class='verticalElement'>
@@ -20,21 +18,21 @@
     </div>
     {{/ifCond}}
 
-    <div class='verticalElement'>
+    <div class='verticalElement inputUpdate'>
         <label>{{gearLabel}}:</label>
-        <input id='gear' value='{{gearValue}}' type='number'>
+        <input id='gear' value='{{gearValue}}' type='number' disabled>
     </div>
 
 </div>
 
 <div class='horizontalElement'>    
 
-    <div class='verticalElement'>
+    <div class='verticalElement extraSpace'>
         <label>{{artifactLabel}}:</label>
         <div class='artifactInput'>
-            <label>D8 :</label><input id='artifactD8'  value='{{artifactD8Value}}' type='number'>
-            <label>D10:</label><input id='artifactD10' value='{{artifactD10Value}}' type='number'>
-            <label>D12:</label><input id='artifactD12' value='{{artifactD12Value}}' type='number'>
+            <div class='horizontalElement inputUpdate'><label>D8 :</label><input id='artifactD8'  value='{{artifactD8Value}}' type='number' disabled></div>
+            <div class='horizontalElement inputUpdate'><label>D10:</label><input id='artifactD10' value='{{artifactD10Value}}' type='number' disabled></div>
+            <div class='horizontalElement inputUpdate'><label>D12:</label><input id='artifactD12' value='{{artifactD12Value}}' type='number' disabled></div>
         </div>
     </div>
 
@@ -43,9 +41,9 @@
 
 <div class='horizontalElement'>
 
-    <div class='verticalElement'>
+    <div class='verticalElement inputUpdate'>
         <label>{{modifierLabel}}:</label>
-        <input id='modifier' value='{{modifierValue}}' type='number'>
+        <input id='modifier' value='{{modifierValue}}' type='number' disabled>
     </div>
 
 </div>
